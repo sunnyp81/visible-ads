@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import CountUp from '../../components/CountUp.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -49,22 +50,10 @@ const schema = {
   <section class="py-16 lg:py-20" data-animate>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="glass-card p-6 sm:p-8 text-center">
-          <div class="text-4xl sm:text-5xl font-heading font-extrabold text-electric mb-2">£2.1M</div>
-          <div class="text-sm font-semibold text-navy uppercase tracking-wide">Additional Revenue</div>
-        </div>
-        <div class="glass-card p-6 sm:p-8 text-center">
-          <div class="text-4xl sm:text-5xl font-heading font-extrabold text-electric mb-2">320%</div>
-          <div class="text-sm font-semibold text-navy uppercase tracking-wide">ROAS</div>
-        </div>
-        <div class="glass-card p-6 sm:p-8 text-center">
-          <div class="text-4xl sm:text-5xl font-heading font-extrabold text-electric mb-2">+40%</div>
-          <div class="text-sm font-semibold text-navy uppercase tracking-wide">D2C Sales</div>
-        </div>
-        <div class="glass-card p-6 sm:p-8 text-center">
-          <div class="text-4xl sm:text-5xl font-heading font-extrabold text-electric mb-2">-55%</div>
-          <div class="text-sm font-semibold text-navy uppercase tracking-wide">Acquisition Cost</div>
-        </div>
+        <CountUp value="2.1" prefix="+£" suffix="M" label="Revenue" />
+        <CountUp value="320" suffix="%" label="ROAS" />
+        <CountUp value="40" suffix="%" label="D2C Sales Increase" />
+        <CountUp value="55" suffix="%" label="Lower CAC" />
       </div>
     </div>
   </section>

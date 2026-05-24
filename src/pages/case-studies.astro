@@ -87,7 +87,7 @@ const caseStudies = [
               <h2 class="text-2xl font-heading font-bold text-navy mb-1 group-hover:text-electric transition-colors">{study.title}</h2>
               <p class="text-lg font-heading font-semibold text-slate-dark mb-4">{study.subtitle}</p>
               <div class="flex items-baseline gap-2 mb-6">
-                <span class="text-5xl font-heading font-extrabold text-electric">{study.metric}</span>
+                <span class="text-5xl font-heading font-extrabold text-electric index-metric" data-count-target={study.metric}>{study.metric}</span>
                 <span class="text-lg font-semibold text-slate-dark">{study.metricLabel}</span>
               </div>
               <p class="text-slate-dark leading-relaxed mb-6">{study.description}</p>
@@ -112,5 +112,47 @@ const caseStudies = [
       </a>
     </div>
   </section>
+
+  <script>
+    function animateIndexMetrics() {
+      const metrics = document.querySelectorAll('.index-metric');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target as HTMLElement;
+          const raw = el.dataset.countTarget || '';
+          if (el.dataset.counted) return;
+          el.dataset.counted = 'true';
+
+          const prefix = raw.match(/^([+£]*)/)?.[1] || '';
+          const suffix = raw.match(/([%xM]*)$/)?.[1] || '';
+          const numStr = raw.replace(/^[+£]+/, '').replace(/[%xM]+$/, '');
+          const target = parseFloat(numStr);
+          if (isNaN(target)) return;
+          const hasDecimal = numStr.includes('.');
+          const duration = 2000;
+          const startTime = performance.now();
+
+          function animate(now: number) {
+            const elapsed = now - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = target * eased;
+            const display = hasDecimal ? current.toFixed(1) : Math.floor(current).toString();
+            el.textContent = prefix + display + suffix;
+            if (progress < 1) {
+              requestAnimationFrame(animate);
+            } else {
+              el.textContent = prefix + (hasDecimal ? target.toFixed(1) : target.toString()) + suffix;
+            }
+          }
+          requestAnimationFrame(animate);
+          observer.unobserve(entry.target);
+        });
+      }, { threshold: 0.3 });
+      metrics.forEach((m) => observer.observe(m));
+    }
+    animateIndexMetrics();
+  </script>
 
 </Layout>

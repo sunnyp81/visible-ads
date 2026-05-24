@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import CountUp from '../../components/CountUp.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -45,22 +46,10 @@ const schema = {
   <section class="py-16 lg:py-20" data-animate>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="glass-card p-6 sm:p-8 text-center">
-          <div class="text-4xl sm:text-5xl font-heading font-extrabold text-electric mb-2">12x</div>
-          <div class="text-sm font-semibold text-navy uppercase tracking-wide">Lead Volume</div>
-        </div>
-        <div class="glass-card p-6 sm:p-8 text-center">
-          <div class="text-4xl sm:text-5xl font-heading font-extrabold text-electric mb-2">85%</div>
-          <div class="text-sm font-semibold text-navy uppercase tracking-wide">Qualification Rate</div>
-        </div>
-        <div class="glass-card p-6 sm:p-8 text-center">
-          <div class="text-4xl sm:text-5xl font-heading font-extrabold text-electric mb-2">£45</div>
-          <div class="text-sm font-semibold text-navy uppercase tracking-wide">Cost Per Lead</div>
-        </div>
-        <div class="glass-card p-6 sm:p-8 text-center">
-          <div class="text-4xl sm:text-5xl font-heading font-extrabold text-electric mb-2">6</div>
-          <div class="text-sm font-semibold text-navy uppercase tracking-wide">Projects Closed Q1</div>
-        </div>
+        <CountUp value="12" suffix="x" label="Lead Volume" />
+        <CountUp value="85" suffix="%" label="Qualification Rate" />
+        <CountUp value="45" prefix="£" label="Cost Per Lead" />
+        <CountUp value="6" label="Projects Closed" />
       </div>
     </div>
   </section>

@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import GrowthChart from '../components/GrowthChart.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -145,6 +146,19 @@ const schema = {
           <div class="text-sm font-semibold text-navy uppercase tracking-wide mb-2">First Mindset</div>
           <p class="text-slate-dark text-sm">We think like sellers, not just advertisers. Every decision is measured against real margin and profitability.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28 bg-gray-50" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mx-auto">
+        <GrowthChart title="Amazon Growth Metrics" bars={[
+          { label: "Organic Ranking Improvement", value: 75, color: "#2563EB" },
+          { label: "ACoS Reduction", value: 60, color: "#10B981" },
+          { label: "Sales Velocity Increase", value: 85, color: "#2563EB" },
+          { label: "Buy Box Win Rate", value: 92, color: "#F59E0B" },
+        ]} />
       </div>
     </div>
   </section>

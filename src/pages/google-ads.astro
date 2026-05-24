@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import GrowthChart from '../components/GrowthChart.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -153,6 +154,19 @@ const schema = {
           <div class="text-sm font-semibold text-navy uppercase tracking-wide mb-2">Response Time</div>
           <p class="text-slate-dark text-sm">Every client gets a dedicated account manager with same-day response guaranteed.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28 bg-gray-50" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-2xl mx-auto">
+        <GrowthChart title="Average Client Performance" bars={[
+          { label: "ROAS Improvement", value: 85, color: "#2563EB" },
+          { label: "Wasted Spend Reduction", value: 65, color: "#10B981" },
+          { label: "Conversion Rate Uplift", value: 45, color: "#2563EB" },
+          { label: "Revenue Growth", value: 90, color: "#10B981" },
+        ]} />
       </div>
     </div>
   </section>

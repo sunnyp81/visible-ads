@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import CountUp from '../../components/CountUp.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -49,22 +50,10 @@ const schema = {
   <section class="py-16 lg:py-20" data-animate>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="glass-card p-6 sm:p-8 text-center">
-          <div class="text-4xl sm:text-5xl font-heading font-extrabold text-electric mb-2">+450%</div>
-          <div class="text-sm font-semibold text-navy uppercase tracking-wide">Sales Growth</div>
-        </div>
-        <div class="glass-card p-6 sm:p-8 text-center">
-          <div class="text-4xl sm:text-5xl font-heading font-extrabold text-electric mb-2">+280%</div>
-          <div class="text-sm font-semibold text-navy uppercase tracking-wide">Organic Traffic</div>
-        </div>
-        <div class="glass-card p-6 sm:p-8 text-center">
-          <div class="text-4xl sm:text-5xl font-heading font-extrabold text-electric mb-2">-25%</div>
-          <div class="text-sm font-semibold text-navy uppercase tracking-wide">Cost Per Acquisition</div>
-        </div>
-        <div class="glass-card p-6 sm:p-8 text-center">
-          <div class="text-4xl sm:text-5xl font-heading font-extrabold text-electric mb-2">+95%</div>
-          <div class="text-sm font-semibold text-navy uppercase tracking-wide">Returning Customers</div>
-        </div>
+        <CountUp value="450" prefix="+" suffix="%" label="Sales Growth" />
+        <CountUp value="280" prefix="+" suffix="%" label="Organic Traffic" />
+        <CountUp value="25" suffix="%" label="Lower CPA" />
+        <CountUp value="95" suffix="%" label="Returning Customers" />
       </div>
     </div>
   </section>

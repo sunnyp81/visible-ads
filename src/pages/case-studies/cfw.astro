@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import CountUp from '../../components/CountUp.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -49,22 +50,10 @@ const schema = {
   <section class="py-16 lg:py-20" data-animate>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="glass-card p-6 sm:p-8 text-center">
-          <div class="text-4xl sm:text-5xl font-heading font-extrabold text-electric mb-2">340%</div>
-          <div class="text-sm font-semibold text-navy uppercase tracking-wide">ROAS</div>
-        </div>
-        <div class="glass-card p-6 sm:p-8 text-center">
-          <div class="text-4xl sm:text-5xl font-heading font-extrabold text-electric mb-2">7-Fig</div>
-          <div class="text-sm font-semibold text-navy uppercase tracking-wide">Annual Revenue</div>
-        </div>
-        <div class="glass-card p-6 sm:p-8 text-center">
-          <div class="text-4xl sm:text-5xl font-heading font-extrabold text-electric mb-2">-45%</div>
-          <div class="text-sm font-semibold text-navy uppercase tracking-wide">Wasted Spend</div>
-        </div>
-        <div class="glass-card p-6 sm:p-8 text-center">
-          <div class="text-4xl sm:text-5xl font-heading font-extrabold text-electric mb-2">3x</div>
-          <div class="text-sm font-semibold text-navy uppercase tracking-wide">New Customers</div>
-        </div>
+        <CountUp value="340" suffix="%" label="ROAS" />
+        <CountUp value="7" suffix="-Figure" label="Annual Revenue" />
+        <CountUp value="45" suffix="%" label="Less Wasted Spend" />
+        <CountUp value="3" suffix="x" label="New Customers" />
       </div>
     </div>
   </section>
