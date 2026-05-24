@@ -1,0 +1,152 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Visible Ads",
+  "description": "Meet the team behind Visible Ads. 20+ years of digital expertise, boutique service, global results.",
+  "url": "https://visible-ads.optimisedwebsite.com/about",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "Visible Ads",
+    "description": "Award-winning boutique search engine marketing consultancy",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kingston-Upon-Thames",
+      "addressCountry": "GB"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Boh",
+      "jobTitle": "Founder & PPC Specialist"
+    },
+    "employee": [
+      { "@type": "Person", "name": "Joe", "jobTitle": "Digital Marketing Manager" },
+      { "@type": "Person", "name": "Ben", "jobTitle": "Senior Marketing & PPC Strategist" },
+      { "@type": "Person", "name": "Tom", "jobTitle": "Search Advertising Specialist" }
+    ]
+  }
+};
+
+const team = [
+  {
+    name: 'Boh',
+    role: 'Founder & PPC Specialist',
+    bio: 'With over 20 years in digital media, Boh founded Visible Ads to give businesses access to enterprise-level advertising expertise without the enterprise price tag. An Amazon seller since 2015 and certified Google Ads specialist, he has personally scaled multiple sellers to 7-figure revenue and managed millions in ad spend across every major platform.',
+    image: '/images/boh.jpg',
+    initial: 'B',
+    hasImage: true,
+  },
+  {
+    name: 'Joe',
+    role: 'Digital Marketing Manager',
+    bio: 'Joe leads campaign execution across Google Search, Display, and Performance Max. With deep expertise in SEO and conversion rate optimisation, he brings a full-funnel perspective to every campaign, ensuring ads and landing pages work together to maximise returns.',
+    image: '/images/joe.webp',
+    initial: 'J',
+    hasImage: true,
+  },
+  {
+    name: 'Ben',
+    role: 'Senior Marketing & PPC Strategist',
+    bio: 'Active in paid search since 2008, Ben is one of the most experienced PPC strategists in the UK. His background spans Google Ads, paid social, and direct-response copywriting. He specialises in building campaigns that convert at scale for eCommerce and lead generation clients.',
+    initial: 'B',
+    hasImage: false,
+  },
+  {
+    name: 'Tom',
+    role: 'Search Advertising Specialist',
+    bio: 'Tom brings 15+ years of search advertising experience across more than 100 industry niches. From local service businesses to international eCommerce brands, his breadth of experience means he has seen what works and what does not in virtually every market.',
+    initial: 'T',
+    hasImage: false,
+  },
+];
+
+const certifications = [
+  { name: 'Google Partner', icon: 'G' },
+  { name: 'Microsoft Advertising Partner', icon: 'M' },
+  { name: 'Amazon Ads Partner', icon: 'A' },
+  { name: 'Meta Business Partner', icon: 'Meta' },
+  { name: 'UK Search Awards Winner', icon: 'UK' },
+];
+---
+
+<Layout title="About Visible Ads | Award-Winning PPC Agency" description="Meet the team behind Visible Ads. 20+ years of digital expertise, boutique service, global results. Kingston-Upon-Thames." schema={schema}>
+
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-navy to-navy-light relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white mb-6 leading-tight">About Visible Ads</h1>
+        <p class="text-lg sm:text-xl text-slate-light leading-relaxed">Award-winning boutique search engine marketing consultancy. Based in Kingston-Upon-Thames, delivering results for clients worldwide.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-8">Our Story</h2>
+        <p class="text-lg text-slate-dark leading-relaxed mb-6">Visible Ads was founded by Boh with a simple conviction: businesses deserve advertising partners who care about their bottom line as much as they do. After two decades in digital media, managing campaigns for brands of every size, he saw the same pattern repeated. Agencies charging premium fees for cookie-cutter work, leaving clients without transparency and without results.</p>
+        <p class="text-lg text-slate-dark leading-relaxed mb-6">We built Visible Ads to be the opposite. A boutique consultancy where every client gets senior-level attention, every campaign is built bespoke, and every decision is driven by data and a relentless focus on measurable ROI. No account managers reading from a script. No junior staff learning on your budget.</p>
+        <p class="text-lg text-slate-dark leading-relaxed">Today, we manage advertising across Google, Bing, Amazon, Meta, and more for clients ranging from ambitious start-ups to established eCommerce brands turning over seven figures. Our size is deliberate. It means we can be selective about who we work with and give every client the attention they deserve.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28 bg-sky-tint" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">Meet the Team</h2>
+        <p class="text-lg text-slate-dark max-w-2xl mx-auto">A small, senior team that punches well above its weight.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        {team.map((member) => (
+          <div class="glass-card p-8 text-center">
+            {member.hasImage ? (
+              <img src={member.image} alt={member.name} class="w-28 h-28 rounded-full mx-auto mb-6 object-cover ring-4 ring-electric/20" loading="lazy" />
+            ) : (
+              <div class="w-28 h-28 rounded-full mx-auto mb-6 bg-gradient-to-br from-electric to-cyan-500 flex items-center justify-center ring-4 ring-electric/20">
+                <span class="text-4xl font-heading font-bold text-white">{member.initial}</span>
+              </div>
+            )}
+            <h3 class="text-xl font-heading font-bold text-navy mb-1">{member.name}</h3>
+            <p class="text-sm font-semibold text-electric mb-4">{member.role}</p>
+            <p class="text-slate-dark leading-relaxed text-sm">{member.bio}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">Certifications & Awards</h2>
+        <p class="text-lg text-slate-dark">Recognised by the platforms we manage and the industry we serve.</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-4xl mx-auto">
+        {certifications.map((cert) => (
+          <div class="glass-card p-6 text-center hover:shadow-lg transition-shadow">
+            <div class="w-14 h-14 rounded-xl bg-sky-tint flex items-center justify-center mx-auto mb-3">
+              <span class="text-lg font-heading font-bold text-electric">{cert.icon}</span>
+            </div>
+            <p class="text-xs font-semibold text-slate-dark leading-tight">{cert.name}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28 bg-navy" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">Work With Us</h2>
+      <p class="text-lg text-slate-light mb-8 max-w-2xl mx-auto">We are selective about who we work with because we give every client our full attention. If you are serious about growth, we would love to talk.</p>
+      <a href="/free-ads-audit" class="inline-flex items-center px-8 py-4 bg-electric text-white font-semibold rounded-lg hover:bg-electric-dark transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-electric/25 text-lg">
+        Get Your Free Audit
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </section>
+
+</Layout>

@@ -1,0 +1,222 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Paid Social Advertising",
+      "provider": {
+        "@type": "Organization",
+        "name": "Visible Ads",
+        "url": "https://visible-ads.optimisedwebsite.com"
+      },
+      "description": "Meta Business Partner. Strategic paid social campaigns on Facebook, Instagram, and beyond for scalable customer acquisition.",
+      "url": "https://visible-ads.optimisedwebsite.com/paid-social",
+      "serviceType": "Paid Social Media Advertising",
+      "areaServed": "GB"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which social platforms do you advertise on?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We primarily manage campaigns on Meta platforms (Facebook and Instagram), which offer the most sophisticated targeting and attribution tools. We also run campaigns on TikTok, Pinterest, and LinkedIn depending on your audience and objectives. We recommend platforms based on where your customers actually spend time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you create the ad creative?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our paid social service includes creative strategy, copywriting, and design direction. We produce static images, carousel ads, and video concepts optimised for each platform's format. We also run creative testing programmes to continuously improve performance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What budget do you recommend for paid social?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We recommend a minimum of £1,500 per month in ad spend to generate enough data for meaningful optimisation. Larger budgets allow us to test more audiences and creative variations faster. We'll provide a recommended budget based on your goals and competitive landscape during our free audit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does retargeting work on social media?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We install tracking pixels on your website that build audiences of people who've visited specific pages, added items to cart, or completed other actions. We then serve these warm audiences tailored ads that address their specific stage in the buying journey. Retargeting typically delivers the highest ROAS of any campaign type."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title="Paid Social Agency | Meta & Social Ads | Visible Ads" description="Meta Business Partner. Strategic paid social campaigns on Facebook, Instagram, and beyond for scalable customer acquisition." schema={schema}>
+
+  <section class="relative py-20 lg:py-28 overflow-hidden" data-animate>
+    <div class="absolute inset-0 bg-gradient-to-br from-navy to-navy-light"></div>
+    <div class="absolute inset-0 dot-pattern opacity-10"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <span class="inline-block px-4 py-1.5 bg-electric/20 text-electric-light text-sm font-medium rounded-full mb-6">Meta Business Partner</span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-tight mb-6">Paid Social Campaigns That Turn Scrollers Into Buyers</h1>
+        <p class="text-lg sm:text-xl text-slate-light mb-8 leading-relaxed">Your customers spend hours on social media every day. We build campaigns that interrupt the scroll with the right message, to the right person, at the right moment — turning passive browsers into active buyers.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/free-ads-audit" class="inline-flex items-center justify-center bg-electric text-white font-semibold px-8 py-4 rounded-xl hover:bg-electric-dark transition-colors text-lg">Get Your Free Social Ads Audit</a>
+          <a href="#approach" class="inline-flex items-center justify-center text-white font-medium px-8 py-4 rounded-xl border border-white/20 hover:bg-white/10 transition-colors">See Our Approach</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-8">What We Do</h2>
+        <p class="text-lg text-slate-dark mb-6 leading-relaxed">We build and manage paid social campaigns that drive measurable customer acquisition across Meta (Facebook and Instagram), TikTok, Pinterest, and LinkedIn. Unlike search advertising where you capture existing demand, paid social creates demand — putting your brand in front of precisely targeted audiences who didn't know they needed you yet.</p>
+        <p class="text-lg text-slate-dark mb-6 leading-relaxed">Creative is the lever that makes or breaks social campaigns. We develop thumb-stopping ad creative — static images, carousels, and video — designed specifically for each platform's format and user behaviour. Every creative decision is informed by performance data, not guesswork. We run structured creative testing programmes that continuously identify winning concepts and retire underperformers.</p>
+        <p class="text-lg text-slate-dark leading-relaxed">Our full-funnel approach means we don't just run prospecting campaigns. We build sophisticated retargeting sequences that nurture cold audiences through to purchase, re-engage lapsed customers, and maximise lifetime value. Combined with proper attribution setup, you always know exactly which campaigns are driving real business outcomes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach" class="py-20 lg:py-28 bg-sky-tint" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">Our Approach</h2>
+        <p class="text-lg text-slate-dark max-w-2xl mx-auto">Creative-led, data-driven paid social that scales.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-electric text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">1</div>
+          <h3 class="text-xl font-heading font-bold text-navy mb-3">Audience Research</h3>
+          <p class="text-slate-dark">We map your ideal customer profiles, analyse competitor activity, and identify the targeting combinations that will deliver the most efficient customer acquisition.</p>
+        </div>
+        <div class="relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-electric text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">2</div>
+          <h3 class="text-xl font-heading font-bold text-navy mb-3">Creative Strategy</h3>
+          <p class="text-slate-dark">We develop ad creative concepts tailored to each audience segment and funnel stage — from awareness-building brand content to direct-response conversion ads.</p>
+        </div>
+        <div class="relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-electric text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">3</div>
+          <h3 class="text-xl font-heading font-bold text-navy mb-3">Campaign Launch</h3>
+          <p class="text-slate-dark">Campaigns go live with proper pixel tracking, conversion API setup, and structured testing frameworks. We monitor performance closely during the learning phase.</p>
+        </div>
+        <div class="relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-electric text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">4</div>
+          <h3 class="text-xl font-heading font-bold text-navy mb-3">Measure & Iterate</h3>
+          <p class="text-slate-dark">We analyse results against business KPIs, refresh creative before fatigue sets in, and scale winning combinations. Continuous testing drives continuous improvement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">Why Choose Us</h2>
+        <p class="text-lg text-slate-dark max-w-2xl mx-auto">Paid social expertise that delivers scalable growth.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="gradient-border p-8 text-center">
+          <div class="text-4xl font-heading font-extrabold text-electric mb-2">Full</div>
+          <div class="text-sm font-semibold text-navy uppercase tracking-wide mb-2">Funnel Coverage</div>
+          <p class="text-slate-dark text-sm">From cold prospecting to warm retargeting to post-purchase — we cover the entire customer journey.</p>
+        </div>
+        <div class="gradient-border p-8 text-center">
+          <div class="text-4xl font-heading font-extrabold text-electric mb-2">In-House</div>
+          <div class="text-sm font-semibold text-navy uppercase tracking-wide mb-2">Creative Team</div>
+          <p class="text-slate-dark text-sm">No outsourced design. Our creative team produces platform-native ads that actually stop the scroll.</p>
+        </div>
+        <div class="gradient-border p-8 text-center">
+          <div class="text-4xl font-heading font-extrabold text-electric mb-2">CAPI</div>
+          <div class="text-sm font-semibold text-navy uppercase tracking-wide mb-2">Server-Side Tracking</div>
+          <p class="text-slate-dark text-sm">We implement Conversions API for accurate attribution even with iOS privacy changes and cookie restrictions.</p>
+        </div>
+        <div class="gradient-border p-8 text-center">
+          <div class="text-4xl font-heading font-extrabold text-electric mb-2">Multi</div>
+          <div class="text-sm font-semibold text-navy uppercase tracking-wide mb-2">Platform Expertise</div>
+          <p class="text-slate-dark text-sm">Meta, TikTok, Pinterest, LinkedIn — we go where your audience is, not where it's easiest to run ads.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28 bg-sky-tint" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="glass-card p-8 sm:p-12 lg:p-16 max-w-4xl mx-auto">
+        <span class="inline-block px-3 py-1 bg-electric/10 text-electric text-sm font-semibold rounded-full mb-6">Case Study</span>
+        <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-4">Multi-Channel Success — Search + Social Synergy</h2>
+        <p class="text-lg text-slate-dark mb-8 leading-relaxed">For clients running paid social alongside search campaigns, we consistently see the combined effect outperform isolated channel strategies. Social campaigns build brand awareness and prime audiences, making search campaigns more efficient. Retargeting sequences on Meta recapture users who searched but didn't convert, creating a closed-loop acquisition engine that improves over time.</p>
+        <div class="flex flex-wrap gap-8">
+          <div>
+            <div class="text-3xl font-heading font-extrabold text-electric">4.2x</div>
+            <div class="text-sm text-slate-dark">Blended ROAS</div>
+          </div>
+          <div>
+            <div class="text-3xl font-heading font-extrabold text-electric">-35%</div>
+            <div class="text-sm text-slate-dark">Cost Per Acquisition</div>
+          </div>
+          <div>
+            <div class="text-3xl font-heading font-extrabold text-electric">+62%</div>
+            <div class="text-sm text-slate-dark">New Customer Revenue</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-10">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+              Which social platforms do you advertise on?
+              <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-slate-dark leading-relaxed">We primarily manage campaigns on Meta platforms (Facebook and Instagram), which offer the most sophisticated targeting and attribution tools. We also run campaigns on TikTok, Pinterest, and LinkedIn depending on your audience and objectives. We recommend platforms based on where your customers actually spend time.</div>
+          </details>
+          <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+              Do you create the ad creative?
+              <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-slate-dark leading-relaxed">Yes. Our paid social service includes creative strategy, copywriting, and design direction. We produce static images, carousel ads, and video concepts optimised for each platform's format. We also run creative testing programmes to continuously improve performance.</div>
+          </details>
+          <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+              What budget do you recommend for paid social?
+              <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-slate-dark leading-relaxed">We recommend a minimum of £1,500 per month in ad spend to generate enough data for meaningful optimisation. Larger budgets allow us to test more audiences and creative variations faster. We'll provide a recommended budget based on your goals and competitive landscape during our free audit.</div>
+          </details>
+          <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+              How does retargeting work on social media?
+              <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-slate-dark leading-relaxed">We install tracking pixels on your website that build audiences of people who've visited specific pages, added items to cart, or completed other actions. We then serve these warm audiences tailored ads that address their specific stage in the buying journey. Retargeting typically delivers the highest ROAS of any campaign type.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28 bg-navy" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">Ready to Turn Social Into a Revenue Channel?</h2>
+      <p class="text-lg text-slate-light mb-8 max-w-2xl mx-auto">Get a free paid social audit that reveals untapped audience opportunities and shows you how to scale profitably.</p>
+      <a href="/free-ads-audit" class="inline-flex items-center justify-center bg-electric text-white font-semibold px-10 py-4 rounded-xl hover:bg-electric-dark transition-colors text-lg">Get Your Free Social Ads Audit</a>
+    </div>
+  </section>
+
+</Layout>

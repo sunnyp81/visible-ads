@@ -1,0 +1,222 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Amazon Ads & Marketplace Management",
+      "provider": {
+        "@type": "Organization",
+        "name": "Visible Ads",
+        "url": "https://visible-ads.optimisedwebsite.com"
+      },
+      "description": "Amazon Ads Partner. From Sponsored Products to full marketplace management, we help brands scale on Amazon profitably.",
+      "url": "https://visible-ads.optimisedwebsite.com/amazon",
+      "serviceType": "Amazon Advertising & Marketplace Management",
+      "areaServed": "GB"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What's the difference between Sponsored Products, Sponsored Brands, and Sponsored Display?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sponsored Products appear in search results and product pages, targeting shoppers actively searching for items like yours. Sponsored Brands showcase your brand with a custom headline, logo, and multiple products at the top of search results. Sponsored Display reaches audiences both on and off Amazon, including retargeting past viewers. We use all three in combination for maximum visibility."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What are your Amazon management fees?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our management fees are based on a percentage of ad spend or a flat monthly fee depending on account size and complexity. We provide a detailed proposal after our free audit. For marketplace management (listings, inventory, brand content), we offer separate packages that can be bundled with advertising management."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you help with Amazon listing optimisation?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Listing optimisation is fundamental to Amazon success. We optimise titles, bullet points, descriptions, backend keywords, A+ Content, and main/secondary images. Strong listings convert more traffic from both organic and paid sources, making every pound of ad spend work harder."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need Brand Registry to work with you?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Brand Registry isn't required but it unlocks critical tools: A+ Content, Sponsored Brands, Stores, and brand analytics. If you're not registered, we'll help you through the process. If you're a reseller without brand ownership, we can still run effective Sponsored Products campaigns."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title="Amazon Ads Agency | Marketplace Management | Visible Ads" description="Amazon Ads Partner. From Sponsored Products to full marketplace management, we help brands scale on Amazon profitably." schema={schema}>
+
+  <section class="relative py-20 lg:py-28 overflow-hidden" data-animate>
+    <div class="absolute inset-0 bg-gradient-to-br from-navy to-navy-light"></div>
+    <div class="absolute inset-0 dot-pattern opacity-10"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <span class="inline-block px-4 py-1.5 bg-electric/20 text-electric-light text-sm font-medium rounded-full mb-6">Amazon Ads Partner</span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-tight mb-6">Amazon Advertising & Marketplace Management</h1>
+        <p class="text-lg sm:text-xl text-slate-light mb-8 leading-relaxed">We've been selling on Amazon since 2015. We know what it takes to scale profitably because we've done it ourselves — from zero to 7-figure revenue. Now we help brands do the same.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/free-ads-audit" class="inline-flex items-center justify-center bg-electric text-white font-semibold px-8 py-4 rounded-xl hover:bg-electric-dark transition-colors text-lg">Get Your Free Amazon Audit</a>
+          <a href="#approach" class="inline-flex items-center justify-center text-white font-medium px-8 py-4 rounded-xl border border-white/20 hover:bg-white/10 transition-colors">See Our Approach</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-8">What We Do</h2>
+        <p class="text-lg text-slate-dark mb-6 leading-relaxed">We manage Amazon advertising and marketplace operations for brands that want to scale profitably. Our founder Boh has been an Amazon seller since 2015 — this isn't theoretical knowledge. We've built and scaled multiple seller accounts to 7-figure revenue, navigated every algorithm change, and survived every policy update. That first-hand experience shapes every decision we make for our clients.</p>
+        <p class="text-lg text-slate-dark mb-6 leading-relaxed">Our Amazon advertising management covers the full spectrum: Sponsored Products to capture high-intent shoppers, Sponsored Brands to build top-of-search visibility, and Sponsored Display to retarget and reach audiences both on and off Amazon. We manage bids at the keyword and ASIN level, optimise placements, and continuously refine targeting to push ACoS down while scaling revenue up.</p>
+        <p class="text-lg text-slate-dark leading-relaxed">Beyond advertising, we offer full marketplace management — listing optimisation, A+ Content creation, inventory planning guidance, pricing strategy, and Brand Store development. Amazon rewards sellers who provide the best customer experience, and we make sure every element of your presence on the platform is working toward that goal.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="approach" class="py-20 lg:py-28 bg-sky-tint" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">Our Approach</h2>
+        <p class="text-lg text-slate-dark max-w-2xl mx-auto">A systematic process to unlock profitable Amazon growth.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-electric text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">1</div>
+          <h3 class="text-xl font-heading font-bold text-navy mb-3">Listing Audit</h3>
+          <p class="text-slate-dark">We audit every listing for keyword coverage, content quality, image standards, and competitive positioning. Weak listings waste ad spend — we fix them first.</p>
+        </div>
+        <div class="relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-electric text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">2</div>
+          <h3 class="text-xl font-heading font-bold text-navy mb-3">Advertising Strategy</h3>
+          <p class="text-slate-dark">We build a campaign architecture across Sponsored Products, Brands, and Display — targeting keywords, ASINs, and audiences aligned to your margin and growth goals.</p>
+        </div>
+        <div class="relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-electric text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">3</div>
+          <h3 class="text-xl font-heading font-bold text-navy mb-3">Launch & Optimise</h3>
+          <p class="text-slate-dark">Campaigns launch with careful bid management and daily monitoring. We harvest converting search terms, negate waste, and adjust placements to maximise profitable impressions.</p>
+        </div>
+        <div class="relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          <div class="w-12 h-12 bg-electric text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">4</div>
+          <h3 class="text-xl font-heading font-bold text-navy mb-3">Scale & Expand</h3>
+          <p class="text-slate-dark">Once we've established profitable baselines, we expand into new markets, launch new products strategically, and use Amazon's data to inform broader business decisions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">Why Choose Us</h2>
+        <p class="text-lg text-slate-dark max-w-2xl mx-auto">Amazon expertise from people who've actually built Amazon businesses.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="gradient-border p-8 text-center">
+          <div class="text-4xl font-heading font-extrabold text-electric mb-2">2015</div>
+          <div class="text-sm font-semibold text-navy uppercase tracking-wide mb-2">Selling Since</div>
+          <p class="text-slate-dark text-sm">Our founder has been an active Amazon seller for over a decade — we know the platform inside out.</p>
+        </div>
+        <div class="gradient-border p-8 text-center">
+          <div class="text-4xl font-heading font-extrabold text-electric mb-2">7-Fig</div>
+          <div class="text-sm font-semibold text-navy uppercase tracking-wide mb-2">Revenue Scaled</div>
+          <p class="text-slate-dark text-sm">We've helped multiple sellers break through to 7-figure annual revenue on Amazon.</p>
+        </div>
+        <div class="gradient-border p-8 text-center">
+          <div class="text-4xl font-heading font-extrabold text-electric mb-2">Full</div>
+          <div class="text-sm font-semibold text-navy uppercase tracking-wide mb-2">Stack Service</div>
+          <p class="text-slate-dark text-sm">Advertising, listings, A+ Content, Brand Store, inventory guidance — everything under one roof.</p>
+        </div>
+        <div class="gradient-border p-8 text-center">
+          <div class="text-4xl font-heading font-extrabold text-electric mb-2">Seller</div>
+          <div class="text-sm font-semibold text-navy uppercase tracking-wide mb-2">First Mindset</div>
+          <p class="text-slate-dark text-sm">We think like sellers, not just advertisers. Every decision is measured against real margin and profitability.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28 bg-sky-tint" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="glass-card p-8 sm:p-12 lg:p-16 max-w-4xl mx-auto">
+        <span class="inline-block px-3 py-1 bg-electric/10 text-electric text-sm font-semibold rounded-full mb-6">Case Study</span>
+        <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-4">CFW — From Stagnation to 7-Figure Amazon Revenue</h2>
+        <p class="text-lg text-slate-dark mb-8 leading-relaxed">CFW came to us with a stagnating Amazon presence — decent products but poor visibility and rising ACoS. We rebuilt their entire listing portfolio with keyword-optimised copy and professional imagery, restructured their advertising from scratch with granular Sponsored Products campaigns, and launched Sponsored Brands to capture branded and category searches. Within twelve months, they broke through to 7-figure annual revenue with a sustainable ACoS well below their target threshold.</p>
+        <div class="flex flex-wrap gap-8">
+          <div>
+            <div class="text-3xl font-heading font-extrabold text-electric">7-Figure</div>
+            <div class="text-sm text-slate-dark">Annual Revenue</div>
+          </div>
+          <div>
+            <div class="text-3xl font-heading font-extrabold text-electric">-38%</div>
+            <div class="text-sm text-slate-dark">ACoS Reduction</div>
+          </div>
+          <div>
+            <div class="text-3xl font-heading font-extrabold text-electric">+210%</div>
+            <div class="text-sm text-slate-dark">Organic Rank Improvement</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-10">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+              What's the difference between Sponsored Products, Brands, and Display?
+              <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-slate-dark leading-relaxed">Sponsored Products appear in search results and product pages, targeting shoppers actively searching for items like yours. Sponsored Brands showcase your brand with a custom headline, logo, and multiple products at the top of search results. Sponsored Display reaches audiences both on and off Amazon, including retargeting past viewers. We use all three in combination for maximum visibility.</div>
+          </details>
+          <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+              What are your Amazon management fees?
+              <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-slate-dark leading-relaxed">Our management fees are based on a percentage of ad spend or a flat monthly fee depending on account size and complexity. We provide a detailed proposal after our free audit. For marketplace management (listings, inventory, brand content), we offer separate packages that can be bundled with advertising management.</div>
+          </details>
+          <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+              Do you help with Amazon listing optimisation?
+              <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-slate-dark leading-relaxed">Yes. Listing optimisation is fundamental to Amazon success. We optimise titles, bullet points, descriptions, backend keywords, A+ Content, and main/secondary images. Strong listings convert more traffic from both organic and paid sources, making every pound of ad spend work harder.</div>
+          </details>
+          <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+              Do I need Brand Registry to work with you?
+              <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-slate-dark leading-relaxed">Brand Registry isn't required but it unlocks critical tools: A+ Content, Sponsored Brands, Stores, and brand analytics. If you're not registered, we'll help you through the process. If you're a reseller without brand ownership, we can still run effective Sponsored Products campaigns.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28 bg-navy" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">Ready to Scale Your Amazon Business?</h2>
+      <p class="text-lg text-slate-light mb-8 max-w-2xl mx-auto">Get a free Amazon account audit from a team that's been selling on the platform since 2015. We'll show you exactly where the growth opportunities are.</p>
+      <a href="/free-ads-audit" class="inline-flex items-center justify-center bg-electric text-white font-semibold px-10 py-4 rounded-xl hover:bg-electric-dark transition-colors text-lg">Get Your Free Amazon Audit</a>
+    </div>
+  </section>
+
+</Layout>

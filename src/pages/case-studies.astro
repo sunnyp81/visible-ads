@@ -1,0 +1,116 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Case Studies | Client Results",
+  "description": "Real results for real businesses. See how we've helped our clients achieve 340% ROAS, 7-figure revenue, and sustainable growth.",
+  "url": "https://visible-ads.optimisedwebsite.com/case-studies",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Visible Ads"
+  }
+};
+
+const caseStudies = [
+  {
+    slug: 'cfw',
+    title: 'CFW',
+    subtitle: 'From Stagnation to Success',
+    channels: 'Amazon + Google Ads',
+    metric: '340%',
+    metricLabel: 'ROAS',
+    industry: 'Food & Beverage',
+    description: 'CFW had been running paid campaigns for years but had plateaued. Revenue was flat, ROAS was declining, and they were spending more to stand still. We rebuilt their account structure, realigned their bidding strategy to margin-weighted targets, and launched a coordinated Amazon-Google approach that turned their entire trajectory around.',
+    color: 'from-electric to-cyan-500',
+  },
+  {
+    slug: 'iwholesales',
+    title: 'iWholesales',
+    subtitle: 'Skyrocketing Airsoft Sales',
+    channels: 'Google Ads + Amazon',
+    metric: '+450%',
+    metricLabel: 'Sales',
+    industry: 'eCommerce',
+    description: 'iWholesales needed to break out of a crowded airsoft market where competitors were outspending them three to one. Through granular product-level bidding, aggressive negative keyword management, and a Shopping feed overhaul, we grew their sales by 450% while maintaining profitable ROAS throughout.',
+    color: 'from-electric to-violet-500',
+  },
+  {
+    slug: 'luxury-architecture',
+    title: 'Luxury Architecture',
+    subtitle: 'Premium Lead Gen at Scale',
+    channels: 'Lead Generation',
+    metric: '12x',
+    metricLabel: 'Lead Volume',
+    industry: 'Architecture',
+    description: 'A boutique architecture firm needed high-value leads, not volume for volume\'s sake. We designed a lead generation strategy targeting affluent homeowners planning major renovations, using geo-targeted Search and Display campaigns with bespoke landing pages. Lead volume increased 12x while cost per qualified lead dropped by 60%.',
+    color: 'from-electric to-emerald-500',
+  },
+  {
+    slug: 'sephra',
+    title: 'Sephra Europe',
+    subtitle: 'Exceptional Business Growth',
+    channels: 'Multi-channel',
+    metric: '+£2.1M',
+    metricLabel: 'Revenue',
+    industry: 'Food & Beverage',
+    description: 'Sephra Europe sells commercial chocolate fountains and ingredients across the UK and Europe. We managed their full advertising stack: Google Search, Shopping, Display, Bing, and Amazon. A unified measurement framework and cross-channel budget optimisation drove £2.1M in attributable revenue growth.',
+    color: 'from-electric to-amber-500',
+  },
+];
+---
+
+<Layout title="Case Studies | Client Results | Visible Ads" description="Real results for real businesses. See how we've helped our clients achieve 340% ROAS, 7-figure revenue, and sustainable growth." schema={schema}>
+
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-navy to-navy-light relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white mb-6 leading-tight">Case Studies</h1>
+        <p class="text-lg sm:text-xl text-slate-light leading-relaxed">Real results. Real businesses. Real growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {caseStudies.map((study) => (
+          <a href={`/case-studies/${study.slug}`} class="group glass-card overflow-hidden hover:shadow-xl hover:shadow-electric/10 transition-all duration-300 hover:-translate-y-1">
+            <div class={`h-2 bg-gradient-to-r ${study.color}`}></div>
+            <div class="p-8 sm:p-10">
+              <div class="flex items-center justify-between mb-6">
+                <span class="text-xs font-semibold uppercase tracking-wider text-electric bg-sky-tint px-3 py-1 rounded-full">{study.industry}</span>
+                <span class="text-xs font-medium text-slate">{study.channels}</span>
+              </div>
+              <h2 class="text-2xl font-heading font-bold text-navy mb-1 group-hover:text-electric transition-colors">{study.title}</h2>
+              <p class="text-lg font-heading font-semibold text-slate-dark mb-4">{study.subtitle}</p>
+              <div class="flex items-baseline gap-2 mb-6">
+                <span class="text-5xl font-heading font-extrabold text-electric">{study.metric}</span>
+                <span class="text-lg font-semibold text-slate-dark">{study.metricLabel}</span>
+              </div>
+              <p class="text-slate-dark leading-relaxed mb-6">{study.description}</p>
+              <span class="inline-flex items-center text-sm font-semibold text-electric group-hover:gap-3 gap-2 transition-all">
+                Read full case study
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28 bg-navy" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">Ready for Results Like These?</h2>
+      <p class="text-lg text-slate-light mb-8 max-w-2xl mx-auto">Every one of these clients started with a free ads audit. Yours could be the next success story.</p>
+      <a href="/free-ads-audit" class="inline-flex items-center px-8 py-4 bg-electric text-white font-semibold rounded-lg hover:bg-electric-dark transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-electric/25 text-lg">
+        Get Your Free Audit
+        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+  </section>
+
+</Layout>

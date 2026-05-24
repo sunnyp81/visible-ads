@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://visible-ads.optimisedwebsite.com/sitemap-index.xml
