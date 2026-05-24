@@ -1,0 +1,25 @@
+---
+interface Props {
+  compact?: boolean;
+  dark?: boolean;
+}
+const { compact = false, dark = false } = Astro.props;
+
+const partners = [
+  { name: 'Google Partner 2026', src: '/images/partners/google-partner.webp' },
+  { name: 'Microsoft Advertising Partner 2026', src: '/images/partners/microsoft-partner.webp' },
+  { name: 'Amazon Ads Partner 2026', src: '/images/partners/amazon-partner.webp' },
+  { name: 'Meta Business Partner 2026', src: '/images/partners/meta-partner.webp' },
+  { name: 'UK Search Awards Winner', src: '/images/partners/uk-search-awards.webp' },
+  { name: 'UK eCommerce Awards Finalist', src: '/images/partners/uk-ecommerce-awards.webp' },
+  { name: 'National Digital Awards Finalist', src: '/images/partners/national-digital-awards.webp' },
+];
+---
+
+<div class={`flex flex-wrap justify-center items-center ${compact ? 'gap-6 sm:gap-8' : 'gap-8 sm:gap-10 lg:gap-14'}`} data-animate>
+  {partners.map(p => (
+    <div class={`${compact ? 'w-16 h-12 sm:w-20 sm:h-14' : 'w-24 h-16 sm:w-28 sm:h-20'} flex items-center justify-center ${dark ? 'brightness-0 invert opacity-60 hover:opacity-100' : 'opacity-70 hover:opacity-100'} transition-all duration-300`}>
+      <img src={p.src} alt={p.name} class="max-w-full max-h-full object-contain" loading="lazy" />
+    </div>
+  ))}
+</div>

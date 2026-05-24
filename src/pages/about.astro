@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CountUp from '../components/CountUp.astro';
+import PartnerBadges from '../components/PartnerBadges.astro';
+import ClientLogos from '../components/ClientLogos.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -141,16 +143,14 @@ const certifications = [
         <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">Certifications & Awards</h2>
         <p class="text-lg text-slate-dark">Recognised by the platforms we manage and the industry we serve.</p>
       </div>
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 max-w-4xl mx-auto">
-        {certifications.map((cert) => (
-          <div class="glass-card p-6 text-center hover:shadow-lg transition-shadow">
-            <div class="w-14 h-14 rounded-xl bg-sky-tint flex items-center justify-center mx-auto mb-3">
-              <span class="text-lg font-heading font-bold text-electric">{cert.icon}</span>
-            </div>
-            <p class="text-xs font-semibold text-slate-dark leading-tight">{cert.name}</p>
-          </div>
-        ))}
-      </div>
+      <PartnerBadges />
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28 bg-sky-tint" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy text-center mb-12">Clients We've Helped Grow</h2>
+      <ClientLogos />
     </div>
   </section>
 

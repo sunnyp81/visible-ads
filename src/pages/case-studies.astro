@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import ClientLogos from '../components/ClientLogos.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -99,6 +100,13 @@ const caseStudies = [
           </a>
         ))}
       </div>
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center text-sm font-medium text-slate-light uppercase tracking-widest mb-8">More Brands We Work With</p>
+      <ClientLogos compact />
     </div>
   </section>
 

@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import CountUp from '../components/CountUp.astro';
 import GrowthChart from '../components/GrowthChart.astro';
+import ClientLogos from '../components/ClientLogos.astro';
+import PartnerBadges from '../components/PartnerBadges.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -60,12 +62,10 @@ const schema = {
       </div>
     </div>
     <div class="mt-16 pt-12 border-t border-gray-200" data-animate>
-      <p class="text-center text-sm font-medium text-slate-light uppercase tracking-widest mb-6">Trusted Partners</p>
-      <div class="flex flex-wrap justify-center gap-4 sm:gap-6">
-        {['Google Partner', 'Microsoft Partner', 'Amazon Ads Partner', 'Meta Business Partner', 'UK Search Awards Winner'].map(partner => (
-          <span class="px-5 py-2.5 bg-white border border-gray-200 rounded-full text-sm font-semibold text-navy shadow-sm">{partner}</span>
-        ))}
-      </div>
+      <PartnerBadges />
+    </div>
+    <div class="mt-10 pt-10 border-t border-gray-100" data-animate>
+      <ClientLogos />
     </div>
   </div>
 </section>

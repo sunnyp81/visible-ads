@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import GrowthChart from '../components/GrowthChart.astro';
+import PartnerBadges from '../components/PartnerBadges.astro';
+import ClientLogos from '../components/ClientLogos.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -82,6 +84,12 @@ const schema = {
           <a href="#approach" class="inline-flex items-center justify-center text-white font-medium px-8 py-4 rounded-xl border border-white/20 hover:bg-white/10 transition-colors">See Our Approach</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-sky-tint border-y border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PartnerBadges compact />
     </div>
   </section>
 
@@ -237,6 +245,12 @@ const schema = {
           </details>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-20" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ClientLogos />
     </div>
   </section>
 
