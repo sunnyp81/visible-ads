@@ -86,28 +86,28 @@ const faqs = [
           </div>
         </div>
 
-        <div class="glass-card p-8 sm:p-10 gradient-border">
+        <div class="bg-white rounded-2xl p-8 sm:p-10 shadow-xl border border-gray-200 ring-1 ring-electric/10">
           <h2 class="text-2xl font-heading font-bold text-navy mb-6">Request Your Audit</h2>
           <form id="audit-form" class="space-y-5">
             <div>
               <label for="name" class="block text-sm font-medium text-navy mb-1.5">Name</label>
-              <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-slate-dark" placeholder="Your full name" />
+              <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-slate-dark" placeholder="Your full name" />
             </div>
             <div>
               <label for="email" class="block text-sm font-medium text-navy mb-1.5">Email</label>
-              <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-slate-dark" placeholder="you@company.com" />
+              <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-slate-dark" placeholder="you@company.com" />
             </div>
             <div>
               <label for="phone" class="block text-sm font-medium text-navy mb-1.5">Phone</label>
-              <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-slate-dark" placeholder="+44 7XXX XXXXXX" />
+              <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-slate-dark" placeholder="+44 7XXX XXXXXX" />
             </div>
             <div>
               <label for="website" class="block text-sm font-medium text-navy mb-1.5">Website URL</label>
-              <input type="url" id="website" name="website" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-slate-dark" placeholder="https://yoursite.com" />
+              <input type="url" id="website" name="website" required class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-slate-dark" placeholder="https://yoursite.com" />
             </div>
             <div>
               <label for="budget" class="block text-sm font-medium text-navy mb-1.5">Monthly Ad Spend</label>
-              <select id="budget" name="budget" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-slate-dark bg-white">
+              <select id="budget" name="budget" required class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-slate-dark">
                 <option value="" disabled selected>Select your monthly spend</option>
                 <option value="under-5k">Under £5,000</option>
                 <option value="5k-20k">£5,000 - £20,000</option>
@@ -117,7 +117,7 @@ const faqs = [
             </div>
             <div>
               <label for="message" class="block text-sm font-medium text-navy mb-1.5">Message</label>
-              <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-slate-dark resize-none" placeholder="Tell us about your goals and current challenges..."></textarea>
+              <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-slate-dark resize-none" placeholder="Tell us about your goals and current challenges..."></textarea>
             </div>
             <button type="submit" class="w-full px-6 py-4 bg-electric text-white font-semibold rounded-lg hover:bg-electric-dark transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-electric/25 text-lg">
               Request My Free Audit
@@ -190,7 +190,7 @@ const faqs = [
       <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-12 text-center">Frequently Asked Questions</h2>
       <div class="space-y-6">
         {faqs.map((faq) => (
-          <div class="glass-card p-6 sm:p-8">
+          <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
             <h3 class="text-lg font-heading font-bold text-navy mb-3">{faq.question}</h3>
             <p class="text-slate-dark leading-relaxed">{faq.answer}</p>
           </div>
