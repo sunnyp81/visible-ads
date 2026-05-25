@@ -6,7 +6,7 @@ export const GET: APIRoute = () => {
     { title: 'What Is eCRO? A Complete Guide to eCommerce Conversion Rate Optimisation', slug: 'what-is-ecro', date: '2024-11-10' },
     { title: 'How Much Do Amazon Ads Cost in the UK?', slug: 'amazon-ads-cost-uk', date: '2024-11-05' },
     { title: 'PPC vs SEO: Which Should You Invest In?', slug: 'ppc-vs-seo', date: '2024-10-28' },
-    { title: 'How Much Does Google Ads Cost in the UK in 2025?', slug: 'how-much-google-ads-cost-uk', date: '2024-10-20' },
+    { title: 'How Much Does Google Ads Cost in the UK in 2026?', slug: 'how-much-google-ads-cost-uk', date: '2024-10-20' },
   ];
 
   const items = posts.map(p => `
