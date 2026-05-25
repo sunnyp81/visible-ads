@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import PartnerBadges from '../components/PartnerBadges.astro';
 import GoogleReviews from '../components/GoogleReviews.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -43,6 +44,8 @@ const faqs = [
 ---
 
 <Layout title="Free Ads Audit | Visible Ads" description="Get a comprehensive, no-obligation audit of your Google Ads, Bing Ads, or Amazon campaigns. Discover exactly where you're leaving money on the table." schema={schema}>
+
+  <Breadcrumb items={[{label: 'Home', href: '/'}, {label: 'Free Ads Audit'}]} />
 
   <section class="relative overflow-hidden py-20 lg:py-28 bg-white" data-animate>
     <div class="absolute top-20 left-10 w-32 h-32 bg-electric/5 rounded-full blur-3xl"></div>

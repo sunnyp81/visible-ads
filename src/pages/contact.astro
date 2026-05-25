@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import GoogleReviews from '../components/GoogleReviews.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -35,6 +36,8 @@ const schema = {
 ---
 
 <Layout title="Contact Visible Ads | Get In Touch" description="Contact Visible Ads for Google Ads, Bing Ads, SEO, and Amazon advertising enquiries. Kingston-Upon-Thames, UK." schema={schema}>
+
+  <Breadcrumb items={[{label: 'Home', href: '/'}, {label: 'Contact'}]} />
 
   <section class="py-20 lg:py-28 bg-white" data-animate>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

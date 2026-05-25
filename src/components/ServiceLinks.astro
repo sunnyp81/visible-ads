@@ -1,0 +1,31 @@
+---
+interface Props {
+  current?: string;
+}
+const { current } = Astro.props;
+
+const services = [
+  { name: 'Google Ads', href: '/google-ads', description: 'Our flagship PPC management service' },
+  { name: 'Bing Ads', href: '/bing-ads', description: 'Lower-cost high-intent search traffic' },
+  { name: 'Paid Social', href: '/paid-social', description: 'Meta, LinkedIn & TikTok campaigns' },
+  { name: 'Amazon', href: '/amazon', description: 'Marketplace advertising & DSP' },
+  { name: 'eCRO', href: '/ecro', description: 'Conversion rate optimisation' },
+  { name: 'SEO', href: '/seo', description: 'Organic search visibility' },
+];
+---
+<nav aria-label="Our services" class="bg-sky-tint rounded-2xl p-6 sm:p-8">
+  <h3 class="font-heading text-lg font-bold text-navy mb-4">Explore Our Services</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+    {services.filter(s => s.href !== current).map(s => (
+      <a href={s.href} class="group flex flex-col p-3 rounded-xl bg-white border border-gray-100 hover:border-electric/30 hover:shadow-sm transition-all">
+        <span class="text-sm font-semibold text-navy group-hover:text-electric transition-colors">{s.name}</span>
+        <span class="text-xs text-slate mt-0.5">{s.description}</span>
+      </a>
+    ))}
+  </div>
+  <div class="mt-4 pt-4 border-t border-gray-200">
+    <a href="/google-ads" class="text-sm font-semibold text-electric hover:text-electric-dark transition-colors">
+      ← Back to Google Ads (Hub)
+    </a>
+  </div>
+</nav>

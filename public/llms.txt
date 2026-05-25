@@ -1,20 +1,64 @@
-# Visible Ads
+# Visible Ads — Award-Winning PPC & SEM Consultancy
 
-> Award-winning search engine marketing consultancy based in Kingston-Upon-Thames, UK.
+> Visible Ads is a boutique search engine marketing consultancy based in Kingston-Upon-Thames, UK. We specialise in Google Ads, Bing Ads, Amazon Advertising, Paid Social, eCRO, and SEO for businesses generating £1M+ revenue.
 
-Visible Ads is a boutique SEM agency specialising in Google Ads, Bing Ads, SEO, paid social, Amazon advertising, and conversion rate optimisation (eCRO). Founded by Boh, with 20+ years in digital media.
+## Core Services
+- Google Ads Management (our flagship service) — /google-ads
+- Bing Ads Management — /bing-ads
+- Paid Social (Meta, LinkedIn, TikTok) — /paid-social
+- Amazon Advertising — /amazon
+- eCommerce Conversion Rate Optimisation (eCRO) — /ecro
+- SEO — /seo
 
-## Services
-- Google Ads Management (Google Partner)
-- Bing Ads / Microsoft Advertising (Microsoft Partner)
-- SEO (Organic Search Growth)
-- Paid Social (Meta Business Partner)
-- Amazon Advertising (Amazon Ads Partner)
-- eCRO (eCommerce Conversion Rate Optimisation)
+## Key Results
+- 1,110% ROAS for CFW (Food & Beverage)
+- £5.1M revenue growth for Sephra Europe
+- 450% sales growth for iWholesales
+- 12x lead volume for Luxury Architecture firm
+
+## Methodology
+We follow our proven 4-phase Blueprint: Discover → Strategise → Execute → Optimise
+
+## Credentials
+- Google Partner certified
+- Microsoft Advertising Partner
+- Amazon Ads Partner
+- Meta Business Partner
+- UK Search Awards Winner
+- 50+ years combined team experience
+- 5.0 Google Reviews rating
+
+## Team
+- Boh — Founder & PPC Specialist (20+ years digital media)
+- Joe — Digital Marketing Manager (SEO + CRO + Google Ads)
+- Ben — Senior Marketing & PPC Strategist (active since 2008)
+- Tom — Search Advertising Specialist (15+ years, 100+ niches)
 
 ## Contact
-- Website: https://www.visible-ads.com
 - Email: boh@visible-ads.com
-- Phone: +44 7810 47679
-- Location: Kingston-Upon-Thames, UK
-- LinkedIn: https://www.linkedin.com/company/visible-ads
+- Phone: +44 7810 477679
+- Location: Kingston-Upon-Thames, Surrey, UK
+- Website: https://visible-ads.optimisedwebsite.com
+
+## Pages
+- Home: /
+- Google Ads (Hub): /google-ads
+- Bing Ads: /bing-ads
+- Paid Social: /paid-social
+- Amazon: /amazon
+- eCRO: /ecro
+- SEO: /seo
+- Blueprint (Methodology): /blueprint
+- Case Studies: /case-studies
+- CFW Case Study: /case-studies/cfw
+- Sephra Case Study: /case-studies/sephra
+- iWholesales Case Study: /case-studies/iwholesales
+- Luxury Architecture Case Study: /case-studies/luxury-architecture
+- About: /about
+- Contact: /contact
+- Free Ads Audit: /free-ads-audit
+- PPC London: /ppc-london
+- Kingston-Upon-Thames: /kingston-upon-thames
+- Google Ads + SEO: /google-ads-seo
+- Amazon + Google Ads: /amazon-google-ads
+- Blog: /blog
