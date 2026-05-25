@@ -68,19 +68,19 @@ const caseStudies = [
     <div class="absolute inset-0 dot-pattern opacity-5"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="max-w-3xl mx-auto text-center">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white mb-6 leading-tight">Case Studies</h1>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white mb-6 leading-tight">Case Studies</h1>
         <p class="text-lg sm:text-xl text-slate-light leading-relaxed">Real results. Real businesses. Real growth.</p>
       </div>
     </div>
   </section>
 
-  <section class="py-20 lg:py-28" data-animate>
+  <section class="py-20 lg:py-28 bg-white" data-animate>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
         {caseStudies.map((study) => (
-          <a href={`/case-studies/${study.slug}`} class="group glass-card overflow-hidden hover:shadow-xl hover:shadow-electric/10 transition-all duration-300 hover:-translate-y-1">
+          <a href={`/case-studies/${study.slug}`} class="group relative bg-white rounded-2xl overflow-hidden shadow-md border border-gray-100 ring-1 ring-electric/10 hover:ring-electric/30 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
             <div class={`h-2 bg-gradient-to-r ${study.color}`}></div>
-            <div class="p-8 sm:p-10">
+            <div class="p-6 sm:p-8 lg:p-10">
               <div class="flex items-center justify-between mb-6">
                 <span class="text-xs font-semibold uppercase tracking-wider text-electric bg-sky-tint px-3 py-1 rounded-full">{study.industry}</span>
                 <span class="text-xs font-medium text-slate">{study.channels}</span>
@@ -105,7 +105,7 @@ const caseStudies = [
 
   <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p class="text-center text-sm font-medium text-slate-light uppercase tracking-widest mb-8">More Brands We Work With</p>
+      <p class="text-center text-sm font-medium text-slate-dark uppercase tracking-widest mb-8">More Brands We Work With</p>
       <ClientLogos compact />
     </div>
   </section>
@@ -114,7 +114,7 @@ const caseStudies = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">Ready for Results Like These?</h2>
       <p class="text-lg text-slate-light mb-8 max-w-2xl mx-auto">Every one of these clients started with a free ads audit. Yours could be the next success story.</p>
-      <a href="/free-ads-audit" class="inline-flex items-center px-8 py-4 bg-electric text-white font-semibold rounded-lg hover:bg-electric-dark transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-electric/25 text-lg">
+      <a href="/free-ads-audit" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-electric text-white font-semibold rounded-lg hover:bg-electric-dark transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-electric/25 text-lg">
         Get Your Free Audit
         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
       </a>

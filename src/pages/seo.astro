@@ -61,63 +61,69 @@ const schema = {
 
 <Layout title="SEO Services | Organic Search Growth | Visible Ads" description="Strategic SEO services that complement your paid campaigns. Technical audits, content strategy, and sustainable organic growth." schema={schema}>
 
+  <!-- Hero -->
   <section class="relative py-20 lg:py-28 overflow-hidden" data-animate>
     <div class="absolute inset-0 bg-gradient-to-br from-navy to-navy-light"></div>
     <div class="absolute inset-0 dot-pattern opacity-10"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl">
         <span class="inline-block px-4 py-1.5 bg-electric/20 text-electric-light text-sm font-medium rounded-full mb-6">Organic Search Growth</span>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-extrabold text-white leading-tight mb-6">SEO That Compounds Your Paid Search Investment</h1>
-        <p class="text-lg sm:text-xl text-slate-light mb-8 leading-relaxed">PPC captures demand. SEO creates it. Together, they own the search results page. Our SEO services are built to amplify the ROI of your entire digital marketing stack.</p>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white leading-tight mb-6">SEO That Compounds Your Paid Search Investment</h1>
+        <p class="text-lg sm:text-xl text-slate-light mb-4 leading-relaxed">PPC captures demand. SEO creates it. Together, they own the search results page. Our SEO services are built to amplify the ROI of your entire digital marketing stack.</p>
+        <p class="text-sm text-slate-light/80 mb-8">Part of our integrated <a href="/google-ads" class="text-electric-light underline hover:text-white">Google Ads-led growth strategy</a></p>
         <div class="flex flex-col sm:flex-row gap-4">
-          <a href="/free-ads-audit" class="inline-flex items-center justify-center bg-electric text-white font-semibold px-8 py-4 rounded-xl hover:bg-electric-dark transition-colors text-lg">Get Your Free SEO Audit</a>
-          <a href="#approach" class="inline-flex items-center justify-between text-white font-medium px-8 py-4 rounded-xl border border-white/20 hover:bg-white/10 transition-colors">See Our Approach</a>
+          <a href="/free-ads-audit" class="w-full sm:w-auto inline-flex items-center justify-center bg-electric text-white font-semibold px-8 py-4 rounded-xl hover:bg-electric-dark transition-colors text-lg">Get Your Free SEO Audit</a>
+          <a href="#approach" class="w-full sm:w-auto inline-flex items-center justify-center text-white font-medium px-8 py-4 rounded-xl border border-white/20 hover:bg-white/10 transition-colors">See Our Approach</a>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Partner Badges -->
   <section class="py-12 bg-sky-tint border-y border-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <PartnerBadges compact />
     </div>
   </section>
 
-  <section class="py-20 lg:py-28" data-animate>
+  <!-- What We Do -->
+  <section class="py-20 lg:py-28 bg-white" data-animate>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto">
         <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-8">What We Do</h2>
         <p class="text-lg text-slate-dark mb-6 leading-relaxed">We deliver SEO that works alongside your paid campaigns to dominate the search results page. When prospects see your brand in both paid and organic results, click-through rates increase by up to 30%. That synergy is what makes our approach different — we don't treat SEO as a separate channel, we treat it as a force multiplier for your entire search strategy.</p>
         <p class="text-lg text-slate-dark mb-6 leading-relaxed">Our technical audits uncover the crawling, indexing, and performance issues that silently throttle your organic visibility. From Core Web Vitals and site architecture to structured data and internal linking, we fix the foundations before building on top of them. Every technical recommendation is prioritised by impact so you see results, not just a list of issues.</p>
-        <p class="text-lg text-slate-dark leading-relaxed">Content strategy is where SEO compounds. We identify the topics, questions, and intent patterns your audience searches for, then build content that earns rankings and drives conversions. Combined with strategic link building and digital PR, your organic presence grows month over month — reducing your long-term dependence on paid traffic while increasing overall profitability.</p>
+        <p class="text-lg text-slate-dark leading-relaxed">Content strategy is where SEO compounds. We identify the topics, questions, and intent patterns your audience searches for, then build content that earns rankings and drives conversions. Combined with our <a href="/google-ads" class="text-electric underline hover:text-electric-dark">Google Ads management</a> and <a href="/ecro" class="text-electric underline hover:text-electric-dark">conversion rate optimisation</a>, your organic presence grows month over month — reducing your long-term dependence on paid traffic while increasing overall profitability.</p>
       </div>
     </div>
   </section>
 
+  <!-- Approach -->
   <section id="approach" class="py-20 lg:py-28 bg-sky-tint" data-animate>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">Our Approach</h2>
         <p class="text-lg text-slate-dark max-w-2xl mx-auto">Systematic SEO that builds sustainable organic growth.</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-electric text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">1</div>
+      <div class="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="hidden lg:block absolute top-10 left-[calc(12.5%+24px)] right-[calc(12.5%+24px)] h-0.5 bg-electric/20"></div>
+        <div class="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300">
+          <div class="relative z-10 w-12 h-12 bg-electric text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">1</div>
           <h3 class="text-xl font-heading font-bold text-navy mb-3">Technical Audit</h3>
           <p class="text-slate-dark">We crawl your entire site to identify technical barriers — crawl errors, slow pages, broken links, missing structured data, and indexing issues that suppress your rankings.</p>
         </div>
-        <div class="relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-electric text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">2</div>
+        <div class="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300">
+          <div class="relative z-10 w-12 h-12 bg-electric text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">2</div>
           <h3 class="text-xl font-heading font-bold text-navy mb-3">Content Strategy</h3>
           <p class="text-slate-dark">We map your keyword landscape, identify content gaps, and build an editorial calendar targeting topics with proven commercial intent and realistic ranking potential.</p>
         </div>
-        <div class="relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-electric text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">3</div>
+        <div class="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300">
+          <div class="relative z-10 w-12 h-12 bg-electric text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">3</div>
           <h3 class="text-xl font-heading font-bold text-navy mb-3">On-Page Optimisation</h3>
           <p class="text-slate-dark">We optimise titles, meta descriptions, headings, internal links, and content structure across your priority pages to maximise relevance and click-through rate.</p>
         </div>
-        <div class="relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-          <div class="w-12 h-12 bg-electric text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">4</div>
+        <div class="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-all duration-300">
+          <div class="relative z-10 w-12 h-12 bg-electric text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">4</div>
           <h3 class="text-xl font-heading font-bold text-navy mb-3">Link Building & Authority</h3>
           <p class="text-slate-dark">We earn high-quality backlinks through digital PR, strategic partnerships, and content-led outreach that builds your domain authority and reinforces topical relevance.</p>
         </div>
@@ -125,24 +131,25 @@ const schema = {
     </div>
   </section>
 
-  <section class="py-20 lg:py-28" data-animate>
+  <!-- Why Choose Us -->
+  <section class="py-20 lg:py-28 bg-white" data-animate>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
         <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">Why Choose Us</h2>
         <p class="text-lg text-slate-dark max-w-2xl mx-auto">SEO built for businesses that already run paid search.</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="gradient-border p-8 text-center">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-md border border-gray-100 ring-1 ring-electric/10 hover:ring-electric/30 hover:shadow-lg transition-all duration-300 text-center">
           <div class="text-4xl font-heading font-extrabold text-electric mb-2">+30%</div>
           <div class="text-sm font-semibold text-navy uppercase tracking-wide mb-2">Combined CTR Lift</div>
           <p class="text-slate-dark text-sm">Brands appearing in both paid and organic results see significantly higher click-through rates than either channel alone.</p>
         </div>
-        <div class="gradient-border p-8 text-center">
+        <div class="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-md border border-gray-100 ring-1 ring-electric/10 hover:ring-electric/30 hover:shadow-lg transition-all duration-300 text-center">
           <div class="text-4xl font-heading font-extrabold text-electric mb-2">£0</div>
           <div class="text-sm font-semibold text-navy uppercase tracking-wide mb-2">Cost Per Organic Click</div>
           <p class="text-slate-dark text-sm">Once you rank, every click is free. SEO compounds over time — the investment today pays dividends for years.</p>
         </div>
-        <div class="gradient-border p-8 text-center">
+        <div class="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-md border border-gray-100 ring-1 ring-electric/10 hover:ring-electric/30 hover:shadow-lg transition-all duration-300 text-center">
           <div class="text-4xl font-heading font-extrabold text-electric mb-2">PPC+SEO</div>
           <div class="text-sm font-semibold text-navy uppercase tracking-wide mb-2">Integrated Strategy</div>
           <p class="text-slate-dark text-sm">We use your PPC data to inform SEO priorities and vice versa — no siloed channels, just coordinated growth.</p>
@@ -151,7 +158,8 @@ const schema = {
     </div>
   </section>
 
-  <section class="py-20 lg:py-28 bg-sky-tint" data-animate>
+  <!-- Case Study -->
+  <section class="py-20 lg:py-28 bg-gray-50" data-animate>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="glass-card p-8 sm:p-12 lg:p-16 max-w-4xl mx-auto">
         <span class="inline-block px-3 py-1 bg-electric/10 text-electric text-sm font-semibold rounded-full mb-6">Case Study</span>
@@ -175,7 +183,8 @@ const schema = {
     </div>
   </section>
 
-  <section class="py-20 lg:py-28" data-animate>
+  <!-- FAQ -->
+  <section class="py-20 lg:py-28 bg-sky-tint" data-animate>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto">
         <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-10">Frequently Asked Questions</h2>
@@ -213,11 +222,32 @@ const schema = {
     </div>
   </section>
 
-  <section class="py-20 lg:py-28 bg-navy" data-animate>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+  <!-- Related Services -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-heading font-bold text-navy text-center mb-8">Related Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+        <a href="/google-ads" class="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-md border border-gray-100 ring-1 ring-electric/10 hover:ring-electric/30 hover:shadow-lg transition-all duration-300">
+          <h3 class="text-lg font-heading font-bold text-navy mb-2 group-hover:text-electric transition-colors">Google Ads Management</h3>
+          <p class="text-slate-dark text-sm mb-3">Our core PPC service — capture demand instantly while your organic rankings build.</p>
+          <span class="text-electric text-sm font-medium inline-flex items-center gap-1">Learn more <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/ecro" class="group relative bg-white rounded-2xl p-6 sm:p-8 shadow-md border border-gray-100 ring-1 ring-electric/10 hover:ring-electric/30 hover:shadow-lg transition-all duration-300">
+          <h3 class="text-lg font-heading font-bold text-navy mb-2 group-hover:text-electric transition-colors">Conversion Rate Optimisation</h3>
+          <p class="text-slate-dark text-sm mb-3">Convert more of your organic traffic into revenue through data-driven testing.</p>
+          <span class="text-electric text-sm font-medium inline-flex items-center gap-1">Learn more <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative py-20 lg:py-28 bg-navy" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">Ready to Own the Organic Results?</h2>
       <p class="text-lg text-slate-light mb-8 max-w-2xl mx-auto">Get a free technical SEO audit that shows you exactly where your organic visibility is being held back — and how to fix it.</p>
-      <a href="/free-ads-audit" class="inline-flex items-center justify-center bg-electric text-white font-semibold px-10 py-4 rounded-xl hover:bg-electric-dark transition-colors text-lg">Get Your Free SEO Audit</a>
+      <a href="/free-ads-audit" class="w-full sm:w-auto inline-flex items-center justify-center bg-electric text-white font-semibold px-10 py-4 rounded-xl hover:bg-electric-dark transition-colors text-lg">Get Your Free SEO Audit</a>
     </div>
   </section>
 

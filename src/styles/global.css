@@ -26,15 +26,17 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: var(--font-body);
-  color: var(--color-slate-dark);
-  background: var(--color-white);
-}
+@layer base {
+  body {
+    font-family: var(--font-body);
+    color: var(--color-slate-dark);
+    background: var(--color-white);
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  color: var(--color-navy);
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--color-navy);
+  }
 }
 
 @keyframes fade-up {
@@ -60,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 .gradient-border {
   position: relative;
   border-radius: 1rem;
-  background: var(--color-white);
+  background: #FFFFFF;
 }
 
 .gradient-border::before {
@@ -73,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(37, 99, 235, 0.1);
   border-radius: 1rem;
