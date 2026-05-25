@@ -101,3 +101,14 @@ html {
   background-image: radial-gradient(circle, var(--color-gray-200) 1px, transparent 1px);
   background-size: 24px 24px;
 }
+
+::view-transition-old(root) {
+  animation: fade-out 0.2s ease-out;
+}
+::view-transition-new(root) {
+  animation: fade-in 0.3s ease-in;
+}
+@keyframes fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
