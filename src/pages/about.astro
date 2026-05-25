@@ -102,9 +102,11 @@ const certifications = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl mx-auto">
         <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-8">Our Story</h2>
-        <p class="text-lg text-slate-dark leading-relaxed mb-6">Visible Ads was founded by Boh with a simple conviction: businesses deserve advertising partners who care about their bottom line as much as they do. After two decades in digital media, managing campaigns for brands of every size, he saw the same pattern repeated. Agencies charging premium fees for cookie-cutter work, leaving clients without transparency and without results.</p>
-        <p class="text-lg text-slate-dark leading-relaxed mb-6">We built Visible Ads to be the opposite. A boutique consultancy where every client gets senior-level attention, every campaign is built bespoke, and every decision is driven by data and a relentless focus on measurable ROI. No account managers reading from a script. No junior staff learning on your budget.</p>
-        <p class="text-lg text-slate-dark leading-relaxed">Today, we manage advertising across Google, Bing, Amazon, Meta, and more for clients ranging from ambitious start-ups to established eCommerce brands turning over seven figures. Our size is deliberate. It means we can be selective about who we work with and give every client the attention they deserve.</p>
+        <div class="border-l-4 border-electric pl-8">
+          <p class="text-lg text-slate-dark leading-relaxed mb-6">Visible Ads was founded by Boh with a simple conviction: businesses deserve advertising partners who care about their bottom line as much as they do. After two decades in digital media, managing campaigns for brands of every size, he saw the same pattern repeated. Agencies charging premium fees for cookie-cutter work, leaving clients without transparency and without results.</p>
+          <p class="text-lg text-slate-dark leading-relaxed mb-6">We built Visible Ads to be the opposite. A boutique consultancy where every client gets senior-level attention, every campaign is built bespoke, and every decision is driven by data and a relentless focus on measurable ROI. No account managers reading from a script. No junior staff learning on your budget.</p>
+          <p class="text-lg text-slate-dark leading-relaxed">Today, we manage advertising across Google, Bing, Amazon, Meta, and more for clients ranging from ambitious start-ups to established eCommerce brands turning over seven figures. Our size is deliberate. It means we can be selective about who we work with and give every client the attention they deserve.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -117,7 +119,7 @@ const certifications = [
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl mx-auto">
         {team.map((member) => (
-          <div class="bg-white rounded-2xl p-8 text-center shadow-sm border border-gray-100">
+          <div class="bg-white rounded-2xl p-8 text-center shadow-sm border border-gray-100 transition-transform duration-300 hover:-translate-y-1">
             {member.hasImage ? (
               <img src={member.image} alt={member.name} class="w-28 h-28 rounded-full mx-auto mb-6 object-cover ring-4 ring-electric/20" loading="lazy" />
             ) : (
