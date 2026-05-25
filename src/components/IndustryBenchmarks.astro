@@ -14,7 +14,7 @@ const industries = [
       <button
         class:list={[
           'benchmark-tab px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200',
-          i === 0 ? 'bg-electric text-white shadow-lg shadow-electric/25' : 'bg-sky-tint text-slate-dark hover:bg-electric/10'
+          i === 0 ? 'bg-electric text-white shadow-lg shadow-electric/25' : 'bg-sky-tint text-gray-700 hover:bg-electric/10'
         ]}
         data-industry={ind.id}
         data-cpc={ind.cpc}
@@ -30,7 +30,7 @@ const industries = [
   <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
     <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
       <div class="flex items-center justify-between mb-3">
-        <p class="text-sm font-medium text-slate-dark">Avg. Cost Per Click</p>
+        <p class="text-sm font-medium text-gray-700">Avg. Cost Per Click</p>
         <p id="bm-cpc-val" class="font-heading text-xl font-bold text-navy">£0.88</p>
       </div>
       <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
@@ -39,7 +39,7 @@ const industries = [
     </div>
     <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
       <div class="flex items-center justify-between mb-3">
-        <p class="text-sm font-medium text-slate-dark">Click-Through Rate</p>
+        <p class="text-sm font-medium text-gray-700">Click-Through Rate</p>
         <p id="bm-ctr-val" class="font-heading text-xl font-bold text-navy">2.69%</p>
       </div>
       <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
@@ -48,7 +48,7 @@ const industries = [
     </div>
     <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
       <div class="flex items-center justify-between mb-3">
-        <p class="text-sm font-medium text-slate-dark">Conversion Rate</p>
+        <p class="text-sm font-medium text-gray-700">Conversion Rate</p>
         <p id="bm-conv-val" class="font-heading text-xl font-bold text-navy">2.81%</p>
       </div>
       <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
@@ -57,7 +57,7 @@ const industries = [
     </div>
     <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
       <div class="flex items-center justify-between mb-3">
-        <p class="text-sm font-medium text-slate-dark">Cost Per Lead</p>
+        <p class="text-sm font-medium text-gray-700">Cost Per Lead</p>
         <p id="bm-cpl-val" class="font-heading text-xl font-bold text-navy">£33</p>
       </div>
       <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
@@ -95,9 +95,9 @@ const industries = [
 
       tabs.forEach((t) => {
         t.classList.remove('bg-electric', 'text-white', 'shadow-lg', 'shadow-electric/25');
-        t.classList.add('bg-sky-tint', 'text-slate-dark');
+        t.classList.add('bg-sky-tint', 'text-gray-700');
       });
-      tab.classList.remove('bg-sky-tint', 'text-slate-dark');
+      tab.classList.remove('bg-sky-tint', 'text-gray-700');
       tab.classList.add('bg-electric', 'text-white', 'shadow-lg', 'shadow-electric/25');
     }
 

@@ -14,7 +14,7 @@ const maxValue = Math.max(...bars.map(b => b.value));
     {bars.map((bar, i) => (
       <div class="growth-bar-row">
         <div class="flex justify-between items-center mb-1.5">
-          <span class="text-sm font-medium text-slate-dark">{bar.label}</span>
+          <span class="text-sm font-medium text-gray-700">{bar.label}</span>
           <span class="text-sm font-bold text-electric bar-value" data-target={bar.value}>0%</span>
         </div>
         <div class="h-3 bg-gray-100 rounded-full overflow-hidden">

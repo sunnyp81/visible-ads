@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 import ClientLogos from '../components/ClientLogos.astro';
 import PartnerBadges from '../components/PartnerBadges.astro';
@@ -98,12 +98,12 @@ const caseStudies = [
                 <span class="text-xs font-medium text-slate">{study.channels}</span>
               </div>
               <h2 class="text-2xl font-heading font-bold text-navy mb-1 group-hover:text-electric transition-colors">{study.title}</h2>
-              <p class="text-lg font-heading font-semibold text-slate-dark mb-4">{study.subtitle}</p>
+              <p class="text-lg font-heading font-semibold text-gray-700 mb-4">{study.subtitle}</p>
               <div class="flex items-baseline gap-2 mb-6">
                 <span class="text-5xl font-heading font-extrabold text-electric index-metric" data-count-target={study.metric}>{study.metric}</span>
-                <span class="text-lg font-semibold text-slate-dark">{study.metricLabel}</span>
+                <span class="text-lg font-semibold text-gray-700">{study.metricLabel}</span>
               </div>
-              <p class="text-slate-dark leading-relaxed mb-6">{study.description}</p>
+              <p class="text-gray-700 leading-relaxed mb-6">{study.description}</p>
               <span class="inline-flex items-center text-sm font-semibold text-electric group-hover:gap-3 gap-2 transition-all">
                 Read full case study
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
@@ -117,7 +117,7 @@ const caseStudies = [
 
   <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <p class="text-center text-sm font-medium text-slate-dark uppercase tracking-widest mb-8">More Brands We Work With</p>
+      <p class="text-center text-sm font-medium text-gray-700 uppercase tracking-widest mb-8">More Brands We Work With</p>
       <ClientLogos compact />
     </div>
   </section>
