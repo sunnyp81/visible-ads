@@ -3,22 +3,33 @@ import Layout from '../layouts/Layout.astro';
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "name": "Contact Visible Ads",
-  "description": "Contact Visible Ads for Google Ads, Bing Ads, SEO, and Amazon advertising enquiries.",
-  "url": "https://visible-ads.optimisedwebsite.com/contact",
-  "mainEntity": {
-    "@type": "Organization",
-    "name": "Visible Ads",
-    "email": "boh@visible-ads.com",
-    "telephone": "+447810476799",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Kingston-Upon-Thames",
-      "addressRegion": "Surrey",
-      "addressCountry": "GB"
+  "@graph": [
+    {
+      "@type": "ContactPage",
+      "name": "Contact Visible Ads",
+      "description": "Contact Visible Ads for Google Ads, Bing Ads, SEO, and Amazon advertising enquiries.",
+      "url": "https://visible-ads.optimisedwebsite.com/contact",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Visible Ads",
+        "email": "boh@visible-ads.com",
+        "telephone": "+447810476799",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kingston-Upon-Thames",
+          "addressRegion": "Surrey",
+          "addressCountry": "GB"
+        }
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.optimisedwebsite.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://visible-ads.optimisedwebsite.com/contact" }
+      ]
     }
-  }
+  ]
 };
 ---
 

@@ -1,17 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import ClientLogos from '../components/ClientLogos.astro';
+import PartnerBadges from '../components/PartnerBadges.astro';
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "Case Studies | Client Results",
-  "description": "Real results for real businesses. See how we've helped our clients achieve 340% ROAS, 7-figure revenue, and sustainable growth.",
-  "url": "https://visible-ads.optimisedwebsite.com/case-studies",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Visible Ads"
-  }
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "name": "Case Studies | Client Results",
+      "description": "Real results for real businesses. See how we've helped our clients achieve 340% ROAS, 7-figure revenue, and sustainable growth.",
+      "url": "https://visible-ads.optimisedwebsite.com/case-studies",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Visible Ads"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.optimisedwebsite.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://visible-ads.optimisedwebsite.com/case-studies" }
+      ]
+    }
+  ]
 };
 
 const caseStudies = [
@@ -107,6 +119,13 @@ const caseStudies = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="text-center text-sm font-medium text-slate-dark uppercase tracking-widest mb-8">More Brands We Work With</p>
       <ClientLogos compact />
+    </div>
+  </section>
+
+  <!-- Partner Badges -->
+  <section class="py-12 lg:py-16 bg-white" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PartnerBadges compact />
     </div>
   </section>
 

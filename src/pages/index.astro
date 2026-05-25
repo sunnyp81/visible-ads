@@ -9,13 +9,30 @@ const schema = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": ["Organization", "LocalBusiness"],
       "@id": "https://visible-ads.optimisedwebsite.com/#organization",
       "name": "Visible Ads",
       "url": "https://visible-ads.optimisedwebsite.com",
       "description": "Google Ads agency delivering measurable ROI through paid search, marketplace, and social advertising for businesses generating £1M+ revenue.",
       "knowsAbout": ["Google Ads", "Bing Ads", "Amazon Advertising", "SEO", "Paid Social", "Conversion Rate Optimisation"],
-      "sameAs": []
+      "sameAs": ["https://www.linkedin.com/company/visible-ads"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kingston-Upon-Thames",
+        "addressRegion": "Surrey",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.4123,
+        "longitude": -0.3007
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      },
+      "email": "boh@visible-ads.com",
+      "telephone": "+447810476799"
     },
     {
       "@type": "WebSite",

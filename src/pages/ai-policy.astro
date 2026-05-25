@@ -3,14 +3,25 @@ import Layout from '../layouts/Layout.astro';
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "AI Policy",
-  "description": "How Visible Ads uses artificial intelligence responsibly in our advertising management and marketing services.",
-  "url": "https://visible-ads.optimisedwebsite.com/ai-policy",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Visible Ads"
-  }
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "AI Policy",
+      "description": "How Visible Ads uses artificial intelligence responsibly in our advertising management and marketing services.",
+      "url": "https://visible-ads.optimisedwebsite.com/ai-policy",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Visible Ads"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.optimisedwebsite.com/" },
+        { "@type": "ListItem", "position": 2, "name": "AI Policy", "item": "https://visible-ads.optimisedwebsite.com/ai-policy" }
+      ]
+    }
+  ]
 };
 ---
 

@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import GrowthChart from '../components/GrowthChart.astro';
 import PartnerBadges from '../components/PartnerBadges.astro';
+import ClientLogos from '../components/ClientLogos.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -54,6 +55,13 @@ const schema = {
             "text": "Brand Registry isn't required but it unlocks critical tools: A+ Content, Sponsored Brands, Stores, and brand analytics. If you're not registered, we'll help you through the process. If you're a reseller without brand ownership, we can still run effective Sponsored Products campaigns."
           }
         }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.optimisedwebsite.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Amazon", "item": "https://visible-ads.optimisedwebsite.com/amazon" }
       ]
     }
   ]
@@ -258,6 +266,13 @@ const schema = {
           <span class="text-electric text-sm font-medium inline-flex items-center gap-1">Learn more <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
         </a>
       </div>
+    </div>
+  </section>
+
+  <!-- Client Logos -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ClientLogos compact />
     </div>
   </section>
 

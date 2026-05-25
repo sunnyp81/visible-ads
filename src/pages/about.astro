@@ -6,30 +6,41 @@ import ClientLogos from '../components/ClientLogos.astro';
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "AboutPage",
-  "name": "About Visible Ads",
-  "description": "Meet the team behind Visible Ads. 20+ years of digital expertise, boutique service, global results.",
-  "url": "https://visible-ads.optimisedwebsite.com/about",
-  "mainEntity": {
-    "@type": "Organization",
-    "name": "Visible Ads",
-    "description": "Award-winning boutique search engine marketing consultancy",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Kingston-Upon-Thames",
-      "addressCountry": "GB"
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "name": "About Visible Ads",
+      "description": "Meet the team behind Visible Ads. 20+ years of digital expertise, boutique service, global results.",
+      "url": "https://visible-ads.optimisedwebsite.com/about",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Visible Ads",
+        "description": "Award-winning boutique search engine marketing consultancy",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kingston-Upon-Thames",
+          "addressCountry": "GB"
+        },
+        "founder": {
+          "@type": "Person",
+          "name": "Boh",
+          "jobTitle": "Founder & PPC Specialist"
+        },
+        "employee": [
+          { "@type": "Person", "name": "Joe", "jobTitle": "Digital Marketing Manager" },
+          { "@type": "Person", "name": "Ben", "jobTitle": "Senior Marketing & PPC Strategist" },
+          { "@type": "Person", "name": "Tom", "jobTitle": "Search Advertising Specialist" }
+        ]
+      }
     },
-    "founder": {
-      "@type": "Person",
-      "name": "Boh",
-      "jobTitle": "Founder & PPC Specialist"
-    },
-    "employee": [
-      { "@type": "Person", "name": "Joe", "jobTitle": "Digital Marketing Manager" },
-      { "@type": "Person", "name": "Ben", "jobTitle": "Senior Marketing & PPC Strategist" },
-      { "@type": "Person", "name": "Tom", "jobTitle": "Search Advertising Specialist" }
-    ]
-  }
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.optimisedwebsite.com/" },
+        { "@type": "ListItem", "position": 2, "name": "About", "item": "https://visible-ads.optimisedwebsite.com/about" }
+      ]
+    }
+  ]
 };
 
 const team = [

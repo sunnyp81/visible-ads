@@ -4,27 +4,39 @@ import CountUp from '../../components/CountUp.astro';
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "iWholesales Case Study — Airsoft eCommerce Growth",
-  "description": "How Visible Ads supercharged iWholesales' online presence with 450% sales growth through strategic Google and Amazon advertising.",
-  "author": {
-    "@type": "Organization",
-    "name": "Visible Ads",
-    "url": "https://visible-ads.optimisedwebsite.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Visible Ads",
-    "url": "https://visible-ads.optimisedwebsite.com"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://visible-ads.optimisedwebsite.com/case-studies/iwholesales"
-  },
-  "about": {
-    "@type": "Organization",
-    "name": "iWholesales"
-  }
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "iWholesales Case Study — Airsoft eCommerce Growth",
+      "description": "How Visible Ads supercharged iWholesales' online presence with 450% sales growth through strategic Google and Amazon advertising.",
+      "author": {
+        "@type": "Organization",
+        "name": "Visible Ads",
+        "url": "https://visible-ads.optimisedwebsite.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Visible Ads",
+        "url": "https://visible-ads.optimisedwebsite.com"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://visible-ads.optimisedwebsite.com/case-studies/iwholesales"
+      },
+      "about": {
+        "@type": "Organization",
+        "name": "iWholesales"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.optimisedwebsite.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://visible-ads.optimisedwebsite.com/case-studies" },
+        { "@type": "ListItem", "position": 3, "name": "iWholesales", "item": "https://visible-ads.optimisedwebsite.com/case-studies/iwholesales" }
+      ]
+    }
+  ]
 };
 ---
 

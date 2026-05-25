@@ -4,14 +4,25 @@ import PartnerBadges from '../components/PartnerBadges.astro';
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Free Ads Audit",
-  "description": "Get a comprehensive, no-obligation audit of your Google Ads, Bing Ads, or Amazon campaigns.",
-  "url": "https://visible-ads.optimisedwebsite.com/free-ads-audit",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Visible Ads"
-  }
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Free Ads Audit",
+      "description": "Get a comprehensive, no-obligation audit of your Google Ads, Bing Ads, or Amazon campaigns.",
+      "url": "https://visible-ads.optimisedwebsite.com/free-ads-audit",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Visible Ads"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.optimisedwebsite.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Free Ads Audit", "item": "https://visible-ads.optimisedwebsite.com/free-ads-audit" }
+      ]
+    }
+  ]
 };
 
 const faqs = [

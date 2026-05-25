@@ -1,0 +1,103 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "name": "Insights & Guides | Visible Ads Blog",
+      "description": "Expert perspectives on paid search, eCommerce advertising, and digital growth strategy.",
+      "url": "https://visible-ads.optimisedwebsite.com/blog",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Visible Ads",
+        "url": "https://visible-ads.optimisedwebsite.com"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.optimisedwebsite.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://visible-ads.optimisedwebsite.com/blog" }
+      ]
+    }
+  ]
+};
+
+const posts = [
+  {
+    slug: 'google-ads-vs-bing-ads',
+    category: 'Platform Comparison',
+    title: 'Google Ads vs Bing Ads: Which Platform Delivers Better ROI in 2026?',
+    excerpt: 'A data-driven comparison of audience reach, cost-per-click, features, and ROI across both platforms — plus guidance on when to use each.',
+  },
+  {
+    slug: 'what-is-ecro',
+    category: 'Conversion Optimisation',
+    title: 'What Is eCRO? How Conversion Rate Optimisation Multiplies Your Ad Spend',
+    excerpt: 'Discover how eCommerce conversion rate optimisation turns your existing traffic into significantly more revenue without increasing ad budgets.',
+  },
+  {
+    slug: 'amazon-ads-cost-uk',
+    category: 'Amazon Advertising',
+    title: 'How Much Do Amazon Ads Cost in the UK? A Complete 2026 Guide',
+    excerpt: 'Typical CPC ranges, ACOS benchmarks, and a full breakdown of Sponsored Products, Sponsored Brands, and Sponsored Display costs for UK sellers.',
+  },
+  {
+    slug: 'ppc-vs-seo',
+    category: 'Strategy',
+    title: 'PPC vs SEO: Why the Best Strategy Uses Both',
+    excerpt: 'Compare timelines, costs, and compounding effects — and learn why an integrated paid-plus-organic approach outperforms either channel alone.',
+  },
+  {
+    slug: 'how-much-google-ads-cost-uk',
+    category: 'Google Ads',
+    title: 'How Much Do Google Ads Cost in the UK? 2026 Pricing Breakdown',
+    excerpt: 'Average CPC data by industry, campaign type breakdowns, and bidding strategy guidance for UK businesses planning their Google Ads budget.',
+  },
+];
+---
+
+<Layout title="Insights & Guides | Visible Ads Blog" description="Expert perspectives on paid search, eCommerce advertising, and digital growth strategy from Visible Ads." schema={schema}>
+
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-navy to-navy-light relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white mb-6 leading-tight">Insights & Guides</h1>
+        <p class="text-lg sm:text-xl text-slate-light leading-relaxed">Expert perspectives on paid search, eCommerce advertising, and digital growth strategy.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28 bg-white" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {posts.map((post) => (
+          <a href={`/blog/${post.slug}`} class="group bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-electric/20">
+            <div class="p-8">
+              <span class="inline-block px-3 py-1 bg-electric/10 text-electric text-xs font-semibold rounded-full mb-4">{post.category}</span>
+              <h2 class="font-heading text-lg font-bold text-navy mb-3 group-hover:text-electric transition-colors leading-snug">{post.title}</h2>
+              <p class="text-slate text-sm leading-relaxed mb-4">{post.excerpt}</p>
+              <span class="text-electric font-semibold text-sm group-hover:underline inline-flex items-center gap-1">
+                Read More
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="relative py-20 lg:py-28 bg-navy" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">Ready to Put These Insights Into Action?</h2>
+      <p class="text-lg text-slate-light mb-8 max-w-2xl mx-auto">Get a free, no-obligation audit of your advertising and discover exactly where you can improve.</p>
+      <a href="/free-ads-audit" class="w-full sm:w-auto inline-flex items-center justify-center bg-electric text-white font-semibold px-10 py-4 rounded-xl hover:bg-electric-dark transition-colors text-lg">Get Your Free Ads Audit</a>
+    </div>
+  </section>
+
+</Layout>

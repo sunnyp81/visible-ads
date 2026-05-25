@@ -1,0 +1,252 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CountUp from '../components/CountUp.astro';
+import PartnerBadges from '../components/PartnerBadges.astro';
+import ClientLogos from '../components/ClientLogos.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Google Ads + SEO — Combined Search Strategy",
+      "provider": {
+        "@type": "Organization",
+        "name": "Visible Ads",
+        "url": "https://visible-ads.optimisedwebsite.com"
+      },
+      "description": "Combined Google Ads and SEO service that dominates both paid and organic search results. Unified keyword strategy, cross-channel reporting, and compounding returns.",
+      "url": "https://visible-ads.optimisedwebsite.com/google-ads-seo",
+      "serviceType": "PPC and SEO Management",
+      "areaServed": "GB"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.optimisedwebsite.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Google Ads + SEO", "item": "https://visible-ads.optimisedwebsite.com/google-ads-seo" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why should I combine Google Ads and SEO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Running Google Ads and SEO together creates a compounding effect. PPC delivers immediate visibility and revenue while SEO builds long-term organic authority. Data from paid campaigns informs your SEO keyword strategy, and strong organic rankings reduce your cost per click in Google Ads. Businesses that run both channels together typically see 25-30% higher total search revenue than those using either channel alone."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you manage the overlap between paid and organic keywords?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We use a unified keyword strategy that identifies where paid and organic should work together and where they should target different opportunities. For high-commercial-intent terms, we often run both to dominate the full SERP. For informational queries, we prioritise SEO. For new product launches or time-sensitive campaigns, PPC leads while organic catches up. This approach maximises total search share while avoiding wasteful internal competition."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to see results from a combined PPC and SEO strategy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google Ads delivers traffic and conversions within days of launch. SEO results typically begin compounding from month three onwards, with significant organic growth visible by month six. The combined strategy means you generate revenue immediately through PPC while building a sustainable organic pipeline that progressively reduces your reliance on paid spend over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer Google Ads and SEO as separate services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We offer standalone Google Ads management and standalone SEO services. However, we strongly recommend the combined approach because the data sharing and strategic alignment between the two channels produces significantly better results than running them in isolation, especially when managed by the same team."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title="Google Ads + SEO Agency | PPC & Organic Search | Visible Ads" description="Combine Google Ads and SEO for complete search dominance. Unified keyword strategy, cross-channel reporting, and compounding returns from paid and organic search." schema={schema}>
+
+  <!-- Hero -->
+  <section class="relative py-20 lg:py-28 overflow-hidden" data-animate>
+    <div class="absolute inset-0 bg-gradient-to-br from-navy to-navy-light"></div>
+    <div class="absolute inset-0 dot-pattern opacity-10"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <span class="inline-block px-4 py-1.5 bg-electric/20 text-electric-light text-sm font-medium rounded-full mb-6">Paid + Organic Search</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white leading-tight mb-6">Google Ads + SEO — The Complete Search Domination Strategy</h1>
+        <p class="text-lg sm:text-xl text-slate-light mb-8 leading-relaxed">Most agencies treat PPC and SEO as separate channels. We integrate them into a single, data-driven strategy that compounds your returns — immediate revenue from paid search and sustainable growth from organic, managed by the same team with shared intelligence.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/free-ads-audit" class="w-full sm:w-auto inline-flex items-center justify-center bg-electric text-white font-semibold px-8 py-4 rounded-xl hover:bg-electric-dark transition-colors text-lg">Get Your Free Search Audit</a>
+          <a href="#synergy" class="w-full sm:w-auto inline-flex items-center justify-center text-white font-medium px-8 py-4 rounded-xl border border-white/20 hover:bg-white/10 transition-colors">See How It Works</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Badges -->
+  <section class="py-12 bg-sky-tint border-y border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PartnerBadges compact />
+    </div>
+  </section>
+
+  <!-- The Synergy -->
+  <section id="synergy" class="py-20 lg:py-28 bg-white" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-8">Why Paid and Organic Search Are Better Together</h2>
+        <p class="text-lg text-slate-dark mb-6 leading-relaxed">The most profitable businesses in search do not choose between Google Ads and SEO — they run both strategically. Here is why: Google Ads gives you immediate access to high-intent buyers the moment campaigns go live. SEO builds compounding organic visibility that reduces your long-term cost of acquisition. Together, they create a search presence that competitors simply cannot match.</p>
+        <p class="text-lg text-slate-dark mb-6 leading-relaxed">When we manage both channels for the same client, we unlock data synergies that siloed agencies miss entirely. Your Google Ads search term reports reveal exactly which keywords convert, and we use that intelligence to prioritise your SEO content strategy. Your organic ranking data shows where you are already earning free traffic, allowing us to reallocate paid budget to opportunities where you genuinely need it. The result is a feedback loop that continuously optimises both channels.</p>
+        <p class="text-lg text-slate-dark mb-6 leading-relaxed">There is also the SERP dominance effect. When your brand appears in both the paid ads and the organic results for the same query, click-through rates increase by 25-30% on average. Prospects see you twice, trust builds, and competitors get pushed further down the page. For high-value commercial terms, this dual visibility is the difference between capturing a lead and losing it to a rival.</p>
+        <p class="text-lg text-slate-dark leading-relaxed">This is not theory — it is the approach we use every day for clients who want to own their search landscape. Whether you are currently running PPC without SEO support, or investing in organic but leaving paid opportunities on the table, a combined strategy will deliver more revenue per pound spent than either channel alone. Learn more about our individual <a href="/google-ads" class="text-electric underline hover:text-electric-dark">Google Ads management</a> and <a href="/seo" class="text-electric underline hover:text-electric-dark">SEO services</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What You Get -->
+  <section class="py-20 lg:py-28 bg-sky-tint" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-4">What You Get</h2>
+        <p class="text-lg text-slate-dark max-w-2xl mx-auto">Four integrated workstreams that turn search into your most profitable acquisition channel.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200">
+          <div class="w-14 h-14 rounded-xl bg-electric/10 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-electric" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+          </div>
+          <h3 class="text-xl font-heading font-bold text-navy mb-3">Paid Search Audit</h3>
+          <p class="text-slate-dark leading-relaxed">We tear down your existing Google Ads account — campaign structure, keyword targeting, bid strategies, conversion tracking, and wasted spend. Every pound of your budget is accounted for with a clear remediation plan.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200">
+          <div class="w-14 h-14 rounded-xl bg-electric/10 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-electric" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+          </div>
+          <h3 class="text-xl font-heading font-bold text-navy mb-3">SEO Technical Audit</h3>
+          <p class="text-slate-dark leading-relaxed">A comprehensive crawl of your site covering indexation, Core Web Vitals, internal linking architecture, schema markup, and content quality. We identify every technical barrier standing between you and higher organic rankings.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200">
+          <div class="w-14 h-14 rounded-xl bg-electric/10 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-electric" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6"/></svg>
+          </div>
+          <h3 class="text-xl font-heading font-bold text-navy mb-3">Unified Keyword Strategy</h3>
+          <p class="text-slate-dark leading-relaxed">We map every relevant keyword by intent, competition, and value — then assign each to paid, organic, or both. PPC conversion data feeds SEO priorities. Organic ranking data informs bid adjustments. No duplication, no gaps.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200">
+          <div class="w-14 h-14 rounded-xl bg-electric/10 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-electric" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"/></svg>
+          </div>
+          <h3 class="text-xl font-heading font-bold text-navy mb-3">Cross-Channel Reporting</h3>
+          <p class="text-slate-dark leading-relaxed">A single dashboard that shows paid and organic performance side by side — total search share, blended cost per acquisition, and revenue attribution. Monthly strategy calls review both channels together to maximise compound growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="relative bg-gradient-to-b from-electric/5 to-transparent" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <div class="text-center mb-10">
+        <h2 class="font-heading text-2xl sm:text-3xl font-bold text-navy">The Combined Search Advantage</h2>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <CountUp value="30" suffix="%" label="Higher Total Revenue" />
+        <CountUp value="25" suffix="%" label="Better CTR (Dual SERP)" />
+        <CountUp value="40" suffix="%" label="Lower Blended CPA" />
+        <CountUp value="12" suffix="mo" label="Full Compound Effect" />
+      </div>
+    </div>
+  </section>
+
+  <!-- The Process -->
+  <section class="py-20 lg:py-28 bg-white" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-8">How the Combined Strategy Works</h2>
+        <p class="text-lg text-slate-dark mb-6 leading-relaxed">In the first month, we run a full audit of both your paid and organic search presence. We identify quick wins in your Google Ads account — wasted spend to eliminate, conversion tracking to fix, campaigns to restructure — and simultaneously diagnose every technical SEO issue holding back your organic visibility.</p>
+        <p class="text-lg text-slate-dark mb-6 leading-relaxed">From month two, paid campaigns are live and generating revenue while we implement the SEO roadmap: fixing technical foundations, optimising existing content, and building new pages targeting high-value keywords validated by your PPC data. By month three, the feedback loop is active — organic ranking improvements allow us to reduce paid spend on terms where you are winning naturally, freeing budget for new opportunities.</p>
+        <p class="text-lg text-slate-dark leading-relaxed">By month six, the compounding effect is unmistakable. Organic traffic is growing steadily, paid campaigns are increasingly efficient, and your total search revenue is significantly higher than either channel could deliver alone. This is the point where most of our clients begin scaling their investment because the data proves the ROI beyond doubt.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Logos -->
+  <section class="py-16 lg:py-20 bg-gray-50" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ClientLogos />
+    </div>
+  </section>
+
+  <!-- Service Links -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-heading font-bold text-navy text-center mb-8">Explore Individual Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto">
+        <a href="/google-ads" class="group bg-white rounded-2xl p-6 sm:p-8 shadow-md border border-gray-100 ring-1 ring-electric/10 hover:ring-electric/30 hover:shadow-lg transition-all duration-300">
+          <h3 class="text-lg font-heading font-bold text-navy mb-2 group-hover:text-electric transition-colors">Google Ads Management</h3>
+          <p class="text-slate-dark text-sm mb-3">Standalone PPC management for Search, Shopping, Performance Max, and remarketing.</p>
+          <span class="text-electric text-sm font-medium inline-flex items-center gap-1">Learn more <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/seo" class="group bg-white rounded-2xl p-6 sm:p-8 shadow-md border border-gray-100 ring-1 ring-electric/10 hover:ring-electric/30 hover:shadow-lg transition-all duration-300">
+          <h3 class="text-lg font-heading font-bold text-navy mb-2 group-hover:text-electric transition-colors">SEO Services</h3>
+          <p class="text-slate-dark text-sm mb-3">Technical SEO, content strategy, and authority building for sustainable organic growth.</p>
+          <span class="text-electric text-sm font-medium inline-flex items-center gap-1">Learn more <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 lg:py-28 bg-sky-tint" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-10">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+              Why should I combine Google Ads and SEO?
+              <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-slate-dark leading-relaxed">Running Google Ads and SEO together creates a compounding effect. PPC delivers immediate visibility and revenue while SEO builds long-term organic authority. Data from paid campaigns informs your SEO keyword strategy, and strong organic rankings reduce your cost per click in Google Ads. Businesses that run both channels together typically see 25-30% higher total search revenue than those using either channel alone.</div>
+          </details>
+          <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+              How do you manage the overlap between paid and organic keywords?
+              <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-slate-dark leading-relaxed">We use a unified keyword strategy that identifies where paid and organic should work together and where they should target different opportunities. For high-commercial-intent terms, we often run both to dominate the full SERP. For informational queries, we prioritise SEO. For new product launches or time-sensitive campaigns, PPC leads while organic catches up. This approach maximises total search share while avoiding wasteful internal competition.</div>
+          </details>
+          <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+              How long does it take to see results from a combined PPC and SEO strategy?
+              <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-slate-dark leading-relaxed">Google Ads delivers traffic and conversions within days of launch. SEO results typically begin compounding from month three onwards, with significant organic growth visible by month six. The combined strategy means you generate revenue immediately through PPC while building a sustainable organic pipeline that progressively reduces your reliance on paid spend over time.</div>
+          </details>
+          <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+              Do you offer Google Ads and SEO as separate services?
+              <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-slate-dark leading-relaxed">Yes. We offer standalone Google Ads management and standalone SEO services. However, we strongly recommend the combined approach because the data sharing and strategic alignment between the two channels produces significantly better results than running them in isolation, especially when managed by the same team.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative py-20 lg:py-28 bg-navy" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">Ready to Dominate Search?</h2>
+      <p class="text-lg text-slate-light mb-8 max-w-2xl mx-auto">Get a free audit of your paid and organic search performance. We will show you exactly how a combined strategy can accelerate your growth.</p>
+      <a href="/free-ads-audit" class="w-full sm:w-auto inline-flex items-center justify-center bg-electric text-white font-semibold px-10 py-4 rounded-xl hover:bg-electric-dark transition-colors text-lg">Get Your Free Search Audit</a>
+    </div>
+  </section>
+
+</Layout>

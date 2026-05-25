@@ -4,23 +4,35 @@ import CountUp from '../../components/CountUp.astro';
 
 const schema = {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "Luxury Architecture Lead Gen Case Study",
-  "description": "How Visible Ads generated 12x more qualified leads for a luxury architecture firm through targeted Google Ads campaigns.",
-  "author": {
-    "@type": "Organization",
-    "name": "Visible Ads",
-    "url": "https://visible-ads.optimisedwebsite.com"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Visible Ads",
-    "url": "https://visible-ads.optimisedwebsite.com"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://visible-ads.optimisedwebsite.com/case-studies/luxury-architecture"
-  }
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Luxury Architecture Lead Gen Case Study",
+      "description": "How Visible Ads generated 12x more qualified leads for a luxury architecture firm through targeted Google Ads campaigns.",
+      "author": {
+        "@type": "Organization",
+        "name": "Visible Ads",
+        "url": "https://visible-ads.optimisedwebsite.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Visible Ads",
+        "url": "https://visible-ads.optimisedwebsite.com"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://visible-ads.optimisedwebsite.com/case-studies/luxury-architecture"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.optimisedwebsite.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Case Studies", "item": "https://visible-ads.optimisedwebsite.com/case-studies" },
+        { "@type": "ListItem", "position": 3, "name": "Luxury Architecture", "item": "https://visible-ads.optimisedwebsite.com/case-studies/luxury-architecture" }
+      ]
+    }
+  ]
 };
 ---
 
