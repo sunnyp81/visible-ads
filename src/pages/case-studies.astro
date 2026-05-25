@@ -153,24 +153,29 @@ const caseStudies = [
 
           const prefix = raw.match(/^([+£]*)/)?.[1] || '';
           const suffix = raw.match(/([%xM]*)$/)?.[1] || '';
-          const numStr = raw.replace(/^[+£]+/, '').replace(/[%xM]+$/, '');
+          const numStr = raw.replace(/^[+£]+/, '').replace(/[%xM]+$/, '').replace(/,/g, '');
           const target = parseFloat(numStr);
           if (isNaN(target)) return;
           const hasDecimal = numStr.includes('.');
+          const useCommas = raw.includes(',');
           const duration = 2000;
           const startTime = performance.now();
+
+          function formatVal(n: number) {
+            const s = hasDecimal ? n.toFixed(1) : Math.floor(n).toString();
+            return useCommas ? Number(s).toLocaleString('en-GB') : s;
+          }
 
           function animate(now: number) {
             const elapsed = now - startTime;
             const progress = Math.min(elapsed / duration, 1);
             const eased = 1 - Math.pow(1 - progress, 3);
             const current = target * eased;
-            const display = hasDecimal ? current.toFixed(1) : Math.floor(current).toString();
-            el.textContent = prefix + display + suffix;
+            el.textContent = prefix + formatVal(current) + suffix;
             if (progress < 1) {
               requestAnimationFrame(animate);
             } else {
-              el.textContent = prefix + (hasDecimal ? target.toFixed(1) : target.toString()) + suffix;
+              el.textContent = prefix + formatVal(target) + suffix;
             }
           }
           requestAnimationFrame(animate);

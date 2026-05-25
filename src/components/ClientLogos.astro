@@ -27,9 +27,9 @@ const clients = [
   {!compact && (
     <p class="text-center text-sm font-medium text-slate-light uppercase tracking-widest mb-8">Trusted by Leading Brands</p>
   )}
-  <div class={`flex flex-wrap justify-center items-center ${compact ? 'gap-6 sm:gap-8' : 'gap-8 sm:gap-10 lg:gap-12'}`}>
+  <div class={`grid ${compact ? 'grid-cols-3 sm:grid-cols-5 gap-4 sm:gap-6' : 'grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-10'} items-center justify-items-center`}>
     {clients.map(c => (
-      <div class={`${compact ? 'w-20 h-10' : 'w-28 h-14 sm:w-32 sm:h-16'} flex items-center justify-center opacity-80 hover:opacity-100 transition-all duration-300`}>
+      <div class={`${compact ? 'h-10' : 'h-12 sm:h-14'} flex items-center justify-center w-full hover:scale-105 transition-transform duration-300`}>
         <img src={c.src} alt={c.name} class="max-w-full max-h-full object-contain" loading="lazy" />
       </div>
     ))}
