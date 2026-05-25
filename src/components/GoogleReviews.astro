@@ -1,0 +1,69 @@
+---
+interface Props {
+  compact?: boolean;
+}
+const { compact = false } = Astro.props;
+
+const reviewUrl = "https://www.google.com/maps/place/Visible+Ads/data=!4m2!3m1!1s0x0:0xc19421e998217581";
+
+const reviews = [
+  {
+    name: "David Archer",
+    company: "CFW / Sephra",
+    text: "The team's expertise in both paid search and Amazon marketplace management has been instrumental in scaling our business across multiple channels.",
+    stars: 5,
+  },
+  {
+    name: "Rishy Singh",
+    company: "iWholesales",
+    text: "Visible Ads transformed our online presence. Their strategic approach to Google and Amazon advertising delivered results beyond our expectations, driving consistent growth month over month.",
+    stars: 5,
+  },
+  {
+    name: "Nari",
+    company: "Japan Centre",
+    text: "Visible Ads understood our unique market from day one. Their strategic approach to our campaigns delivered consistent growth and a return on investment that exceeded our expectations.",
+    stars: 5,
+  },
+];
+---
+
+<div class="google-reviews">
+  <!-- Rating summary -->
+  <div class="flex items-center gap-3 flex-wrap">
+    <span class="text-2xl font-bold" style="color:#4285F4;">G</span><span class="text-lg font-heading font-semibold text-navy">Google Reviews</span>
+    <div class="flex items-center gap-1.5">
+      {Array.from({ length: 5 }).map(() => (
+        <svg class="w-5 h-5" viewBox="0 0 20 20" fill="#F59E0B"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.37-2.448a1 1 0 00-1.176 0l-3.37 2.448c-.784.57-1.838-.197-1.539-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.063 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z"/></svg>
+      ))}
+      <span class="text-lg font-bold text-navy ml-1">5.0</span>
+      <span class="text-sm text-slate ml-1">(3 reviews)</span>
+    </div>
+  </div>
+
+  {!compact && (
+    <div class="grid md:grid-cols-3 gap-6 mt-8">
+      {reviews.map((review) => (
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+          <div class="flex items-center gap-1 mb-3">
+            {Array.from({ length: review.stars }).map(() => (
+              <svg class="w-4 h-4" viewBox="0 0 20 20" fill="#F59E0B"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.37-2.448a1 1 0 00-1.176 0l-3.37 2.448c-.784.57-1.838-.197-1.539-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.063 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z"/></svg>
+            ))}
+          </div>
+          <p class="text-slate-dark text-sm leading-relaxed mb-4 italic">"{review.text}"</p>
+          <div>
+            <p class="font-heading font-bold text-navy text-sm">{review.name}</p>
+            <p class="text-slate text-xs">{review.company}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+
+  <div class="mt-6">
+    <a href={reviewUrl} target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white border border-gray-200 rounded-lg text-sm font-semibold text-navy hover:border-electric/40 hover:shadow-sm transition-all">
+      <svg class="w-4 h-4" viewBox="0 0 20 20" fill="#F59E0B"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.957a1 1 0 00.95.69h4.162c.969 0 1.371 1.24.588 1.81l-3.37 2.448a1 1 0 00-.364 1.118l1.287 3.957c.3.921-.755 1.688-1.54 1.118l-3.37-2.448a1 1 0 00-1.176 0l-3.37 2.448c-.784.57-1.838-.197-1.539-1.118l1.287-3.957a1 1 0 00-.364-1.118L2.063 9.384c-.783-.57-.38-1.81.588-1.81h4.162a1 1 0 00.95-.69l1.286-3.957z"/></svg>
+      Leave a Review
+    </a>
+  </div>
+</div>

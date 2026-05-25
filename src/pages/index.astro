@@ -4,6 +4,7 @@ import CountUp from '../components/CountUp.astro';
 import GrowthChart from '../components/GrowthChart.astro';
 import ClientLogos from '../components/ClientLogos.astro';
 import PartnerBadges from '../components/PartnerBadges.astro';
+import GoogleReviews from '../components/GoogleReviews.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -15,7 +16,15 @@ const schema = {
       "url": "https://visible-ads.optimisedwebsite.com",
       "description": "Google Ads agency delivering measurable ROI through paid search, marketplace, and social advertising for businesses generating £1M+ revenue.",
       "knowsAbout": ["Google Ads", "Bing Ads", "Amazon Advertising", "SEO", "Paid Social", "Conversion Rate Optimisation"],
-      "sameAs": ["https://www.linkedin.com/company/visible-ads"],
+      "sameAs": ["https://www.linkedin.com/company/visible-ads", "https://www.google.com/maps/place/Visible+Ads/data=!4m2!3m1!1s0x0:0xc19421e998217581"],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "3",
+        "reviewCount": "3"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Kingston-Upon-Thames",
@@ -343,6 +352,17 @@ const schema = {
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<div class="h-px bg-gradient-to-r from-transparent via-electric/20 to-transparent"></div>
+
+<section class="bg-gray-50" data-animate>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+    <div class="text-center mb-10">
+      <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy">Rated 5 Stars on Google</h2>
+    </div>
+    <GoogleReviews />
   </div>
 </section>
 

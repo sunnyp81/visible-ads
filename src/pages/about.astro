@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import CountUp from '../components/CountUp.astro';
 import PartnerBadges from '../components/PartnerBadges.astro';
 import ClientLogos from '../components/ClientLogos.astro';
+import GoogleReviews from '../components/GoogleReviews.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -155,6 +156,9 @@ const certifications = [
         <p class="text-lg text-slate-dark">Recognised by the platforms we manage and the industry we serve.</p>
       </div>
       <PartnerBadges />
+      <div class="mt-12">
+        <GoogleReviews compact />
+      </div>
     </div>
   </section>
 

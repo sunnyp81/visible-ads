@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import GoogleReviews from '../components/GoogleReviews.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -85,7 +86,11 @@ const schema = {
             </div>
           </div>
 
-          <div class="mt-12 bg-sky-tint rounded-2xl p-6 border border-gray-100">
+          <div class="mt-12">
+            <GoogleReviews compact />
+          </div>
+
+          <div class="mt-8 bg-sky-tint rounded-2xl p-6 border border-gray-100">
             <p class="text-slate-dark text-sm leading-relaxed">
               <span class="font-semibold text-navy">Prefer a comprehensive review?</span> Skip the enquiry and go straight to our <a href="/free-ads-audit" class="text-electric hover:text-electric-dark font-semibold transition-colors">free ads audit</a>. We will analyse your campaigns and deliver a detailed report with actionable recommendations.
             </p>

@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PartnerBadges from '../components/PartnerBadges.astro';
+import GoogleReviews from '../components/GoogleReviews.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -193,6 +194,9 @@ const faqs = [
   <section class="py-16 lg:py-20 bg-white" data-animate>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <PartnerBadges compact />
+      <div class="mt-10">
+        <GoogleReviews compact />
+      </div>
     </div>
   </section>
 
