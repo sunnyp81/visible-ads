@@ -1,0 +1,118 @@
+---
+const industries = [
+  { id: 'ecommerce', name: 'eCommerce', cpc: 0.88, ctr: 2.69, conv: 2.81, cpl: 33 },
+  { id: 'legal', name: 'Legal', cpc: 3.42, ctr: 2.93, conv: 4.35, cpl: 78 },
+  { id: 'finance', name: 'Finance', cpc: 2.65, ctr: 2.91, conv: 5.10, cpl: 52 },
+  { id: 'healthcare', name: 'Healthcare', cpc: 1.82, ctr: 3.36, conv: 3.78, cpl: 48 },
+  { id: 'realestate', name: 'Real Estate', cpc: 1.36, ctr: 3.71, conv: 2.47, cpl: 55 },
+  { id: 'b2bsaas', name: 'B2B SaaS', cpc: 2.14, ctr: 2.41, conv: 3.04, cpl: 70 },
+];
+---
+<div id="benchmarks-widget">
+  <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10">
+    {industries.map((ind, i) => (
+      <button
+        class:list={[
+          'benchmark-tab px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200',
+          i === 0 ? 'bg-electric text-white shadow-lg shadow-electric/25' : 'bg-sky-tint text-slate-dark hover:bg-electric/10'
+        ]}
+        data-industry={ind.id}
+        data-cpc={ind.cpc}
+        data-ctr={ind.ctr}
+        data-conv={ind.conv}
+        data-cpl={ind.cpl}
+      >
+        {ind.name}
+      </button>
+    ))}
+  </div>
+
+  <div class="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+    <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+      <div class="flex items-center justify-between mb-3">
+        <p class="text-sm font-medium text-slate-dark">Avg. Cost Per Click</p>
+        <p id="bm-cpc-val" class="font-heading text-xl font-bold text-navy">£0.88</p>
+      </div>
+      <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
+        <div id="bm-cpc-bar" class="h-full bg-electric rounded-full transition-all duration-700 ease-out" style="width: 0%"></div>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+      <div class="flex items-center justify-between mb-3">
+        <p class="text-sm font-medium text-slate-dark">Click-Through Rate</p>
+        <p id="bm-ctr-val" class="font-heading text-xl font-bold text-navy">2.69%</p>
+      </div>
+      <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
+        <div id="bm-ctr-bar" class="h-full bg-electric-light rounded-full transition-all duration-700 ease-out" style="width: 0%"></div>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+      <div class="flex items-center justify-between mb-3">
+        <p class="text-sm font-medium text-slate-dark">Conversion Rate</p>
+        <p id="bm-conv-val" class="font-heading text-xl font-bold text-navy">2.81%</p>
+      </div>
+      <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
+        <div id="bm-conv-bar" class="h-full bg-success rounded-full transition-all duration-700 ease-out" style="width: 0%"></div>
+      </div>
+    </div>
+    <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+      <div class="flex items-center justify-between mb-3">
+        <p class="text-sm font-medium text-slate-dark">Cost Per Lead</p>
+        <p id="bm-cpl-val" class="font-heading text-xl font-bold text-navy">£33</p>
+      </div>
+      <div class="h-3 bg-gray-100 rounded-full overflow-hidden">
+        <div id="bm-cpl-bar" class="h-full bg-amber rounded-full transition-all duration-700 ease-out" style="width: 0%"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="mt-8 text-center text-slate text-sm">UK Google Ads benchmarks across industries. Your actual performance depends on competition, targeting, and ad quality.</p>
+</div>
+
+<script>
+  (function () {
+    const widget = document.getElementById('benchmarks-widget');
+    if (!widget) return;
+
+    const tabs = widget.querySelectorAll('.benchmark-tab');
+    const maxCpc = 4, maxCtr = 5, maxConv = 6, maxCpl = 100;
+
+    function update(tab) {
+      const cpc = parseFloat(tab.dataset.cpc);
+      const ctr = parseFloat(tab.dataset.ctr);
+      const conv = parseFloat(tab.dataset.conv);
+      const cpl = parseFloat(tab.dataset.cpl);
+
+      document.getElementById('bm-cpc-val').textContent = '£' + cpc.toFixed(2);
+      document.getElementById('bm-ctr-val').textContent = ctr.toFixed(2) + '%';
+      document.getElementById('bm-conv-val').textContent = conv.toFixed(2) + '%';
+      document.getElementById('bm-cpl-val').textContent = '£' + cpl;
+
+      document.getElementById('bm-cpc-bar').style.width = (cpc / maxCpc * 100) + '%';
+      document.getElementById('bm-ctr-bar').style.width = (ctr / maxCtr * 100) + '%';
+      document.getElementById('bm-conv-bar').style.width = (conv / maxConv * 100) + '%';
+      document.getElementById('bm-cpl-bar').style.width = (cpl / maxCpl * 100) + '%';
+
+      tabs.forEach((t) => {
+        t.classList.remove('bg-electric', 'text-white', 'shadow-lg', 'shadow-electric/25');
+        t.classList.add('bg-sky-tint', 'text-slate-dark');
+      });
+      tab.classList.remove('bg-sky-tint', 'text-slate-dark');
+      tab.classList.add('bg-electric', 'text-white', 'shadow-lg', 'shadow-electric/25');
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => update(tab));
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        observer.disconnect();
+        update(tabs[0]);
+      });
+    }, { threshold: 0.2 });
+
+    observer.observe(widget);
+  })();
+</script>

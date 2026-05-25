@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import GrowthChart from '../components/GrowthChart.astro';
 import PartnerBadges from '../components/PartnerBadges.astro';
 import ClientLogos from '../components/ClientLogos.astro';
+import PpcFunnel from '../components/PpcFunnel.astro';
+import IndustryBenchmarks from '../components/IndustryBenchmarks.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -176,6 +178,28 @@ const schema = {
           <p class="text-slate-dark text-sm">Every client gets a dedicated account manager with same-day response guaranteed.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- PPC Funnel -->
+  <section class="py-20 lg:py-28 bg-white" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">The Google Ads Funnel</h2>
+        <p class="text-lg text-slate-dark max-w-2xl mx-auto">How we turn impressions into revenue — every stage optimised for maximum conversion.</p>
+      </div>
+      <PpcFunnel />
+    </div>
+  </section>
+
+  <!-- Industry Benchmarks -->
+  <section class="py-20 lg:py-28 bg-sky-tint" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">UK Industry Benchmarks</h2>
+        <p class="text-lg text-slate-dark max-w-2xl mx-auto">See how Google Ads performance varies by industry. Select yours to see the numbers that matter.</p>
+      </div>
+      <IndustryBenchmarks />
     </div>
   </section>
 

@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import PartnerBadges from '../components/PartnerBadges.astro';
+import PlatformComparison from '../components/PlatformComparison.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -164,6 +165,17 @@ const schema = {
         <p class="text-lg text-slate-dark leading-relaxed mb-6">The Visible Ads Blueprint is built on a philosophy of continuous improvement. Markets shift. Competitors adapt. Consumer behaviour evolves. Your advertising must evolve with it, and that requires a systematic, disciplined approach to optimisation that never stops learning.</p>
         <p class="text-lg text-slate-dark leading-relaxed">We have refined this methodology over 20 years and hundreds of client engagements. It works because it is repeatable, measurable, and adaptable to any industry, any platform, and any budget.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- Platform Comparison -->
+  <section class="py-20 lg:py-28 bg-gray-50" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">Platform Strengths at a Glance</h2>
+        <p class="text-lg text-slate-dark max-w-2xl mx-auto">Every platform has its sweet spot. We help you invest where it matters most.</p>
+      </div>
+      <PlatformComparison />
     </div>
   </section>
 

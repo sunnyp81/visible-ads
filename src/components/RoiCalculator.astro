@@ -1,0 +1,174 @@
+---
+---
+<div class="bg-gradient-to-br from-[#0A1628] to-[#132240] rounded-3xl p-6 sm:p-10 shadow-2xl">
+  <div class="text-center mb-10">
+    <h3 class="font-heading text-2xl sm:text-3xl font-bold text-white">ROI Calculator</h3>
+    <p class="mt-2 text-[#94A3B8] text-sm sm:text-base">Drag the slider to see projected returns on your ad spend</p>
+  </div>
+
+  <div class="mb-10 px-2">
+    <label class="flex items-center justify-between mb-4">
+      <span class="text-[#94A3B8] text-sm font-medium">Monthly Ad Spend</span>
+      <span id="roi-spend-label" class="font-heading text-2xl sm:text-3xl font-bold text-white">&pound;5,000</span>
+    </label>
+    <input
+      type="range"
+      id="roi-slider"
+      min="1000"
+      max="50000"
+      step="500"
+      value="5000"
+      class="roi-slider w-full h-2 rounded-full appearance-none cursor-pointer"
+    />
+    <div class="flex justify-between mt-2 text-xs text-[#94A3B8]">
+      <span>&pound;1k</span>
+      <span>&pound;25k</span>
+      <span>&pound;50k</span>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
+    <div class="bg-white/5 rounded-2xl p-5 text-center border border-white/10">
+      <p class="text-[#94A3B8] text-xs sm:text-sm mb-1">Impressions</p>
+      <p id="roi-impressions" class="font-heading text-xl sm:text-2xl font-bold text-white">142,857</p>
+    </div>
+    <div class="bg-white/5 rounded-2xl p-5 text-center border border-white/10">
+      <p class="text-[#94A3B8] text-xs sm:text-sm mb-1">Clicks</p>
+      <p id="roi-clicks" class="font-heading text-xl sm:text-2xl font-bold text-white">5,000</p>
+    </div>
+    <div class="bg-white/5 rounded-2xl p-5 text-center border border-white/10">
+      <p class="text-[#94A3B8] text-xs sm:text-sm mb-1">Conversions</p>
+      <p id="roi-conversions" class="font-heading text-xl sm:text-2xl font-bold text-white">200</p>
+    </div>
+    <div class="bg-white/5 rounded-2xl p-5 text-center border border-white/10">
+      <p class="text-[#94A3B8] text-xs sm:text-sm mb-1">Revenue</p>
+      <p id="roi-revenue" class="font-heading text-xl sm:text-2xl font-bold text-[#2563EB]">&pound;16,000</p>
+    </div>
+    <div class="col-span-2 lg:col-span-1 bg-[#2563EB]/20 rounded-2xl p-5 text-center border border-[#2563EB]/30">
+      <p class="text-[#3B82F6] text-xs sm:text-sm mb-1 font-semibold">ROAS</p>
+      <p id="roi-roas" class="font-heading text-xl sm:text-2xl font-bold text-[#2563EB]">3.2x</p>
+    </div>
+  </div>
+
+  <p class="mt-6 text-center text-[#94A3B8] text-xs">Based on industry averages: 3.5% CTR, 4% conversion rate, &pound;80 AOV. Your results may vary.</p>
+</div>
+
+<style>
+  .roi-slider {
+    background: linear-gradient(to right, #2563EB 0%, #2563EB 8.16%, #1e293b 8.16%, #1e293b 100%);
+  }
+  .roi-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #2563EB;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.3);
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+  }
+  .roi-slider::-webkit-slider-thumb:hover {
+    box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.4);
+  }
+  .roi-slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #2563EB;
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.3);
+    border: none;
+    cursor: pointer;
+  }
+  .roi-slider::-moz-range-track {
+    background: #1e293b;
+    height: 8px;
+    border-radius: 9999px;
+  }
+</style>
+
+<script>
+  (function () {
+    const slider = document.getElementById('roi-slider');
+    const spendLabel = document.getElementById('roi-spend-label');
+    const elImpressions = document.getElementById('roi-impressions');
+    const elClicks = document.getElementById('roi-clicks');
+    const elConversions = document.getElementById('roi-conversions');
+    const elRevenue = document.getElementById('roi-revenue');
+    const elRoas = document.getElementById('roi-roas');
+
+    const CTR = 0.035;
+    const CONV_RATE = 0.04;
+    const AOV = 80;
+    const AVG_CPC = 1.0;
+
+    const targets = { impressions: 0, clicks: 0, conversions: 0, revenue: 0, roas: 0 };
+    const current = { impressions: 0, clicks: 0, conversions: 0, revenue: 0, roas: 0 };
+    let animating = false;
+
+    function calc(spend) {
+      const clicks = spend / AVG_CPC;
+      const impressions = clicks / CTR;
+      const conversions = clicks * CONV_RATE;
+      const revenue = conversions * AOV;
+      const roas = revenue / spend;
+      return { impressions, clicks, conversions, revenue, roas };
+    }
+
+    function formatNum(n) {
+      return Math.round(n).toLocaleString('en-GB');
+    }
+
+    function render() {
+      elImpressions.textContent = formatNum(current.impressions);
+      elClicks.textContent = formatNum(current.clicks);
+      elConversions.textContent = formatNum(current.conversions);
+      elRevenue.textContent = '£' + formatNum(current.revenue);
+      elRoas.textContent = current.roas.toFixed(1) + 'x';
+    }
+
+    function animate() {
+      let done = true;
+      for (const key in targets) {
+        const diff = targets[key] - current[key];
+        if (Math.abs(diff) > 0.5) {
+          current[key] += diff * 0.18;
+          done = false;
+        } else {
+          current[key] = targets[key];
+        }
+      }
+      render();
+      if (!done) {
+        requestAnimationFrame(animate);
+      } else {
+        animating = false;
+      }
+    }
+
+    function updateSliderBg(val) {
+      const pct = ((val - 1000) / (50000 - 1000)) * 100;
+      slider.style.background = 'linear-gradient(to right, #2563EB 0%, #2563EB ' + pct + '%, #1e293b ' + pct + '%, #1e293b 100%)';
+    }
+
+    function onInput() {
+      const spend = parseInt(slider.value, 10);
+      if (spend >= 1000) {
+        spendLabel.textContent = '£' + spend.toLocaleString('en-GB');
+      }
+      updateSliderBg(spend);
+      const m = calc(spend);
+      targets.impressions = m.impressions;
+      targets.clicks = m.clicks;
+      targets.conversions = m.conversions;
+      targets.revenue = m.revenue;
+      targets.roas = m.roas;
+      if (!animating) {
+        animating = true;
+        requestAnimationFrame(animate);
+      }
+    }
+
+    slider.addEventListener('input', onInput);
+    onInput();
+  })();
+</script>

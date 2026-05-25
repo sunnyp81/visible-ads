@@ -5,6 +5,7 @@ import GrowthChart from '../components/GrowthChart.astro';
 import ClientLogos from '../components/ClientLogos.astro';
 import PartnerBadges from '../components/PartnerBadges.astro';
 import GoogleReviews from '../components/GoogleReviews.astro';
+import RoiCalculator from '../components/RoiCalculator.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -364,6 +365,20 @@ const schema = {
       <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy">Rated 5 Stars on Google</h2>
     </div>
     <GoogleReviews />
+  </div>
+</section>
+
+<div class="h-px bg-gradient-to-r from-transparent via-electric/20 to-transparent"></div>
+
+<section class="bg-gray-50 py-20 lg:py-28" data-animate>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy">See Your Growth Potential</h2>
+      <p class="mt-4 text-lg text-slate max-w-2xl mx-auto">Adjust your monthly ad spend to see projected returns based on industry benchmarks.</p>
+    </div>
+    <div class="max-w-4xl mx-auto">
+      <RoiCalculator />
+    </div>
   </div>
 </section>
 
