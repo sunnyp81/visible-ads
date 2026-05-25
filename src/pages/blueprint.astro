@@ -32,6 +32,7 @@ const schema = {
     <div class="absolute inset-0 dot-pattern opacity-5"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="max-w-3xl mx-auto text-center">
+        <img src="/images/visible-ads-animated.gif" alt="Visible Ads" class="w-20 h-20 mx-auto mb-6" />
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white mb-6 leading-tight">The Visible Ads Blueprint</h1>
         <p class="text-lg sm:text-xl text-slate-light leading-relaxed">Every successful advertising campaign starts with a system. Our Blueprint is the proven methodology we apply to every engagement, ensuring nothing is left to chance and every pound of your budget works harder than the last.</p>
       </div>
@@ -44,9 +45,14 @@ const schema = {
       <div class="hidden lg:block relative mb-16">
         <div class="absolute top-8 left-[12.5%] right-[12.5%] h-1 bg-gradient-to-r from-electric via-cyan-400 to-electric rounded-full"></div>
         <div class="grid grid-cols-4 gap-8 relative">
-          {[1,2,3,4].map(n => (
+          {[
+            { n: 1, bg: 'bg-electric', shadow: 'shadow-electric/30' },
+            { n: 2, bg: 'bg-amber-500', shadow: 'shadow-amber-500/30' },
+            { n: 3, bg: 'bg-purple-600', shadow: 'shadow-purple-600/30' },
+            { n: 4, bg: 'bg-emerald-500', shadow: 'shadow-emerald-500/30' },
+          ].map(({ n, bg, shadow }) => (
             <div class="flex justify-center">
-              <div class="w-16 h-16 rounded-full bg-electric text-white font-heading font-bold text-xl flex items-center justify-center shadow-lg shadow-electric/30 ring-4 ring-white">{n}</div>
+              <div class={`w-16 h-16 rounded-full ${bg} text-white font-heading font-bold text-xl flex items-center justify-center shadow-lg ${shadow} ring-4 ring-white`}>{n}</div>
             </div>
           ))}
         </div>
@@ -79,8 +85,8 @@ const schema = {
 
         <div class="relative">
           <div class="lg:hidden flex items-center gap-4 mb-6">
-            <div class="w-12 h-12 rounded-full bg-electric text-white font-heading font-bold text-lg flex items-center justify-center shadow-lg shadow-electric/30 flex-shrink-0">2</div>
-            <div class="h-0.5 flex-1 bg-gradient-to-r from-electric to-transparent"></div>
+            <div class="w-12 h-12 rounded-full bg-amber-500 text-white font-heading font-bold text-lg flex items-center justify-center shadow-lg shadow-amber-500/30 flex-shrink-0">2</div>
+            <div class="h-0.5 flex-1 bg-gradient-to-r from-amber-500 to-transparent"></div>
           </div>
           <div class="relative bg-white rounded-2xl p-6 sm:p-8 shadow-md border border-gray-100 ring-1 ring-electric/10 hover:ring-electric/30 hover:shadow-lg transition-all h-full">
             <div class="w-14 h-14 rounded-xl bg-sky-tint flex items-center justify-center mb-6">
@@ -102,8 +108,8 @@ const schema = {
 
         <div class="relative">
           <div class="lg:hidden flex items-center gap-4 mb-6">
-            <div class="w-12 h-12 rounded-full bg-electric text-white font-heading font-bold text-lg flex items-center justify-center shadow-lg shadow-electric/30 flex-shrink-0">3</div>
-            <div class="h-0.5 flex-1 bg-gradient-to-r from-electric to-transparent"></div>
+            <div class="w-12 h-12 rounded-full bg-purple-600 text-white font-heading font-bold text-lg flex items-center justify-center shadow-lg shadow-purple-600/30 flex-shrink-0">3</div>
+            <div class="h-0.5 flex-1 bg-gradient-to-r from-purple-600 to-transparent"></div>
           </div>
           <div class="relative bg-white rounded-2xl p-6 sm:p-8 shadow-md border border-gray-100 ring-1 ring-electric/10 hover:ring-electric/30 hover:shadow-lg transition-all h-full">
             <div class="w-14 h-14 rounded-xl bg-sky-tint flex items-center justify-center mb-6">
@@ -125,8 +131,8 @@ const schema = {
 
         <div class="relative">
           <div class="lg:hidden flex items-center gap-4 mb-6">
-            <div class="w-12 h-12 rounded-full bg-electric text-white font-heading font-bold text-lg flex items-center justify-center shadow-lg shadow-electric/30 flex-shrink-0">4</div>
-            <div class="h-0.5 flex-1 bg-gradient-to-r from-electric to-transparent"></div>
+            <div class="w-12 h-12 rounded-full bg-emerald-500 text-white font-heading font-bold text-lg flex items-center justify-center shadow-lg shadow-emerald-500/30 flex-shrink-0">4</div>
+            <div class="h-0.5 flex-1 bg-gradient-to-r from-emerald-500 to-transparent"></div>
           </div>
           <div class="relative bg-white rounded-2xl p-6 sm:p-8 shadow-md border border-gray-100 ring-1 ring-electric/10 hover:ring-electric/30 hover:shadow-lg transition-all h-full">
             <div class="w-14 h-14 rounded-xl bg-sky-tint flex items-center justify-center mb-6">
