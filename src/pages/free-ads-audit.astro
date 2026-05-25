@@ -105,7 +105,11 @@ const faqs = [
 
         <div class="bg-white rounded-2xl p-8 sm:p-10 shadow-xl border border-gray-200 ring-1 ring-electric/10">
           <h2 class="text-2xl font-heading font-bold text-navy mb-6">Request Your Audit</h2>
-          <form id="audit-form" class="space-y-5">
+          <form id="audit-form" action="https://formsubmit.co/boh@visible-ads.com" method="POST" class="space-y-5">
+            <input type="hidden" name="_subject" value="New Free Ads Audit Request" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://visible-ads.optimisedwebsite.com/free-ads-audit?thanks=1" />
+            <input type="text" name="_honey" style="display:none" />
             <div>
               <label for="name" class="block text-sm font-medium text-navy mb-1.5">Name</label>
               <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-gray-700" placeholder="Your full name" />
@@ -141,28 +145,10 @@ const faqs = [
             </button>
           </form>
           <script>
-            document.getElementById('audit-form')?.addEventListener('submit', function(e) {
-              e.preventDefault();
-              const form = e.target as HTMLFormElement;
-              const fd = new FormData(form);
-              const name = fd.get('name') || '';
-              const email = fd.get('email') || '';
-              const phone = fd.get('phone') || '';
-              const website = fd.get('website') || '';
-              const budget = fd.get('budget') || '';
-              const message = fd.get('message') || '';
-              const subject = encodeURIComponent('Free Ads Audit Request from ' + name);
-              const body = encodeURIComponent(
-                'Name: ' + name + '\n' +
-                'Email: ' + email + '\n' +
-                'Phone: ' + phone + '\n' +
-                'Website: ' + website + '\n' +
-                'Monthly Spend: ' + budget + '\n' +
-                'Message: ' + message
-              );
-              window.location.href = 'mailto:boh@visible-ads.com?subject=' + subject + '&body=' + body;
-              form.innerHTML = '<div class="text-center py-12"><div class="w-16 h-16 rounded-full bg-success/10 flex items-center justify-center mx-auto mb-4"><svg class="w-8 h-8 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><h3 class="text-xl font-heading font-bold text-navy mb-2">Thank You!</h3><p class="text-gray-700">Your email client should open shortly. If it does not, please email us directly at <a href="mailto:boh@visible-ads.com" class="text-electric font-semibold">boh@visible-ads.com</a>.</p></div>';
-            });
+            if (window.location.search.includes('thanks=1')) {
+              const form = document.getElementById('audit-form');
+              if (form) form.innerHTML = '<div class="text-center py-12"><div class="w-16 h-16 rounded-full bg-success/10 flex items-center justify-center mx-auto mb-4"><svg class="w-8 h-8 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><h3 class="text-xl font-heading font-bold text-navy mb-2">Thank You!</h3><p class="text-gray-700">We\'ve received your request. Boh will be in touch within 24 hours with your personalised audit.</p></div>';
+            }
           </script>
         </div>
 
