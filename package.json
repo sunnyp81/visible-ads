@@ -13,12 +13,21 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "@astrojs/sitemap": "^3.7.2",
     "@tailwindcss/vite": "^4.1.8",
     "astro": "^6.3.7",
+    "playwright": "^1.60.0",
     "tailwindcss": "^4.1.8",
     "vite": "^7.3.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunnyp81/visible-ads.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sunnyp81/visible-ads/issues"
+  },
+  "homepage": "https://github.com/sunnyp81/visible-ads#readme",
+  "description": ""
 }

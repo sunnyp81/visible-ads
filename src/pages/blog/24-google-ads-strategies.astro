@@ -1,0 +1,219 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PartnerBadges from '../../components/PartnerBadges.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "24 Expert Google Ads Strategies to Maximise Sales",
+      "description": "24 proven Google Ads strategies covering campaign structure, bidding, ad copy, remarketing, Quality Score, and conversion tracking for UK businesses.",
+      "url": "https://visible-ads.optimisedwebsite.com/blog/24-google-ads-strategies",
+      "datePublished": "2024-04-03",
+      "dateModified": "2026-05-26",
+      "author": { "@type": "Person", "name": "Boh Tjarks" },
+      "publisher": { "@type": "Organization", "name": "Visible Ads", "url": "https://visible-ads.optimisedwebsite.com" },
+      "image": "https://visible-ads.optimisedwebsite.com/images/visible-ads-og.png"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the most important Google Ads strategy for increasing sales?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Focus on your top sellers first. Allocating budget to products and services that already convert well gives you the highest immediate return. From there, optimise campaign structure, implement conversion tracking, and layer in Smart Bidding strategies as you gather data." }
+        },
+        {
+          "@type": "Question",
+          "name": "How often should I optimise my Google Ads account?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Review search terms and negative keywords weekly, adjust bids and budgets fortnightly, and conduct full account restructuring quarterly. Continuous monitoring prevents wasted spend, but avoid making changes too frequently — Google's algorithms need 2-3 weeks to learn from each significant adjustment." }
+        },
+        {
+          "@type": "Question",
+          "name": "Are Responsive Search Ads better than standard text ads?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Responsive Search Ads (RSAs) allow Google to test multiple headline and description combinations automatically, finding the best-performing variations for each search query. RSAs typically deliver 5-15% higher click-through rates compared to single static ads, and they are now Google's default Search ad format." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.optimisedwebsite.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://visible-ads.optimisedwebsite.com/blog" },
+        { "@type": "ListItem", "position": 3, "name": "24 Expert Google Ads Strategies", "item": "https://visible-ads.optimisedwebsite.com/blog/24-google-ads-strategies" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title="24 Expert Google Ads Strategies | Visible Ads" description="24 proven Google Ads strategies to maximise sales. Campaign structure, bidding, ad copy, remarketing, and conversion tracking for UK businesses." schema={schema}>
+
+  <!-- Hero -->
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-navy to-navy-light relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <nav class="text-sm text-slate-light mb-8">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+        <span class="mx-2">/</span>
+        <span class="text-white">24 Expert Google Ads Strategies</span>
+      </nav>
+      <div class="max-w-3xl">
+        <span class="inline-block px-4 py-1.5 bg-electric/20 text-electric-light text-sm font-medium rounded-full mb-6">Google Ads</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white leading-tight mb-6">24 Expert Strategies to Maximise Your Sales with Google Ads</h1>
+        <p class="text-lg sm:text-xl text-slate-light leading-relaxed">A comprehensive playbook covering campaign structure, bidding, ad copy, remarketing, Quality Score optimisation, and everything in between.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Strategies 1-6: Foundation -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">Foundation: Campaign Structure and Bidding</h2>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">1. Focus on Your Top Sellers</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Allocate the bulk of your budget to products and services that already convert. Doubling down on proven winners delivers faster ROI than experimenting with unproven offerings.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">2. Optimise Your Campaign Structure</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">The single-keyword ad group (SKAG) approach is outdated. Google now focuses on intent, so group keywords from the same intent cluster in a single ad group, provide high-quality assets, and let the algorithm optimise delivery.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">3. Craft Compelling Ad Copy</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Highlight your unique selling points, include a strong call-to-action, and use ad extensions to maximise visibility. On smaller budgets, pin your key headlines into top positions to ensure your core message always shows.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">4. Use Ad Scheduling and Geo-Targeting</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Schedule ads to run during your highest-converting hours and target the regions that deliver the best ROI. This ensures you reach the right audience at the right time without wasting budget on low-value impressions.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">5. Connect Google Analytics 4</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Link your <a href="/google-ads" class="text-electric underline hover:text-electric-dark">Google Ads</a> account to GA4 to track conversions, user behaviour, and attribution paths. This data is essential for identifying which campaigns and keywords actually drive revenue.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">6. Adopt Smart Bidding</h3>
+      <p class="text-lg text-gray-700 leading-relaxed">Automated bidding strategies like Target CPA, Target ROAS, and Maximise Conversions use Google's machine learning to optimise bids in real time. They consistently outperform manual bidding on accounts with sufficient conversion data.</p>
+    </div>
+  </section>
+
+  <!-- Strategies 7-12: Ad Optimisation -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">Ad Optimisation and Testing</h2>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">7. Test Multiple Ad Variations</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Create multiple ad variations within each ad group to identify the best-performing messages. Regular testing keeps campaigns fresh and prevents ad fatigue from eroding your click-through rates.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">8. Use Responsive Search Ads</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Responsive Search Ads (RSAs) let Google test multiple headline and description combinations automatically. The algorithm serves the best-performing combinations for each query, improving ad relevance and reducing manual testing effort.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">9. Optimise Landing Pages</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Ensure landing pages are fast-loading, mobile-friendly, and directly relevant to your ad copy. Clear, low-risk CTAs and a frictionless user experience are essential — your Quality Score depends on landing page quality as much as ad relevance.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">10. Manage Negative Keywords</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Review your search terms report weekly and add irrelevant queries to your negative keyword list. This prevents your ads from showing for unwanted searches and reduces wasted spend — one of the fastest ways to improve account efficiency.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">11. Leverage Remarketing</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Use remarketing and Customer Match to re-engage users who have already visited your site or are in your customer database. These audiences convert at 2-3x the rate of cold traffic, making remarketing one of the highest-ROI campaign types.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">12. Work with a Google Ads Specialist</h3>
+      <p class="text-lg text-gray-700 leading-relaxed">A certified <a href="/google-ads" class="text-electric underline hover:text-electric-dark">Google Ads specialist</a> brings expertise in bid management, account structure, and creative testing that typically pays for itself through improved efficiency and reduced wasted spend.</p>
+    </div>
+  </section>
+
+  <!-- Strategies 13-18: Advanced Tactics -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">Advanced Tactics</h2>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">13. Prioritise Mobile Advertising</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Mobile accounts for over 60% of search traffic. Ensure your ads and landing pages are optimised for mobile devices, and adjust bid modifiers based on device-level conversion data.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">14. Use Ad Customisers</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Ad customisers dynamically tailor your ad copy based on the user's query, device, location, and time. This increases relevance and typically delivers higher click-through rates and conversions.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">15. Experiment with Ad Formats</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Test text ads, Shopping ads, video ads, and Performance Max campaigns to discover which formats resonate most with your audience. Diversifying formats increases your visibility across Google's entire ad ecosystem.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">16. Adjust Bids by Device</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Monitor performance across desktop, mobile, and tablet separately. Apply bid adjustments to allocate more budget to the devices that generate the highest ROI for your business.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">17. Refine Audience Targeting</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Layer demographic, interest, and behavioural targeting onto your campaigns. Combine these with <a href="/paid-social" class="text-electric underline hover:text-electric-dark">paid social</a> audience insights to build a more complete picture of your ideal customer.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">18. Optimise Continuously</h3>
+      <p class="text-lg text-gray-700 leading-relaxed">Google Ads is not a set-and-forget platform. Monitor your account regularly, make data-driven adjustments to campaigns, ad groups, keywords, and creative, and maintain a disciplined optimisation cadence.</p>
+    </div>
+  </section>
+
+  <!-- Strategies 19-24: Scaling -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">Scaling and Competitive Edge</h2>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">19. Monitor Competitor Activity</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Track your competitors' ad strategies using tools like SEMrush and SpyFu. Identify gaps in their approach and opportunities to differentiate your messaging, bidding, and targeting.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">20. Implement Conversion Tracking</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Robust conversion tracking is non-negotiable. Track purchases, sign-ups, form submissions, and phone calls to understand exactly which campaigns and keywords drive revenue. Without accurate tracking, every optimisation decision is guesswork.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">21. Capitalise on Seasonal Trends</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Adjust campaigns to align with seasonal demand, holidays, and industry events. Increasing budget during peak periods and pulling back during quiet months maximises your annual ROAS.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">22. Test Bidding Strategies</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Experiment with Manual CPC, Enhanced CPC, Maximise Conversions, and Target ROAS to find the strategy that delivers the best results for each campaign type. What works for Search may not work for Shopping or Performance Max.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">23. Improve Your Quality Score</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">A higher Quality Score means lower CPCs and better ad positions. Improve it by tightening keyword-to-ad relevance, optimising landing page experience, and increasing expected click-through rate through better ad copy.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">24. Conduct Comprehensive Keyword Research</h3>
+      <p class="text-lg text-gray-700 leading-relaxed">Go beyond volume. Use Google Keyword Planner and third-party tools to find long-tail keywords with high conversion potential. Analyse competitor keywords and identify gaps your campaigns can fill. The best <a href="/seo" class="text-electric underline hover:text-electric-dark">SEO</a> and PPC strategies work together, targeting high-intent terms across both channels.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-8">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            What is the most important Google Ads strategy for increasing sales?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">Focus on your top sellers first. Allocating budget to products and services that already convert well gives you the highest immediate return. From there, optimise campaign structure, implement conversion tracking, and layer in Smart Bidding strategies as you gather data.</div>
+        </details>
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            How often should I optimise my Google Ads account?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">Review search terms and negative keywords weekly, adjust bids and budgets fortnightly, and conduct full account restructuring quarterly. Continuous monitoring prevents wasted spend, but avoid making changes too frequently — Google's algorithms need 2-3 weeks to learn from each significant adjustment.</div>
+        </details>
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            Are Responsive Search Ads better than standard text ads?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">Yes. Responsive Search Ads (RSAs) allow Google to test multiple headline and description combinations automatically, finding the best-performing variations for each search query. RSAs typically deliver 5-15% higher click-through rates compared to single static ads, and they are now Google's default Search ad format.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Badges -->
+  <section class="py-12 bg-sky-tint border-y border-gray-100" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PartnerBadges compact />
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative py-20 lg:py-28 bg-navy" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">Put These Strategies to Work</h2>
+      <p class="text-lg text-slate-light mb-8 max-w-2xl mx-auto">Get a free audit showing which of these 24 strategies will have the biggest impact on your account.</p>
+      <a href="/free-ads-audit" class="w-full sm:w-auto inline-flex items-center justify-center bg-cta text-white font-semibold px-10 py-4 rounded-xl hover:bg-electric transition-colors text-lg">Get Your Free Ads Audit</a>
+    </div>
+  </section>
+
+</Layout>

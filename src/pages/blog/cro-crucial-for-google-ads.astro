@@ -1,0 +1,149 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PartnerBadges from '../../components/PartnerBadges.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Why CRO Is Crucial for Google Ads",
+      "description": "Discover why conversion rate optimisation is essential for Google Ads success. Learn how dedicated landing pages and split testing reduce cost per lead.",
+      "url": "https://visible-ads.optimisedwebsite.com/blog/cro-crucial-for-google-ads",
+      "datePublished": "2025-02-21",
+      "dateModified": "2026-05-26",
+      "author": { "@type": "Person", "name": "Joe Short" },
+      "publisher": { "@type": "Organization", "name": "Visible Ads", "url": "https://visible-ads.optimisedwebsite.com" },
+      "image": "https://visible-ads.optimisedwebsite.com/images/visible-ads-og.png"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is conversion rate optimisation for Google Ads?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Conversion rate optimisation (CRO) for Google Ads is the process of improving your landing pages and user experience so that a higher percentage of paid clicks convert into leads or sales. It involves dedicated landing pages, A/B testing, and data-driven refinements to reduce your cost per lead and maximise return on ad spend." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do I need dedicated landing pages for Google Ads?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Dedicated landing pages are laser-focused on the offer in your ad, providing a seamless experience that matches user intent. Sending traffic to generic website pages typically results in lower conversion rates and higher cost per lead because the content does not align with what the user searched for." }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does CRO take to show results?",
+          "acceptedAnswer": { "@type": "Answer", "text": "CRO is an ongoing process rather than a one-time fix. Initial split tests can show statistically significant results within 2-4 weeks depending on traffic volume. Over 3-6 months of continuous testing and iteration, most businesses see substantial improvements in conversion rate and cost per acquisition." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.optimisedwebsite.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://visible-ads.optimisedwebsite.com/blog" },
+        { "@type": "ListItem", "position": 3, "name": "CRO for Google Ads", "item": "https://visible-ads.optimisedwebsite.com/blog/cro-crucial-for-google-ads" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title="Why CRO Is Crucial for Google Ads | Visible Ads" description="Discover why conversion rate optimisation is essential for Google Ads success. Dedicated landing pages and split testing reduce cost per lead and maximise ROAS." schema={schema}>
+
+  <!-- Hero -->
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-navy to-navy-light relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <nav class="text-sm text-slate-light mb-8">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+        <span class="mx-2">/</span>
+        <span class="text-white">CRO for Google Ads</span>
+      </nav>
+      <div class="max-w-3xl">
+        <span class="inline-block px-4 py-1.5 bg-electric/20 text-electric-light text-sm font-medium rounded-full mb-6">Conversion</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white leading-tight mb-6">Why Conversion Rate Optimisation Is Crucial for Google Ads</h1>
+        <p class="text-lg sm:text-xl text-slate-light leading-relaxed">You are paying for every click. If your landing page does not convert, you are throwing money away. Here is how CRO fixes that.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Problem -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">The Problem: Good Traffic, Bad Landing Page</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Running <a href="/google-ads" class="text-electric underline hover:text-electric-dark">Google Ads</a> campaigns can be a powerful way to drive traffic to your website. But what happens when that traffic lands on a page that does not convert? You are paying for clicks that never translate into customers.</p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Imagine a beautifully decorated shop window attracting customers. They step inside, but the store is disorganised, the staff is unhelpful, and the product they were looking for is hard to find. They leave without buying. This is exactly what happens with a poorly designed landing page. It is the first impression you make on a potential customer, and if it fails to deliver, you have lost them.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">You have invested time and resources crafting compelling ad copy, targeting the right keywords, and setting up your campaigns. You are driving genuinely interested people to your site. But if your landing page is not up to par, that potential evaporates, leaving you with low conversion rates and a sky-high cost per lead.</p>
+    </div>
+  </section>
+
+  <!-- The Solution -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">The Solution: Dedicated Landing Pages</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">The best approach is to create dedicated landing pages specifically for your Google Ads campaigns. These pages should be laser-focused on the offer presented in your ad, providing a seamless and relevant experience for the user. This allows you to fine-tune the page over time through split testing.</p>
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">Split Testing: The Key to Improvement</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Split testing (also known as A/B testing) involves creating two versions of your landing page with slight variations -- perhaps a different headline, call-to-action button, or image. You then direct traffic to both versions and track which one performs better in terms of conversions.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">By continuously testing and iterating, you can gradually improve your conversion rate, reduce your cost per lead, and maximise the efficiency of your marketing spend. Our <a href="/ecro" class="text-electric underline hover:text-electric-dark">eCRO service</a> provides exactly this structured approach to testing and optimisation.</p>
+    </div>
+  </section>
+
+  <!-- The Process -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">CRO Is a Process, Not a One-Time Fix</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">CRO is an ongoing process of testing, analysing, and refining. Just like a shop owner constantly adjusts their window display based on customer feedback, you should continually optimise your landing pages based on data and insights. Over time, these small changes add up to significant improvements in your conversion rate and ROI.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">At Visible Ads, we developed our Conversion Growth Blueprint to help businesses achieve sustainable growth through data-driven optimisation. This blueprint provides a structured approach to identifying areas for improvement, implementing effective testing strategies, and driving more conversions from your Google Ads campaigns. We have seen firsthand how this process can transform underperforming campaigns into lead-generating machines -- as demonstrated in our <a href="/blog/cfw-case-study" class="text-electric underline hover:text-electric-dark">CFW case study</a>.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-8">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            What is conversion rate optimisation for Google Ads?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">Conversion rate optimisation (CRO) for Google Ads is the process of improving your landing pages and user experience so that a higher percentage of paid clicks convert into leads or sales. It involves dedicated landing pages, A/B testing, and data-driven refinements to reduce your cost per lead and maximise return on ad spend.</div>
+        </details>
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            Why do I need dedicated landing pages for Google Ads?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">Dedicated landing pages are laser-focused on the offer in your ad, providing a seamless experience that matches user intent. Sending traffic to generic website pages typically results in lower conversion rates and higher cost per lead because the content does not align with what the user searched for.</div>
+        </details>
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            How long does CRO take to show results?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">CRO is an ongoing process rather than a one-time fix. Initial split tests can show statistically significant results within 2-4 weeks depending on traffic volume. Over 3-6 months of continuous testing and iteration, most businesses see substantial improvements in conversion rate and cost per acquisition.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Badges -->
+  <section class="py-12 bg-white border-y border-gray-100" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PartnerBadges compact />
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative py-20 lg:py-28 bg-navy" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">Stop Wasting Ad Spend on Pages That Do Not Convert</h2>
+      <p class="text-lg text-slate-light mb-8 max-w-2xl mx-auto">Get a free ads and conversion audit to find out exactly where your budget is leaking and how to fix it.</p>
+      <a href="/free-ads-audit" class="w-full sm:w-auto inline-flex items-center justify-center bg-cta text-white font-semibold px-10 py-4 rounded-xl hover:bg-electric transition-colors text-lg">Get Your Free Ads Audit</a>
+    </div>
+  </section>
+
+</Layout>

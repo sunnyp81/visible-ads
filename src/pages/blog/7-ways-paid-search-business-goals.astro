@@ -1,0 +1,182 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PartnerBadges from '../../components/PartnerBadges.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "7 Ways Paid Search Achieves Business Goals",
+      "description": "Discover seven proven paid search strategies that go beyond the basics to drive real business growth through Google, Bing, and Amazon Ads.",
+      "url": "https://visible-ads.optimisedwebsite.com/blog/7-ways-paid-search-business-goals",
+      "datePublished": "2024-06-03",
+      "dateModified": "2026-05-26",
+      "author": { "@type": "Person", "name": "Boh Tjarks" },
+      "publisher": { "@type": "Organization", "name": "Visible Ads", "url": "https://visible-ads.optimisedwebsite.com" },
+      "image": "https://visible-ads.optimisedwebsite.com/images/visible-ads-og.png"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does paid search help achieve business goals?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Paid search puts your brand in front of users with high purchase intent at the exact moment they are searching for your products or services. Combined with SMART goals, conversion tracking, and dedicated landing pages, it delivers measurable ROI that directly supports revenue targets, lead generation, and market share growth." }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I bid on my own brand keywords?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Bidding on your own brand name prevents competitors from appearing above your organic listing and capturing your highest-intent traffic. Brand CPCs are typically very low (£0.10-0.30), making it a cost-effective way to protect your most valuable search real estate." }
+        },
+        {
+          "@type": "Question",
+          "name": "How much of my ad budget is lost to click fraud?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Industry estimates suggest 10-20% of paid search clicks may be fraudulent, from bots or competitors. Anti-click-fraud platforms can detect and block invalid clicks in real time, protecting your budget and improving your true ROAS." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.optimisedwebsite.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://visible-ads.optimisedwebsite.com/blog" },
+        { "@type": "ListItem", "position": 3, "name": "7 Ways Paid Search Achieves Business Goals", "item": "https://visible-ads.optimisedwebsite.com/blog/7-ways-paid-search-business-goals" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title="7 Ways Paid Search Achieves Business Goals | Visible Ads" description="Seven proven paid search strategies to drive measurable business growth. From SMART goals to click fraud protection and ROAS tracking." schema={schema}>
+
+  <!-- Hero -->
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-navy to-navy-light relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <nav class="text-sm text-slate-light mb-8">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+        <span class="mx-2">/</span>
+        <span class="text-white">7 Ways Paid Search Achieves Business Goals</span>
+      </nav>
+      <div class="max-w-3xl">
+        <span class="inline-block px-4 py-1.5 bg-electric/20 text-electric-light text-sm font-medium rounded-full mb-6">Paid Search</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white leading-tight mb-6">7 Ways to Achieve Your Business Goals with Paid Search</h1>
+        <p class="text-lg sm:text-xl text-slate-light leading-relaxed">Seven strategies Google will not tell you about — from protecting your brand to eliminating click fraud and tracking the metrics that actually matter.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1. Write Down Your Strategy -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">1. Define SMART Goals and Build Conversion Funnels</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Before spending a single pound, write down exactly what you want to achieve, by when, and for which customer segment. Set SMART goals (Specific, Measurable, Achievable, Relevant, Time-bound) and define your minimum acceptable ROI.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">Never send traffic to your homepage. Instead, build dedicated landing pages aligned to each campaign objective and create conversion funnels that guide prospects from click to customer. A well-structured funnel with targeted landing pages can double your conversion rate compared to generic homepage traffic.</p>
+    </div>
+  </section>
+
+  <!-- 2. Target Your Own Brand -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">2. Bid on Your Own Brand Name</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Run ads on your own brand terms to prevent competitors from snatching your highest-intent traffic by outranking your organic listing with a paid ad. Brand CPCs are typically very low, making this one of the most cost-effective defences in paid search.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">Regularly check your brand position using an incognito browser window. If competitors are bidding on your name, the only reliable way to stop them is to hold a registered trademark and file an ad policy complaint with the platform.</p>
+    </div>
+  </section>
+
+  <!-- 3. Target Competitor Keywords -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">3. Target Competitor Keywords</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Bidding on competitor brand names and product keywords is one of the most effective ways to intercept their audience. If a competitor is not trademark-registered, you can bid on their brand terms directly. The key is to only bid on competitor keywords when you can present a genuinely better offer.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">This strategy works particularly well on <a href="/google-ads" class="text-electric underline hover:text-electric-dark">Google Ads</a> and <a href="/bing-ads" class="text-electric underline hover:text-electric-dark">Bing Ads</a>, where you can capture comparison shoppers actively evaluating alternatives. Pair competitor campaigns with landing pages that highlight your differentiators.</p>
+    </div>
+  </section>
+
+  <!-- 4. Click Fraud Protection -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">4. Protect Your Budget from Click Fraud</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Up to 20% of paid search clicks can come from bots or competitors deliberately draining your budget. Google reduced its internal click fraud detection team in 2023, leaving advertisers more exposed than ever.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">Invest in a dedicated anti-click-fraud platform that monitors traffic patterns in real time. These tools identify and block fraudulent clicks before they cost you money, directly improving your ROAS and ensuring your budget reaches genuine prospects.</p>
+    </div>
+  </section>
+
+  <!-- 5. Optimise Landing Pages -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">5. Optimise Your Landing Pages</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">You are paying for every click, so do not waste them on slow, cluttered, or confusing landing pages. A fast-loading, mobile-optimised page with clear, low-risk calls-to-action converts significantly more visitors into leads or customers.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">Focus on page speed (under 3 seconds), visual clarity, and removing friction from the conversion path. Every unnecessary form field, slow-loading image, or ambiguous CTA costs you conversions — and with paid traffic, that cost is measurable in pounds.</p>
+    </div>
+  </section>
+
+  <!-- 6. Track Your ROAS -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">6. Track ROAS Relentlessly</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">If you do not monitor Return on Ad Spend at regular intervals, platforms like Google will happily spend your entire budget with no accountability. Track ROAS weekly and monthly, segment by campaign, and build a clear picture of which activities drive profit.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">Think about short, medium, and long-term objectives. Create separate funnels for each customer segment, capture email addresses early, and use email sequences to convert prospects who are not ready to buy immediately. The combination of paid search acquisition with email nurture maximises lifetime value.</p>
+    </div>
+  </section>
+
+  <!-- 7. Hire a Pro -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">7. Work with a Paid Search Specialist</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed"><a href="/google-ads" class="text-electric underline hover:text-electric-dark">Google Ads</a>, <a href="/amazon" class="text-electric underline hover:text-electric-dark">Amazon Ads</a>, and <a href="/bing-ads" class="text-electric underline hover:text-electric-dark">Microsoft Ads</a> are complex platforms that evolve constantly. If you are spending over £5,000 per month on clicks, the cost savings from expert management typically exceed the management fee.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">A specialist handles audience targeting, bid strategy testing, campaign type selection, remarketing, negative keyword management, and ad extensions — freeing you to focus on running your business while ensuring every pound of ad spend works as hard as possible.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-8">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            How does paid search help achieve business goals?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">Paid search puts your brand in front of users with high purchase intent at the exact moment they are searching for your products or services. Combined with SMART goals, conversion tracking, and dedicated landing pages, it delivers measurable ROI that directly supports revenue targets, lead generation, and market share growth.</div>
+        </details>
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            Should I bid on my own brand keywords?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">Yes. Bidding on your own brand name prevents competitors from appearing above your organic listing and capturing your highest-intent traffic. Brand CPCs are typically very low (£0.10-0.30), making it a cost-effective way to protect your most valuable search real estate.</div>
+        </details>
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            How much of my ad budget is lost to click fraud?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">Industry estimates suggest 10-20% of paid search clicks may be fraudulent, from bots or competitors. Anti-click-fraud platforms can detect and block invalid clicks in real time, protecting your budget and improving your true ROAS.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Badges -->
+  <section class="py-12 bg-sky-tint border-y border-gray-100" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PartnerBadges compact />
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative py-20 lg:py-28 bg-navy" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">Ready to Make Paid Search Work for Your Business?</h2>
+      <p class="text-lg text-slate-light mb-8 max-w-2xl mx-auto">Get a free audit showing exactly where your ad budget is being wasted and how to fix it.</p>
+      <a href="/free-ads-audit" class="w-full sm:w-auto inline-flex items-center justify-center bg-cta text-white font-semibold px-10 py-4 rounded-xl hover:bg-electric transition-colors text-lg">Get Your Free Ads Audit</a>
+    </div>
+  </section>
+
+</Layout>

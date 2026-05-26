@@ -1,0 +1,179 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PartnerBadges from '../../components/PartnerBadges.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Performance Max for Lead Gen: A Guide",
+      "description": "A comprehensive guide to reactivating and optimising Performance Max campaigns for lead generation, covering measurement, bidding, creatives, and audience signals.",
+      "url": "https://visible-ads.optimisedwebsite.com/blog/performance-max-lead-generation",
+      "datePublished": "2025-02-07",
+      "dateModified": "2026-05-26",
+      "author": { "@type": "Person", "name": "Joe Short" },
+      "publisher": { "@type": "Organization", "name": "Visible Ads", "url": "https://visible-ads.optimisedwebsite.com" },
+      "image": "https://visible-ads.optimisedwebsite.com/images/visible-ads-og.png"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How long should I wait before evaluating Performance Max results?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Allow your Performance Max campaigns 1-2 weeks to ramp up before evaluating performance. Factor in conversion lag when assessing results to ensure you have a complete picture of your campaign's effectiveness. Rushing to make changes too early can disrupt the algorithm's learning phase." }
+        },
+        {
+          "@type": "Question",
+          "name": "What bidding strategy works best for Performance Max lead generation?",
+          "acceptedAnswer": { "@type": "Answer", "text": "For high volume, use conversion-based bidding focused on upper-funnel goals. To balance volume with quality, use value-based bidding targeting mid to lower-funnel goals. If assigning values is difficult, conversion-based bidding targeting qualified or converted leads is a strong alternative." }
+        },
+        {
+          "@type": "Question",
+          "name": "How many creative assets do I need for Performance Max?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Aim for 15 images per asset group with high pixel density and varied compositions. For video, target 5 videos per asset group in multiple formats (16:9, 1:1, 4:5). Keep videos above 10 seconds, with vertical orientations under 60 seconds. Fill all available text asset slots for headlines, descriptions, and calls to action." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.optimisedwebsite.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://visible-ads.optimisedwebsite.com/blog" },
+        { "@type": "ListItem", "position": 3, "name": "Performance Max Lead Gen", "item": "https://visible-ads.optimisedwebsite.com/blog/performance-max-lead-generation" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title="Performance Max for Lead Gen: A Guide | Visible Ads" description="Reactivate and optimise Performance Max campaigns for lead generation. Covers measurement, bidding strategies, creatives, audience signals, and common pitfalls." schema={schema}>
+
+  <!-- Hero -->
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-navy to-navy-light relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <nav class="text-sm text-slate-light mb-8">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+        <span class="mx-2">/</span>
+        <span class="text-white">Performance Max Lead Gen</span>
+      </nav>
+      <div class="max-w-3xl">
+        <span class="inline-block px-4 py-1.5 bg-electric/20 text-electric-light text-sm font-medium rounded-full mb-6">Google Ads</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white leading-tight mb-6">Performance Max for Lead Generation: A Reactivation Guide</h1>
+        <p class="text-lg sm:text-xl text-slate-light leading-relaxed">Performance Max uplift has grown from 13% at launch to 27% in 2024. This guide helps you overcome common PMax lead generation pitfalls.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fine-Tuning Measurement -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">1. Fine-Tuning Measurement</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Effective measurement is the cornerstone of any successful campaign. Begin by aligning your conversion actions with your goals, guiding Google AI to prioritise the right outcomes. Performance Max campaigns designed for lead generation benefit from focused inventory, reducing the risk of invalid leads.</p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Choose from relevant goals such as contact submissions, lead forms, appointment bookings, sign-ups, quote requests, qualified leads, and converted leads. Regularly review your campaign settings to monitor the conversion goals being optimised -- adjustments can significantly impact bidding performance.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">Consider implementing Enhanced Conversions for Leads. This bridges the gap between offline transactions and their online origins, empowering Google AI to identify high-quality leads more effectively. Aim for consistent, ideally daily, data uploads to keep your insights fresh.</p>
+    </div>
+  </section>
+
+  <!-- Lead Forms & Bidding -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">2. Optimising Website Lead Forms</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Creating a frictionless experience for your target audience while deterring unwanted submissions is crucial. Implement validation measures like reCAPTCHA, Double Opt-in, or One Time Passwords to reduce spam and bot submissions. Server-side and client-side validation adds another layer of protection, verifying accuracy and minimising spam.</p>
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">3. Mastering Bidding Strategies</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Choosing the right bidding strategy is essential for steering campaigns toward your goals. If you lack offline measurement capabilities, value-based bidding can be powerful -- assign values to online actions such as lead form submissions or calls and bid strategically to capture valuable leads.</p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">For high-volume lead generation, conversion-based bidding focused on upper-funnel goals works well. To balance volume with quality, consider value-based bidding targeting mid to lower-funnel goals. If assigning values is challenging, conversion-based bidding targeting qualified or converted leads is a solid option.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">Allow your campaigns 1-2 weeks to ramp up before evaluating performance. Factor in conversion lag when assessing results to get a complete picture. Our <a href="/google-ads" class="text-electric underline hover:text-electric-dark">Google Ads management</a> team can help you select the right bidding strategy for your account.</p>
+    </div>
+  </section>
+
+  <!-- Creatives -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">4. Crafting Compelling Creatives</h2>
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">Text Assets</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Adhere to the recommended quantity and content specifications for headlines, descriptions, and calls to action. Introduce your product with clear, concise descriptions, pique curiosity with compelling statements, and highlight unique features and benefits. Include a strong call to action to encourage immediate engagement.</p>
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">Images and Logos</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Aim for 15 images per asset group, ensuring they are engaging, relevant, and high quality. Avoid overly staged stock photography and prioritise high pixel density to maintain visual appeal across screen sizes.</p>
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">Video Creatives</h3>
+      <p class="text-lg text-gray-700 leading-relaxed">Use various formats (16:9, 1:1, 4:5) and aim for 5 videos per asset group. Keep videos above 10 seconds, with vertical orientations under 60 seconds. Focus on grabbing attention early, diversifying content, and emphasising your product experience.</p>
+    </div>
+  </section>
+
+  <!-- Audience Signals & Content Suitability -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">5. Harnessing Audience Signals</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Provide Google AI with a deeper understanding of your ideal customers. Use audience signals -- website interactions, custom segments, demographics, and search themes -- to paint a clearer picture of your target audience. Search themes allow you to provide additional context about searches and topics that drive conversions. Leverage customer match lists to re-engage existing customers and reach similar new audiences.</p>
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">6. Ensuring Content Suitability</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Maintain brand suitability by using content suitability controls to prevent your ads appearing alongside inappropriate content. Exclude specific keywords, categories, or placements that do not align with your brand. For lead generation campaigns, excluding parked domains and apps is recommended.</p>
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">7. Expanding Reach with URLs and Page Feeds</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Final URL expansion allows Google to generate assets using content from your landing page and domain, improving ad relevance. Page feeds are particularly valuable for lead generation advertisers, enabling targeted reach to specific landing pages with granular control over exclusions.</p>
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">8. Refining Location Targeting</h2>
+      <p class="text-lg text-gray-700 leading-relaxed">Define specific locations to target and exclude, controlling who sees your ads. In most cases, use the "Presence" location option -- targeting individuals physically located in your targeted areas -- for the best lead quality.</p>
+    </div>
+  </section>
+
+  <!-- Common Challenges -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">Addressing Common PMax Challenges</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed"><strong>Transparency:</strong> Performance Max offers asset-level reporting, search term insights, audience insights, and placement reporting to give you a deeper understanding of campaign performance.</p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed"><strong>Lead Quality:</strong> Express your goals clearly in Google Ads, optimise your lead forms, and leverage AI-powered features like deeper funnel measurement and value-based bidding to improve lead quality.</p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed"><strong>Keywords:</strong> Performance Max prioritises keywords based on match characteristics, relevance, and Ad Rank. It can complement your existing <a href="/google-ads" class="text-electric underline hover:text-electric-dark">search campaigns</a> effectively.</p>
+      <p class="text-lg text-gray-700 leading-relaxed"><strong>Channels and Inventory:</strong> PMax optimises across all Google channels and adapts to customer journeys. It can complement <a href="/paid-social" class="text-electric underline hover:text-electric-dark">paid social campaigns</a> for broader reach.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-8">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            How long should I wait before evaluating Performance Max results?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">Allow your Performance Max campaigns 1-2 weeks to ramp up before evaluating performance. Factor in conversion lag when assessing results to ensure you have a complete picture of your campaign's effectiveness. Rushing to make changes too early can disrupt the algorithm's learning phase.</div>
+        </details>
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            What bidding strategy works best for Performance Max lead generation?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">For high volume, use conversion-based bidding focused on upper-funnel goals. To balance volume with quality, use value-based bidding targeting mid to lower-funnel goals. If assigning values is difficult, conversion-based bidding targeting qualified or converted leads is a strong alternative.</div>
+        </details>
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            How many creative assets do I need for Performance Max?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">Aim for 15 images per asset group with high pixel density and varied compositions. For video, target 5 videos per asset group in multiple formats (16:9, 1:1, 4:5). Keep videos above 10 seconds, with vertical orientations under 60 seconds. Fill all available text asset slots for headlines, descriptions, and calls to action.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Badges -->
+  <section class="py-12 bg-white border-y border-gray-100" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PartnerBadges compact />
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative py-20 lg:py-28 bg-navy" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">Get More From Your Performance Max Campaigns</h2>
+      <p class="text-lg text-slate-light mb-8 max-w-2xl mx-auto">Our team will audit your PMax setup and show you exactly where leads are being lost and how to fix it.</p>
+      <a href="/free-ads-audit" class="w-full sm:w-auto inline-flex items-center justify-center bg-cta text-white font-semibold px-10 py-4 rounded-xl hover:bg-electric transition-colors text-lg">Get Your Free Ads Audit</a>
+    </div>
+  </section>
+
+</Layout>

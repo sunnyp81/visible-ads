@@ -1,0 +1,132 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PartnerBadges from '../../components/PartnerBadges.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "F&B eCommerce: 1118% ROAS Case Study",
+      "description": "How Visible Ads achieved 1,118% ROAS for a UK Food and Beverage eCommerce brand while reducing ad spend — turning advertising from a cost centre into a revenue engine.",
+      "url": "https://visible-ads.optimisedwebsite.com/blog/food-beverage-case-study",
+      "datePublished": "2026-02-18",
+      "dateModified": "2026-02-18",
+      "author": { "@type": "Person", "name": "Joe Short" },
+      "publisher": { "@type": "Organization", "name": "Visible Ads", "url": "https://visible-ads.optimisedwebsite.com" },
+      "image": "https://visible-ads.optimisedwebsite.com/images/visible-ads-og.png"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.optimisedwebsite.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://visible-ads.optimisedwebsite.com/blog" },
+        { "@type": "ListItem", "position": 3, "name": "F&B eCommerce Case Study", "item": "https://visible-ads.optimisedwebsite.com/blog/food-beverage-case-study" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title="F&B eCommerce: 1118% ROAS Case Study | Visible Ads" description="How Visible Ads achieved 1,118% ROAS for a UK Food & Beverage eCommerce brand while reducing ad spend by £805. More revenue, less waste." schema={schema}>
+
+  <!-- Hero -->
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-navy to-navy-light relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <nav class="text-sm text-slate-light mb-8">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+        <span class="mx-2">/</span>
+        <span class="text-white">F&amp;B eCommerce Case Study</span>
+      </nav>
+      <div class="max-w-3xl">
+        <span class="inline-block px-4 py-1.5 bg-electric/20 text-electric-light text-sm font-medium rounded-full mb-6">Case Study</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white leading-tight mb-6">Serving Up Success: 1,118% ROAS for an F&amp;B eCommerce Brand</h1>
+        <p class="text-lg sm:text-xl text-slate-light leading-relaxed">How structured campaigns and performance-driven best practices turned a struggling account into a high-performance revenue engine — while spending less.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Results -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-8">Results at a Glance</h2>
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="border-b-2 border-electric/20">
+              <th class="py-3 pr-4 font-heading font-bold text-navy">Metric</th>
+              <th class="py-3 px-4 font-heading font-bold text-navy">Current Performance</th>
+              <th class="py-3 pl-4 font-heading font-bold text-navy">Year-on-Year Change</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+            <tr class="border-b border-gray-100"><td class="py-3 pr-4">Actual ROAS</td><td class="py-3 px-4">1,118.45%</td><td class="py-3 pl-4">+911.58%</td></tr>
+            <tr class="border-b border-gray-100"><td class="py-3 pr-4">Conversions</td><td class="py-3 px-4">682.76</td><td class="py-3 pl-4">+510.75</td></tr>
+            <tr class="border-b border-gray-100"><td class="py-3 pr-4">Conversion Value</td><td class="py-3 px-4">£31,900</td><td class="py-3 pl-4">+£24,300</td></tr>
+            <tr><td class="py-3 pr-4">Ad Spend</td><td class="py-3 px-4">£2,850</td><td class="py-3 pl-4">-£805 (reduced)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-lg text-gray-700 leading-relaxed">The standout figure is the 1,118% Actual ROAS — generating over £11 for every £1 spent. Most impressively, Visible Ads achieved a £24,300 increase in conversion value while actually <em>reducing</em> ad spend by £805. This is the hallmark of doing more with less.</p>
+    </div>
+  </section>
+
+  <!-- Challenge -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">The Challenge: Wasted Spend and Stagnant Growth</h2>
+      <p class="text-lg text-gray-700 leading-relaxed">Before partnering with Visible Ads, this UK-based Food and Beverage brand faced a common industry problem: high ad spend with diminishing returns. The account lacked a cohesive structure, resulting in keyword cannibalisation and a failure to capture high-intent shoppers at the right moment. The objective was clear — increase efficiency and scale revenue without simply throwing more money at the problem.</p>
+    </div>
+  </section>
+
+  <!-- Strategy -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">The Strategy: Structure and Precision</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">The turnaround focused on three core pillars:</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">Granular Campaign Architecture</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">We moved away from catch-all campaigns, instead segmenting products by margin and performance. This allowed for precise budget allocation toward the highest-value items, eliminating the keyword cannibalisation that was dragging down the account.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">Smart Bidding Optimisation</h3>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">By refining conversion tracking and feeding the algorithm higher-quality first-party data, we enabled <a href="/google-ads" class="text-electric underline hover:text-electric-dark">Google's Smart Bidding</a> to bid more aggressively for users likely to have a high Average Order Value. Better data in means better decisions out.</p>
+
+      <h3 class="text-xl font-heading font-bold text-navy mb-4">Creative Resonance</h3>
+      <p class="text-lg text-gray-700 leading-relaxed">In the F&amp;B niche, appetite appeal is everything. We optimised ad copy and visual assets to highlight the brand's unique selling points, ensuring the messaging resonated with the British consumer's preference for authenticity and quality.</p>
+    </div>
+  </section>
+
+  <!-- Quote -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <blockquote class="border-l-4 border-electric pl-6">
+        <p class="text-xl text-gray-700 italic leading-relaxed mb-4">"By focusing on the 'Actual ROAS' rather than just 'Clicks', we've turned this brand's advertising from a cost centre into a high-performance revenue engine."</p>
+        <cite class="text-navy font-heading font-bold not-italic">Boh Tjarks, Director of Clicks — Visible Ads</cite>
+      </blockquote>
+
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mt-12 mb-6">Looking Ahead</h2>
+      <p class="text-lg text-gray-700 leading-relaxed">Success in eCommerce is not a set-and-forget endeavour. We continue to iterate on these campaigns, testing new audience signals and leveraging the latest in AI-driven search themes to ensure this F&amp;B brand remains at the top of its category throughout 2026 and beyond.</p>
+    </div>
+  </section>
+
+  <!-- Partner Badges -->
+  <section class="py-12 bg-white border-y border-gray-100" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PartnerBadges compact />
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative py-20 lg:py-28 bg-navy" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">Is Your Ad Spend Working This Hard?</h2>
+      <p class="text-lg text-slate-light mb-8 max-w-2xl mx-auto">Get a free audit and find out how much revenue your current campaigns are leaving on the table.</p>
+      <a href="/free-ads-audit" class="w-full sm:w-auto inline-flex items-center justify-center bg-cta text-white font-semibold px-10 py-4 rounded-xl hover:bg-electric transition-colors text-lg">Get Your Free Ads Audit</a>
+    </div>
+  </section>
+
+</Layout>
