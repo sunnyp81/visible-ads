@@ -97,45 +97,47 @@ const services = [
 <div class="h-16 lg:h-20"></div>
 
 <script>
-  const toggle = document.getElementById('mobile-toggle');
-  const menu = document.getElementById('mobile-menu');
-  const overlay = document.getElementById('mobile-overlay');
-  const hamburger = document.getElementById('hamburger-icon');
-  const closeIcon = document.getElementById('close-icon');
-  let isOpen = false;
+  document.addEventListener('astro:page-load', () => {
+    const toggle = document.getElementById('mobile-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('mobile-overlay');
+    const hamburger = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+    let isOpen = false;
 
-  function openMenu() {
-    isOpen = true;
-    menu?.classList.remove('translate-x-full');
-    menu?.classList.add('translate-x-0');
-    overlay?.classList.remove('hidden');
-    requestAnimationFrame(() => overlay?.classList.replace('opacity-0', 'opacity-100'));
-    hamburger?.classList.add('hidden');
-    closeIcon?.classList.remove('hidden');
-    document.body.classList.add('overflow-hidden');
-    toggle?.setAttribute('aria-expanded', 'true');
-  }
+    function openMenu() {
+      isOpen = true;
+      menu?.classList.remove('translate-x-full');
+      menu?.classList.add('translate-x-0');
+      overlay?.classList.remove('hidden');
+      requestAnimationFrame(() => overlay?.classList.replace('opacity-0', 'opacity-100'));
+      hamburger?.classList.add('hidden');
+      closeIcon?.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+      toggle?.setAttribute('aria-expanded', 'true');
+    }
 
-  function closeMenu() {
-    isOpen = false;
-    menu?.classList.remove('translate-x-0');
-    menu?.classList.add('translate-x-full');
-    overlay?.classList.replace('opacity-100', 'opacity-0');
-    setTimeout(() => overlay?.classList.add('hidden'), 300);
-    hamburger?.classList.remove('hidden');
-    closeIcon?.classList.add('hidden');
-    document.body.classList.remove('overflow-hidden');
-    toggle?.setAttribute('aria-expanded', 'false');
-  }
+    function closeMenu() {
+      isOpen = false;
+      menu?.classList.remove('translate-x-0');
+      menu?.classList.add('translate-x-full');
+      overlay?.classList.replace('opacity-100', 'opacity-0');
+      setTimeout(() => overlay?.classList.add('hidden'), 300);
+      hamburger?.classList.remove('hidden');
+      closeIcon?.classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+      toggle?.setAttribute('aria-expanded', 'false');
+    }
 
-  toggle?.addEventListener('click', () => isOpen ? closeMenu() : openMenu());
-  overlay?.addEventListener('click', closeMenu);
+    toggle?.addEventListener('click', () => isOpen ? closeMenu() : openMenu());
+    overlay?.addEventListener('click', closeMenu);
 
-  menu?.querySelectorAll('.mobile-link').forEach(link => {
-    link.addEventListener('click', closeMenu);
-  });
+    menu?.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', closeMenu);
+    });
 
-  window.addEventListener('resize', () => {
-    if (window.innerWidth >= 1024 && isOpen) closeMenu();
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024 && isOpen) closeMenu();
+    });
   });
 </script>

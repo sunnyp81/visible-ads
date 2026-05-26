@@ -27,7 +27,7 @@ import '../styles/global.css';
   <link rel="canonical" href={pageUrl} />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <link rel="alternate" type="application/rss+xml" title="Visible Ads Blog" href="/rss.xml" />
-  <link rel="preload" href="/images/boh-and-joe.webp" as="image" type="image/webp" />
+  {Astro.url.pathname === '/' && <link rel="preload" href="/images/boh-and-joe.webp" as="image" type="image/webp" />}
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
