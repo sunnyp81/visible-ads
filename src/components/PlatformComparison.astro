@@ -65,7 +65,7 @@ const metrics = ['Reach', 'Intent', 'Cost Efficiency', 'B2B Strength', 'eCommerc
 </div>
 
 <script>
-  (function () {
+  document.addEventListener('astro:page-load', () => {
     const table = document.getElementById('platform-compare');
     if (!table) return;
 
@@ -73,32 +73,34 @@ const metrics = ['Reach', 'Intent', 'Cost Efficiency', 'B2B Strength', 'eCommerc
       entries.forEach((entry) => {
         if (!entry.isIntersecting) return;
         observer.disconnect();
-        table.querySelectorAll('.platform-dot').forEach((dot) => {
-          dot.style.transform = 'scale(1)';
+        table.querySelectorAll('.platform-dot').forEach((dot: Element) => {
+          (dot as HTMLElement).style.transform = 'scale(1)';
         });
       });
     }, { threshold: 0.15 });
 
     observer.observe(table);
 
-    const cols = table.querySelectorAll('th[data-platform]');
+    const cols = table.querySelectorAll('th[data-platform]') as NodeListOf<HTMLElement>;
     cols.forEach((col) => {
       const name = col.dataset.platform;
       col.addEventListener('mouseenter', () => {
-        table.querySelectorAll('.platform-col').forEach((c) => {
-          if (c.dataset.platform === name) {
-            c.classList.add('bg-electric/10');
+        table.querySelectorAll('.platform-col').forEach((c: Element) => {
+          const el = c as HTMLElement;
+          if (el.dataset.platform === name) {
+            el.classList.add('bg-electric/10');
           } else {
-            c.style.opacity = '0.5';
+            el.style.opacity = '0.5';
           }
         });
       });
       col.addEventListener('mouseleave', () => {
-        table.querySelectorAll('.platform-col').forEach((c) => {
-          c.classList.remove('bg-electric/10');
-          c.style.opacity = '';
+        table.querySelectorAll('.platform-col').forEach((c: Element) => {
+          const el = c as HTMLElement;
+          el.classList.remove('bg-electric/10');
+          el.style.opacity = '';
         });
       });
     });
-  })();
+  });
 </script>

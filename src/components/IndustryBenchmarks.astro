@@ -70,28 +70,28 @@ const industries = [
 </div>
 
 <script>
-  (function () {
+  document.addEventListener('astro:page-load', () => {
     const widget = document.getElementById('benchmarks-widget');
     if (!widget) return;
 
-    const tabs = widget.querySelectorAll('.benchmark-tab');
+    const tabs = widget.querySelectorAll('.benchmark-tab') as NodeListOf<HTMLElement>;
     const maxCpc = 4, maxCtr = 5, maxConv = 6, maxCpl = 100;
 
-    function update(tab) {
-      const cpc = parseFloat(tab.dataset.cpc);
-      const ctr = parseFloat(tab.dataset.ctr);
-      const conv = parseFloat(tab.dataset.conv);
-      const cpl = parseFloat(tab.dataset.cpl);
+    function update(tab: HTMLElement) {
+      const cpc = parseFloat(tab.dataset.cpc || '0');
+      const ctr = parseFloat(tab.dataset.ctr || '0');
+      const conv = parseFloat(tab.dataset.conv || '0');
+      const cpl = parseFloat(tab.dataset.cpl || '0');
 
-      document.getElementById('bm-cpc-val').textContent = '£' + cpc.toFixed(2);
-      document.getElementById('bm-ctr-val').textContent = ctr.toFixed(2) + '%';
-      document.getElementById('bm-conv-val').textContent = conv.toFixed(2) + '%';
-      document.getElementById('bm-cpl-val').textContent = '£' + cpl;
+      document.getElementById('bm-cpc-val')!.textContent = '£' + cpc.toFixed(2);
+      document.getElementById('bm-ctr-val')!.textContent = ctr.toFixed(2) + '%';
+      document.getElementById('bm-conv-val')!.textContent = conv.toFixed(2) + '%';
+      document.getElementById('bm-cpl-val')!.textContent = '£' + cpl;
 
-      document.getElementById('bm-cpc-bar').style.width = (cpc / maxCpc * 100) + '%';
-      document.getElementById('bm-ctr-bar').style.width = (ctr / maxCtr * 100) + '%';
-      document.getElementById('bm-conv-bar').style.width = (conv / maxConv * 100) + '%';
-      document.getElementById('bm-cpl-bar').style.width = (cpl / maxCpl * 100) + '%';
+      (document.getElementById('bm-cpc-bar') as HTMLElement).style.width = (cpc / maxCpc * 100) + '%';
+      (document.getElementById('bm-ctr-bar') as HTMLElement).style.width = (ctr / maxCtr * 100) + '%';
+      (document.getElementById('bm-conv-bar') as HTMLElement).style.width = (conv / maxConv * 100) + '%';
+      (document.getElementById('bm-cpl-bar') as HTMLElement).style.width = (cpl / maxCpl * 100) + '%';
 
       tabs.forEach((t) => {
         t.classList.remove('bg-electric', 'text-white', 'shadow-lg', 'shadow-electric/25');
@@ -114,5 +114,5 @@ const industries = [
     }, { threshold: 0.2 });
 
     observer.observe(widget);
-  })();
+  });
 </script>

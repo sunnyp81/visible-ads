@@ -87,14 +87,15 @@
 </style>
 
 <script>
-  (function () {
-    const slider = document.getElementById('roi-slider');
+  document.addEventListener('astro:page-load', () => {
+    const slider = document.getElementById('roi-slider') as HTMLInputElement;
     const spendLabel = document.getElementById('roi-spend-label');
     const elImpressions = document.getElementById('roi-impressions');
     const elClicks = document.getElementById('roi-clicks');
     const elConversions = document.getElementById('roi-conversions');
     const elRevenue = document.getElementById('roi-revenue');
     const elRoas = document.getElementById('roi-roas');
+    if (!slider) return;
 
     const CTR = 0.035;
     const CONV_RATE = 0.04;
@@ -105,7 +106,7 @@
     const current = { impressions: 0, clicks: 0, conversions: 0, revenue: 0, roas: 0 };
     let animating = false;
 
-    function calc(spend) {
+    function calc(spend: number) {
       const clicks = spend / AVG_CPC;
       const impressions = clicks / CTR;
       const conversions = clicks * CONV_RATE;
@@ -114,27 +115,27 @@
       return { impressions, clicks, conversions, revenue, roas };
     }
 
-    function formatNum(n) {
+    function formatNum(n: number) {
       return Math.round(n).toLocaleString('en-GB');
     }
 
     function render() {
-      elImpressions.textContent = formatNum(current.impressions);
-      elClicks.textContent = formatNum(current.clicks);
-      elConversions.textContent = formatNum(current.conversions);
-      elRevenue.textContent = '£' + formatNum(current.revenue);
-      elRoas.textContent = current.roas.toFixed(1) + 'x';
+      elImpressions!.textContent = formatNum(current.impressions);
+      elClicks!.textContent = formatNum(current.clicks);
+      elConversions!.textContent = formatNum(current.conversions);
+      elRevenue!.textContent = '£' + formatNum(current.revenue);
+      elRoas!.textContent = current.roas.toFixed(1) + 'x';
     }
 
     function animate() {
       let done = true;
       for (const key in targets) {
-        const diff = targets[key] - current[key];
+        const diff = targets[key as keyof typeof targets] - current[key as keyof typeof current];
         if (Math.abs(diff) > 0.5) {
-          current[key] += diff * 0.18;
+          current[key as keyof typeof current] += diff * 0.18;
           done = false;
         } else {
-          current[key] = targets[key];
+          current[key as keyof typeof current] = targets[key as keyof typeof targets];
         }
       }
       render();
@@ -145,7 +146,7 @@
       }
     }
 
-    function updateSliderBg(val) {
+    function updateSliderBg(val: number) {
       const pct = ((val - 1000) / (50000 - 1000)) * 100;
       slider.style.background = 'linear-gradient(to right, #2563EB 0%, #2563EB ' + pct + '%, #1e293b ' + pct + '%, #1e293b 100%)';
     }
@@ -153,7 +154,7 @@
     function onInput() {
       const spend = parseInt(slider.value, 10);
       if (spend >= 1000) {
-        spendLabel.textContent = '£' + spend.toLocaleString('en-GB');
+        spendLabel!.textContent = '£' + spend.toLocaleString('en-GB');
       }
       updateSliderBg(spend);
       const m = calc(spend);
@@ -170,5 +171,5 @@
 
     slider.addEventListener('input', onInput);
     onInput();
-  })();
+  });
 </script>
