@@ -4,7 +4,6 @@ import GrowthChart from '../components/GrowthChart.astro';
 import PartnerBadges from '../components/PartnerBadges.astro';
 import ClientLogos from '../components/ClientLogos.astro';
 import ServiceLinks from '../components/ServiceLinks.astro';
-import Breadcrumb from '../components/Breadcrumb.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -73,8 +72,8 @@ const schema = {
 <Layout title="Amazon Ads Agency | Marketplace Management | Visible Ads" description="Amazon Ads Partner. From Sponsored Products to full marketplace management, we help brands scale on Amazon profitably." schema={schema}>
 
   <!-- Hero -->
-  <section class="relative py-20 lg:py-28 overflow-hidden" data-animate>
-    <div class="absolute inset-0 bg-gradient-to-br from-navy via-amber-900/30 to-navy-light"></div>
+  <section class="relative py-20 lg:py-28 overflow-hidden bg-navy" data-animate>
+    <div class="absolute inset-0 bg-gradient-to-br from-navy via-amber-900 to-navy-light"></div>
     <div class="absolute inset-0 dot-pattern opacity-10"></div>
     <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="max-w-3xl">
@@ -93,7 +92,6 @@ const schema = {
     </div>
   </section>
 
-  <Breadcrumb items={[{label: 'Home', href: '/'}, {label: 'Services', href: '/google-ads'}, {label: 'Amazon'}]} />
 
   <!-- Partner Badges -->
   <section class="py-12 bg-sky-tint border-y border-gray-100">
