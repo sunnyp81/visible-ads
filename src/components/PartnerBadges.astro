@@ -16,9 +16,9 @@ const partners = [
 ];
 ---
 
-<div class={`grid ${compact ? 'grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-4 sm:gap-6' : 'grid-cols-3 sm:grid-cols-4 lg:grid-cols-7 gap-6 sm:gap-8'} items-center justify-items-center`} data-animate>
+<div class={`flex flex-wrap justify-center ${compact ? 'gap-4 sm:gap-6' : 'gap-6 sm:gap-8'} items-center`} data-animate>
   {partners.map(p => (
-    <div class={`${compact ? 'h-12 sm:h-14' : 'h-14 sm:h-18'} flex items-center justify-center w-full ${dark ? 'brightness-0 invert' : ''} hover:scale-105 transition-transform duration-300`}>
+    <div class={`${compact ? 'h-12 sm:h-14 w-[calc(33%-1rem)] sm:w-auto' : 'h-14 sm:h-18 w-[calc(33%-1.5rem)] sm:w-auto'} flex items-center justify-center ${dark ? 'brightness-0 invert' : ''} hover:scale-105 transition-transform duration-300`}>
       <img src={p.src} alt={p.name} class="max-w-full max-h-full object-contain" loading="lazy" />
     </div>
   ))}
