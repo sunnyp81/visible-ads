@@ -100,10 +100,10 @@ const schema = {
 
         <div class="bg-white rounded-2xl p-8 sm:p-10 shadow-xl border border-gray-200 ring-1 ring-electric/10 h-fit mb-24 lg:mb-0">
           <h2 class="text-2xl font-heading font-bold text-navy mb-6">Send Us a Message</h2>
-          <form id="contact-form" action="/api/submit" method="POST" class="space-y-5">
+          <form id="contact-form" action="/api/submit" method="POST" data-astro-reload class="space-y-5">
             <input type="hidden" name="_form" value="contact" />
             <input type="hidden" name="_next" value="https://visible-ads.com/contact?thanks=1" />
-            <input type="text" name="_honey" style="display:none" />
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;pointer-events:none" />
             <div>
               <label for="contact-name" class="block text-sm font-medium text-navy mb-1.5">Name</label>
               <input type="text" id="contact-name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-gray-700" placeholder="Your full name" />
