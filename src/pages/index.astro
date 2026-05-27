@@ -6,6 +6,7 @@ import ClientLogos from '../components/ClientLogos.astro';
 import PartnerBadges from '../components/PartnerBadges.astro';
 import GoogleReviews from '../components/GoogleReviews.astro';
 import RoiCalculator from '../components/RoiCalculator.astro';
+import AdsWizard from '../components/AdsWizard.astro';
 import StatsTicker from '../components/StatsTicker.astro';
 
 const schema = {
@@ -16,7 +17,7 @@ const schema = {
       "@id": "https://visible-ads.optimisedwebsite.com/#organization",
       "name": "Visible Ads",
       "url": "https://visible-ads.optimisedwebsite.com",
-      "description": "Google Ads agency delivering measurable ROI through paid search, marketplace, and social advertising for businesses generating £1M+ revenue.",
+      "description": "Digital advertising agency delivering measurable ROI through Google, Meta, Amazon, and Bing campaigns for businesses generating £1M+ revenue.",
       "knowsAbout": ["Google Ads", "Bing Ads", "Amazon Advertising", "SEO", "Paid Social", "Conversion Rate Optimisation"],
       "sameAs": ["https://www.linkedin.com/company/visible-ads", "https://www.google.com/maps/place/Visible+Ads/data=!4m2!3m1!1s0x0:0xc19421e998217581"],
       "aggregateRating": {
@@ -67,8 +68,8 @@ const schema = {
 ---
 
 <Layout
-  title="Google Ads Agency | Visible Ads — PPC That Converts"
-  description="Unlock sales growth with Google Ads that convert. Visible Ads delivers measurable ROI through Google, Bing, Meta, and Amazon campaigns for £1M+ businesses."
+  title="Digital Advertising Agency | Visible Ads — Ads That Convert"
+  description="Unlock sales growth with advertising that converts. Visible Ads delivers measurable ROI through Google, Bing, Meta, and Amazon campaigns for £1M+ businesses."
   schema={schema}
 >
 
@@ -116,7 +117,7 @@ const schema = {
     </div>
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
       <CountUp value="50" suffix="+" label="Years Combined Experience" />
-      <CountUp value="31" label="Businesses Scaled" />
+      <CountUp value="32" label="Businesses Scaled" />
       <CountUp prefix="£" value="25" suffix="M+" label="Revenue Generated" />
       <CountUp value="900" suffix="%+" label="Average ROAS" />
     </div>
@@ -132,38 +133,38 @@ const schema = {
       <p class="mt-4 text-lg text-slate max-w-2xl mx-auto">Every growth-focused business faces these challenges. We solve them with data-driven advertising.</p>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <a href="/google-ads" class="group bg-white rounded-2xl p-8 shadow-sm border border-gray-100 border-t-4 border-electric transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-electric/20">
-        <div class="w-14 h-14 rounded-xl bg-electric/10 flex items-center justify-center mb-6 group-hover:bg-electric/20 transition-colors">
+      <a href="/google-ads" class="group bg-white rounded-2xl p-8 shadow-md border border-gray-100 border-t-4 border-electric transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
+        <div class="w-14 h-14 rounded-xl bg-electric/15 flex items-center justify-center mb-6">
           <svg class="w-7 h-7 text-electric" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"/></svg>
         </div>
         <h3 class="font-heading text-lg font-bold text-navy mb-3">How do I sell more profitably?</h3>
         <p class="text-slate text-sm leading-relaxed mb-4">Cut wasted ad spend and maximise return from every click with campaigns engineered for profit, not vanity metrics.</p>
-        <span class="text-electric font-semibold text-sm group-hover:underline">Learn More &rarr;</span>
+        <span class="text-electric font-semibold text-sm underline underline-offset-2">Learn More &rarr;</span>
       </a>
 
-      <a href="/bing-ads" class="group bg-white rounded-2xl p-8 shadow-sm border border-gray-100 border-t-4 border-emerald-500 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-electric/20">
-        <div class="w-14 h-14 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-6 group-hover:bg-emerald-500/20 transition-colors">
+      <a href="/bing-ads" class="group bg-white rounded-2xl p-8 shadow-md border border-gray-100 border-t-4 border-emerald-500 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
+        <div class="w-14 h-14 rounded-xl bg-emerald-500/15 flex items-center justify-center mb-6">
           <svg class="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 18.75h-9m9 0a3 3 0 0 1 3 3h-15a3 3 0 0 1 3-3m9 0v-3.375c0-.621-.503-1.125-1.125-1.125h-.871M7.5 18.75v-3.375c0-.621.504-1.125 1.125-1.125h.872m5.007 0H9.497m5.007 0a7.454 7.454 0 0 1-.982-3.172M9.497 14.25a7.454 7.454 0 0 0 .981-3.172M5.25 4.236c-.982.143-1.954.317-2.916.52A6.003 6.003 0 0 0 7.73 9.728M5.25 4.236V4.5c0 2.108.966 3.99 2.48 5.228M5.25 4.236V2.721C7.456 2.41 9.71 2.25 12 2.25c2.291 0 4.545.16 6.75.47v1.516M18.75 4.236c.982.143 1.954.317 2.916.52A6.003 6.003 0 0 1 16.27 9.728M18.75 4.236V4.5c0 2.108-.966 3.99-2.48 5.228m4.294-1.443A18.04 18.04 0 0 1 16.27 9.728M6.593 12.456c-.593-.222-1.15-.48-1.669-.768m-1.674-.94c.556.222 1.138.414 1.674.58m1.669-.768a18.04 18.04 0 0 0 4.283 1.394m-4.283-1.394a18.135 18.135 0 0 1-1.669-.768"/></svg>
         </div>
         <h3 class="font-heading text-lg font-bold text-navy mb-3">How do I beat my competition?</h3>
         <p class="text-slate text-sm leading-relaxed mb-4">Outmanoeuvre rivals with competitor analysis, auction insights, and strategies that win the clicks that matter most.</p>
-        <span class="text-emerald-600 font-semibold text-sm group-hover:underline">Learn More &rarr;</span>
+        <span class="text-emerald-600 font-semibold text-sm underline underline-offset-2">Learn More &rarr;</span>
       </a>
-      <a href="/paid-social" class="group bg-white rounded-2xl p-8 shadow-sm border border-gray-100 border-t-4 border-amber-500 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-electric/20">
-        <div class="w-14 h-14 rounded-xl bg-amber-500/10 flex items-center justify-center mb-6 group-hover:bg-amber-500/20 transition-colors">
+      <a href="/paid-social" class="group bg-white rounded-2xl p-8 shadow-md border border-gray-100 border-t-4 border-amber-500 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
+        <div class="w-14 h-14 rounded-xl bg-amber-500/15 flex items-center justify-center mb-6">
           <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6"/></svg>
         </div>
         <h3 class="font-heading text-lg font-bold text-navy mb-3">How do I increase market share?</h3>
         <p class="text-slate text-sm leading-relaxed mb-4">Dominate your category with strategic bidding, audience targeting, and multi-platform coverage that captures demand competitors miss.</p>
-        <span class="text-amber-600 font-semibold text-sm group-hover:underline">Learn More &rarr;</span>
+        <span class="text-amber-600 font-semibold text-sm underline underline-offset-2">Learn More &rarr;</span>
       </a>
-      <a href="/free-ads-audit" class="group bg-white rounded-2xl p-8 shadow-sm border border-gray-100 border-t-4 border-purple-600 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-electric/20">
-        <div class="w-14 h-14 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6 group-hover:bg-purple-500/20 transition-colors">
+      <a href="/free-ads-audit" class="group bg-white rounded-2xl p-8 shadow-md border border-gray-100 border-t-4 border-purple-600 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
+        <div class="w-14 h-14 rounded-xl bg-purple-500/15 flex items-center justify-center mb-6">
           <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607ZM10.5 7.5v6m3-3h-6"/></svg>
         </div>
         <h3 class="font-heading text-lg font-bold text-navy mb-3">Am I maximising the opportunity?</h3>
         <p class="text-slate text-sm leading-relaxed mb-4">Uncover hidden revenue with a thorough audit of your campaigns, landing pages, and conversion funnels.</p>
-        <span class="text-purple-600 font-semibold text-sm group-hover:underline">Learn More &rarr;</span>
+        <span class="text-purple-600 font-semibold text-sm underline underline-offset-2">Learn More &rarr;</span>
       </a>
     </div>
   </div>
@@ -174,8 +175,8 @@ const schema = {
 <section class="bg-white" data-animate>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
     <div class="text-center mb-14">
-      <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy">Growth Services Built Around Google Ads</h2>
-      <p class="mt-4 text-lg text-slate max-w-2xl mx-auto">A full-funnel approach to paid advertising, anchored by world-class Google Ads management.</p>
+      <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy">Growth Services That Drive Revenue</h2>
+      <p class="mt-4 text-lg text-slate max-w-2xl mx-auto">A full-funnel approach to paid advertising across every channel that matters.</p>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <a href="/google-ads" class="group sm:col-span-2 lg:col-span-3 flex flex-col sm:flex-row sm:items-center gap-6 p-8 rounded-2xl bg-gradient-to-br from-navy to-navy-light shadow-xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl ring-1 ring-electric/30">
@@ -189,45 +190,45 @@ const schema = {
         </div>
         <svg class="w-6 h-6 text-electric-light shrink-0 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
       </a>
-      <a href="/bing-ads" class="group bg-white rounded-2xl p-8 shadow-sm border border-gray-100 border-t-2 border-cyan-500 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-electric/20">
-        <div class="w-14 h-14 rounded-xl bg-electric/10 flex items-center justify-center mb-6">
-          <svg class="w-7 h-7 text-electric" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"/></svg>
-        </div>
-        <h3 class="font-heading text-lg font-bold text-navy mb-2">Bing Ads</h3>
-        <p class="text-slate text-sm leading-relaxed mb-4">Tap into lower-cost clicks and high-intent audiences on Microsoft's search network.</p>
-        <span class="text-electric font-semibold text-sm group-hover:underline">Explore &rarr;</span>
-      </a>
       <a href="/paid-social" class="group bg-white rounded-2xl p-8 shadow-sm border border-gray-100 border-t-2 border-pink-500 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-electric/20">
-        <div class="w-14 h-14 rounded-xl bg-electric/10 flex items-center justify-center mb-6">
-          <svg class="w-7 h-7 text-electric" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 0 1 1.037-.443 48.7 48.7 0 0 0 5.232-.537c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.4 48.4 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"/></svg>
+        <div class="w-14 h-14 rounded-xl bg-pink-500/10 flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-pink-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 0 1 1.037-.443 48.7 48.7 0 0 0 5.232-.537c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.4 48.4 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"/></svg>
         </div>
         <h3 class="font-heading text-lg font-bold text-navy mb-2">Paid Social</h3>
         <p class="text-slate text-sm leading-relaxed mb-4">Reach new audiences and retarget buyers with campaigns across Meta, LinkedIn, and TikTok.</p>
-        <span class="text-electric font-semibold text-sm group-hover:underline">Explore &rarr;</span>
+        <span class="text-pink-600 font-semibold text-sm group-hover:underline">Explore &rarr;</span>
+      </a>
+      <a href="/bing-ads" class="group bg-white rounded-2xl p-8 shadow-sm border border-gray-100 border-t-2 border-cyan-500 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-electric/20">
+        <div class="w-14 h-14 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-cyan-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"/></svg>
+        </div>
+        <h3 class="font-heading text-lg font-bold text-navy mb-2">Bing Ads</h3>
+        <p class="text-slate text-sm leading-relaxed mb-4">Tap into lower-cost clicks and high-intent audiences on Microsoft's search network.</p>
+        <span class="text-cyan-600 font-semibold text-sm group-hover:underline">Explore &rarr;</span>
       </a>
       <a href="/amazon" class="group bg-white rounded-2xl p-8 shadow-sm border border-gray-100 border-t-2 border-amber-500 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-electric/20">
-        <div class="w-14 h-14 rounded-xl bg-electric/10 flex items-center justify-center mb-6">
-          <svg class="w-7 h-7 text-electric" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z"/></svg>
+        <div class="w-14 h-14 rounded-xl bg-amber-500/10 flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z"/></svg>
         </div>
         <h3 class="font-heading text-lg font-bold text-navy mb-2">Amazon</h3>
         <p class="text-slate text-sm leading-relaxed mb-4">Sponsored Products, Brands, and DSP campaigns that drive marketplace dominance and profitability.</p>
-        <span class="text-electric font-semibold text-sm group-hover:underline">Explore &rarr;</span>
+        <span class="text-amber-600 font-semibold text-sm group-hover:underline">Explore &rarr;</span>
       </a>
       <a href="/ecro" class="group bg-white rounded-2xl p-8 shadow-sm border border-gray-100 border-t-2 border-emerald-500 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-electric/20">
-        <div class="w-14 h-14 rounded-xl bg-electric/10 flex items-center justify-center mb-6">
-          <svg class="w-7 h-7 text-electric" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"/></svg>
+        <div class="w-14 h-14 rounded-xl bg-emerald-500/10 flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"/></svg>
         </div>
         <h3 class="font-heading text-lg font-bold text-navy mb-2">eCRO</h3>
         <p class="text-slate text-sm leading-relaxed mb-4">Turn more visitors into customers with data-led conversion rate optimisation and landing page testing.</p>
-        <span class="text-electric font-semibold text-sm group-hover:underline">Explore &rarr;</span>
+        <span class="text-emerald-600 font-semibold text-sm group-hover:underline">Explore &rarr;</span>
       </a>
       <a href="/seo" class="group bg-white rounded-2xl p-8 shadow-sm border border-gray-100 border-t-2 border-purple-500 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-electric/20">
-        <div class="w-14 h-14 rounded-xl bg-electric/10 flex items-center justify-center mb-6">
-          <svg class="w-7 h-7 text-electric" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+        <div class="w-14 h-14 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6">
+          <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
         </div>
         <h3 class="font-heading text-lg font-bold text-navy mb-2">SEO</h3>
         <p class="text-slate text-sm leading-relaxed mb-4">Sustainable organic growth through technical SEO, content strategy, and authority building.</p>
-        <span class="text-electric font-semibold text-sm group-hover:underline">Explore &rarr;</span>
+        <span class="text-purple-600 font-semibold text-sm group-hover:underline">Explore &rarr;</span>
       </a>
     </div>
   </div>
@@ -269,12 +270,15 @@ const schema = {
     <div class="mt-14 max-w-2xl mx-auto">
       <GrowthChart title="Typical Client Growth Journey" bars={[
         { label: "Month 1 — Quick Wins", value: 25, color: "#2563EB" },
-        { label: "Month 3 — Momentum", value: 55, color: "#2563EB" },
-        { label: "Month 6 — Scaling", value: 78, color: "#2563EB" },
+        { label: "Month 3 — Momentum", value: 55, color: "#F59E0B" },
+        { label: "Month 6 — Scaling", value: 78, color: "#9333EA" },
         { label: "Month 12 — Compounding", value: 95, color: "#10B981" },
       ]} />
     </div>
-    <div class="mt-14 text-center">
+    <div class="mt-14 flex justify-center">
+      <img src="/images/NoBackground.gif" alt="Visible Ads Blueprint animated" class="max-w-xs sm:max-w-sm rounded-2xl" loading="lazy" width="400" height="400" />
+    </div>
+    <div class="mt-10 text-center">
       <a href="/blueprint" class="inline-flex items-center text-electric font-heading font-bold text-lg hover:underline">
         Learn More About Our Process
         <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/></svg>
@@ -285,8 +289,8 @@ const schema = {
 
 <div class="h-px bg-gradient-to-r from-transparent via-electric/20 to-transparent"></div>
 
-<div class="relative h-48 sm:h-64 overflow-hidden">
-  <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=80" alt="Team collaborating on digital advertising strategy" class="w-full h-full object-cover" loading="lazy" />
+<div class="relative h-72 sm:h-96 lg:h-[28rem] overflow-hidden">
+  <img src="/images/Boh Tjarks and Joe Short Visible Ads Google and Meta Advertising.jpg" alt="Boh Tjarks and Joe Short, the Visible Ads team" class="w-full h-full object-cover" style="object-position: center 25%;" loading="lazy" />
   <div class="absolute inset-0 bg-gradient-to-r from-navy/80 to-transparent flex items-center">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="text-2xl sm:text-3xl font-heading font-bold text-white max-w-lg">Turning Ad Spend Into Revenue Since 2005</p>
@@ -313,7 +317,7 @@ const schema = {
     </div>
     <div class="grid md:grid-cols-3 gap-8">
       <div class="glass-card p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ring-2 ring-electric/20">
-        <CountUp value="1110" suffix="%" label="ROAS" />
+        <CountUp value="1120" suffix="%" label="ROAS" />
         <h3 class="font-heading text-xl font-bold text-navy mt-4 mb-3">CFW</h3>
         <p class="text-slate text-sm leading-relaxed mb-1">Amazon + Google Ads</p>
         <p class="text-gray-700 font-medium mb-6">From stagnation to 7-figure revenue</p>
@@ -399,6 +403,18 @@ const schema = {
       <h2 class="font-heading text-3xl sm:text-4xl font-bold text-navy">Rated 5 Stars on Google</h2>
     </div>
     <GoogleReviews />
+  </div>
+</section>
+
+<div class="h-px bg-gradient-to-r from-transparent via-electric/20 to-transparent"></div>
+
+<section class="bg-gradient-to-b from-navy to-navy-light py-20 lg:py-28" data-animate>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14">
+      <h2 class="font-heading text-3xl sm:text-4xl font-bold text-white">Find Out What's Holding Your Ads Back</h2>
+      <p class="mt-4 text-lg text-slate-light max-w-2xl mx-auto">Answer 4 quick questions and we'll send you a personalised audit.</p>
+    </div>
+    <AdsWizard />
   </div>
 </section>
 
@@ -496,7 +512,7 @@ const schema = {
 
 <section class="bg-navy" data-animate>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 text-center">
-    <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">Ready to Scale Your Google Ads?</h2>
+    <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">Ready to Scale Your Advertising?</h2>
     <p class="mt-6 text-lg sm:text-xl text-slate-light max-w-2xl mx-auto leading-relaxed">Get a free, no-obligation audit of your advertising — and discover exactly where you're leaving money on the table.</p>
     <div class="mt-10">
       <a href="/free-ads-audit" class="w-full sm:w-auto inline-flex items-center justify-center px-10 py-5 bg-white text-navy font-heading font-bold text-lg rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 hover:bg-gray-50">

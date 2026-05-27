@@ -19,6 +19,8 @@
   --color-amber: #F59E0B;
   --color-cta: #EA4335;
   --color-cta-dark: #D33426;
+  --color-coral: #F97316;
+  --color-teal: #0D9488;
 
   --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
@@ -89,12 +91,12 @@ html {
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, #2563EB, #06B6D4, #2563EB);
-  background-size: 200% auto;
+  background: linear-gradient(135deg, #2563EB, #9333EA, #EC4899, #F59E0B, #2563EB);
+  background-size: 300% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: gradient-shift 3s ease-in-out infinite;
+  animation: gradient-shift 4s ease-in-out infinite;
 }
 
 .dot-pattern {

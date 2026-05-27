@@ -1,0 +1,183 @@
+---
+---
+<div id="ads-wizard" class="max-w-2xl mx-auto">
+  <div class="bg-white rounded-2xl shadow-xl border border-gray-200 ring-1 ring-electric/10 overflow-hidden">
+    <div class="px-8 pt-8 pb-4">
+      <div class="flex items-center justify-between mb-4">
+        <span id="wizard-step-label" class="text-sm font-semibold text-electric">Step 1 of 4</span>
+        <span id="wizard-percent" class="text-sm font-semibold text-navy">25%</span>
+      </div>
+      <div class="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
+        <div id="wizard-progress" class="h-full bg-gradient-to-r from-electric to-cyan-400 rounded-full transition-all duration-500 ease-out" style="width: 25%"></div>
+      </div>
+    </div>
+
+    <div id="wizard-content" class="px-8 pb-8 pt-4">
+      <!-- Step 1 -->
+      <div class="wizard-step" data-step="1">
+        <h3 class="font-heading text-xl sm:text-2xl font-bold text-navy mb-2">What's your biggest frustration with Google Ads right now?</h3>
+        <p class="text-slate text-sm mb-6">Select the one that resonates most.</p>
+        <div class="space-y-3" id="step1-options">
+          <button class="wizard-option w-full text-left px-5 py-4 rounded-xl border-2 border-gray-200 hover:border-electric hover:bg-sky-tint transition-all duration-200 text-navy font-medium" data-value="roas-flat">
+            ROAS looks good, but profit is flat
+          </button>
+          <button class="wizard-option w-full text-left px-5 py-4 rounded-xl border-2 border-gray-200 hover:border-electric hover:bg-sky-tint transition-all duration-200 text-navy font-medium" data-value="pmax-control">
+            Heavily reliant on PMax and losing control
+          </button>
+          <button class="wizard-option w-full text-left px-5 py-4 rounded-xl border-2 border-gray-200 hover:border-electric hover:bg-sky-tint transition-all duration-200 text-navy font-medium" data-value="cant-scale">
+            Can't seem to scale past current spend
+          </button>
+          <button class="wizard-option w-full text-left px-5 py-4 rounded-xl border-2 border-gray-200 hover:border-electric hover:bg-sky-tint transition-all duration-200 text-navy font-medium" data-value="wrong-skus">
+            Wasting budget on the wrong SKUs
+          </button>
+          <button class="wizard-option w-full text-left px-5 py-4 rounded-xl border-2 border-gray-200 hover:border-electric hover:bg-sky-tint transition-all duration-200 text-navy font-medium" data-value="not-sure">
+            Not sure &mdash; I just know something's off
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="wizard-step hidden" data-step="2">
+        <h3 class="font-heading text-xl sm:text-2xl font-bold text-navy mb-2">What's your current monthly ad spend?</h3>
+        <p class="text-slate text-sm mb-6">This helps us tailor our recommendations.</p>
+        <div class="space-y-3" id="step2-options">
+          <button class="wizard-option w-full text-left px-5 py-4 rounded-xl border-2 border-gray-200 hover:border-amber-500 hover:bg-amber-50 transition-all duration-200 text-navy font-medium" data-value="under-5k">Under £5,000 / month</button>
+          <button class="wizard-option w-full text-left px-5 py-4 rounded-xl border-2 border-gray-200 hover:border-amber-500 hover:bg-amber-50 transition-all duration-200 text-navy font-medium" data-value="5k-20k">£5,000 &ndash; £20,000 / month</button>
+          <button class="wizard-option w-full text-left px-5 py-4 rounded-xl border-2 border-gray-200 hover:border-amber-500 hover:bg-amber-50 transition-all duration-200 text-navy font-medium" data-value="20k-50k">£20,000 &ndash; £50,000 / month</button>
+          <button class="wizard-option w-full text-left px-5 py-4 rounded-xl border-2 border-gray-200 hover:border-amber-500 hover:bg-amber-50 transition-all duration-200 text-navy font-medium" data-value="50k-plus">£50,000+ / month</button>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="wizard-step hidden" data-step="3">
+        <h3 class="font-heading text-xl sm:text-2xl font-bold text-navy mb-2">Which platforms are you advertising on?</h3>
+        <p class="text-slate text-sm mb-6">Select all that apply, then continue.</p>
+        <div class="space-y-3" id="step3-options">
+          <button class="wizard-multi w-full text-left px-5 py-4 rounded-xl border-2 border-gray-200 hover:border-purple-500 hover:bg-purple-50 transition-all duration-200 text-navy font-medium" data-value="google">Google Ads</button>
+          <button class="wizard-multi w-full text-left px-5 py-4 rounded-xl border-2 border-gray-200 hover:border-purple-500 hover:bg-purple-50 transition-all duration-200 text-navy font-medium" data-value="meta">Meta (Facebook / Instagram)</button>
+          <button class="wizard-multi w-full text-left px-5 py-4 rounded-xl border-2 border-gray-200 hover:border-purple-500 hover:bg-purple-50 transition-all duration-200 text-navy font-medium" data-value="amazon">Amazon</button>
+          <button class="wizard-multi w-full text-left px-5 py-4 rounded-xl border-2 border-gray-200 hover:border-purple-500 hover:bg-purple-50 transition-all duration-200 text-navy font-medium" data-value="bing">Bing / Microsoft Ads</button>
+          <button class="wizard-multi w-full text-left px-5 py-4 rounded-xl border-2 border-gray-200 hover:border-purple-500 hover:bg-purple-50 transition-all duration-200 text-navy font-medium" data-value="other">Other / Not yet advertising</button>
+        </div>
+        <button id="step3-next" class="mt-6 w-full px-6 py-4 bg-cta text-white font-semibold rounded-xl hover:bg-electric transition-all duration-200 shadow-lg text-lg disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+          Continue
+        </button>
+      </div>
+
+      <!-- Step 4 — Contact form -->
+      <div class="wizard-step hidden" data-step="4">
+        <h3 class="font-heading text-xl sm:text-2xl font-bold text-navy mb-2">Almost there — where should we send your free audit?</h3>
+        <p class="text-slate text-sm mb-6">We'll review your answers and get back within 24 hours.</p>
+        <form id="wizard-form" action="https://formsubmit.co/boh@visible-ads.com" method="POST" class="space-y-4">
+          <input type="hidden" name="_subject" value="New Wizard Audit Request — Visible Ads" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://visible-ads.optimisedwebsite.com/free-ads-audit?thanks=1" />
+          <input type="text" name="_honey" style="display:none" />
+          <input type="hidden" id="wizard-frustration" name="frustration" value="" />
+          <input type="hidden" id="wizard-spend" name="monthly_spend" value="" />
+          <input type="hidden" id="wizard-platforms" name="platforms" value="" />
+          <div>
+            <label for="wiz-name" class="block text-sm font-medium text-navy mb-1.5">Name</label>
+            <input type="text" id="wiz-name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-gray-700" placeholder="Your full name" />
+          </div>
+          <div>
+            <label for="wiz-email" class="block text-sm font-medium text-navy mb-1.5">Email</label>
+            <input type="email" id="wiz-email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-gray-700" placeholder="you@company.com" />
+          </div>
+          <div>
+            <label for="wiz-website" class="block text-sm font-medium text-navy mb-1.5">Website</label>
+            <input type="url" id="wiz-website" name="website" class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-gray-700" placeholder="https://yoursite.com" />
+          </div>
+          <button type="submit" class="w-full px-6 py-4 bg-cta text-white font-semibold rounded-xl hover:bg-electric transition-all duration-200 shadow-lg text-lg">
+            Get My Free Audit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const wizard = document.getElementById('ads-wizard');
+    if (!wizard) return;
+
+    let currentStep = 1;
+    const answers: Record<string, string | string[]> = {};
+    const selectedPlatforms: string[] = [];
+
+    function showStep(step: number) {
+      currentStep = step;
+      wizard.querySelectorAll('.wizard-step').forEach(el => el.classList.add('hidden'));
+      const target = wizard.querySelector(`[data-step="${step}"]`);
+      if (target) target.classList.remove('hidden');
+
+      const label = document.getElementById('wizard-step-label');
+      const pct = document.getElementById('wizard-percent');
+      const bar = document.getElementById('wizard-progress') as HTMLElement;
+      const percent = Math.round((step / 4) * 100);
+      if (label) label.textContent = `Step ${step} of 4`;
+      if (pct) pct.textContent = `${percent}%`;
+      if (bar) bar.style.width = `${percent}%`;
+    }
+
+    // Step 1 & 2 — single select, auto-advance
+    wizard.querySelectorAll('.wizard-option').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const step = btn.closest('.wizard-step')?.getAttribute('data-step');
+        const value = (btn as HTMLElement).dataset.value || '';
+
+        // Highlight selected
+        btn.closest('.wizard-step')?.querySelectorAll('.wizard-option').forEach(b => {
+          b.classList.remove('border-electric', 'bg-sky-tint', 'border-amber-500', 'bg-amber-50');
+          b.classList.add('border-gray-200');
+        });
+        btn.classList.remove('border-gray-200');
+        if (step === '2') {
+          btn.classList.add('border-amber-500', 'bg-amber-50');
+        } else {
+          btn.classList.add('border-electric', 'bg-sky-tint');
+        }
+
+        if (step === '1') {
+          answers.frustration = value;
+          const hidden = document.getElementById('wizard-frustration') as HTMLInputElement;
+          if (hidden) hidden.value = value;
+          setTimeout(() => showStep(2), 300);
+        } else if (step === '2') {
+          answers.spend = value;
+          const hidden = document.getElementById('wizard-spend') as HTMLInputElement;
+          if (hidden) hidden.value = value;
+          setTimeout(() => showStep(3), 300);
+        }
+      });
+    });
+
+    // Step 3 — multi-select
+    wizard.querySelectorAll('.wizard-multi').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const value = (btn as HTMLElement).dataset.value || '';
+        const idx = selectedPlatforms.indexOf(value);
+        if (idx > -1) {
+          selectedPlatforms.splice(idx, 1);
+          btn.classList.remove('border-purple-500', 'bg-purple-50');
+          btn.classList.add('border-gray-200');
+        } else {
+          selectedPlatforms.push(value);
+          btn.classList.remove('border-gray-200');
+          btn.classList.add('border-purple-500', 'bg-purple-50');
+        }
+        const nextBtn = document.getElementById('step3-next') as HTMLButtonElement;
+        if (nextBtn) nextBtn.disabled = selectedPlatforms.length === 0;
+      });
+    });
+
+    const step3Next = document.getElementById('step3-next');
+    step3Next?.addEventListener('click', () => {
+      answers.platforms = [...selectedPlatforms];
+      const hidden = document.getElementById('wizard-platforms') as HTMLInputElement;
+      if (hidden) hidden.value = selectedPlatforms.join(', ');
+      showStep(4);
+    });
+  });
+</script>
