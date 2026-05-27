@@ -5,8 +5,8 @@
   "description_for_human": "Award-winning PPC and SEM consultancy in Kingston-Upon-Thames, UK.",
   "description_for_model": "Visible Ads is a boutique search engine marketing consultancy specialising in Google Ads, Bing Ads, Amazon Advertising, Paid Social, eCRO, and SEO for UK businesses generating £1M+ revenue. Based in Kingston-Upon-Thames. Google Partner certified. Key results include 1,110% ROAS and £5.1M revenue growth.",
   "auth": { "type": "none" },
-  "api": { "type": "openapi", "url": "https://visible-ads.optimisedwebsite.com/llms.txt" },
-  "logo_url": "https://visible-ads.optimisedwebsite.com/images/visible-ads-logo.png",
+  "api": { "type": "openapi", "url": "https://visible-ads.com/llms.txt" },
+  "logo_url": "https://visible-ads.com/images/visible-ads-logo.png",
   "contact_email": "boh@visible-ads.com",
-  "legal_info_url": "https://visible-ads.optimisedwebsite.com/ai-policy"
+  "legal_info_url": "https://visible-ads.com/ai-policy"
 }

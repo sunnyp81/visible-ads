@@ -31,7 +31,7 @@ export const GET: APIRoute = () => {
   const items = posts.map(p => `
     <item>
       <title>${p.title}</title>
-      <link>https://visible-ads.optimisedwebsite.com/blog/${p.slug}</link>
+      <link>https://visible-ads.com/blog/${p.slug}</link>
       <pubDate>${new Date(p.date).toUTCString()}</pubDate>
       <description>${p.title}</description>
     </item>`).join('');
@@ -40,10 +40,10 @@ export const GET: APIRoute = () => {
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Visible Ads Blog</title>
-    <link>https://visible-ads.optimisedwebsite.com/blog</link>
+    <link>https://visible-ads.com/blog</link>
     <description>PPC, SEO, and digital advertising insights from Visible Ads</description>
     <language>en-gb</language>
-    <atom:link href="https://visible-ads.optimisedwebsite.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://visible-ads.com/rss.xml" rel="self" type="application/rss+xml"/>
     ${items}
   </channel>
 </rss>`;
