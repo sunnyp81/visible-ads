@@ -1,0 +1,257 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PartnerBadges from '../components/PartnerBadges.astro';
+import GoogleReviews from '../components/GoogleReviews.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Google Ads for Large SKU Catalogues",
+      "description": "How to run Google Ads on a catalogue of thousands of products: SKU-level profit segmentation, the Scale, Protect, Recover, Pause framework, feed governance and the 80/20 problem.",
+      "url": "https://visible-ads.com/high-sku-advertising",
+      "publisher": { "@type": "Organization", "name": "Visible Ads" }
+    },
+    {
+      "@type": "Service",
+      "name": "Google Ads management for large SKU catalogues",
+      "serviceType": "Google Ads management",
+      "provider": { "@type": "Organization", "name": "Visible Ads", "url": "https://visible-ads.com/" },
+      "areaServed": "GB",
+      "description": "Profit-first Google Ads management for ecommerce catalogues of thousands of SKUs: SKU-level profit segmentation, feed governance, Shopping and Performance Max structure."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Should I advertise every product in my catalogue?", "acceptedAnswer": { "@type": "Answer", "text": "No. In most large catalogues a small share of products makes nearly all the profit, while a long tail spends budget and returns little. Advertising everything spreads the budget so thin that none of it works hard. We advertise the products that earn it and pause the ones that drain it." } },
+        { "@type": "Question", "name": "How do you decide which products to advertise?", "acceptedAnswer": { "@type": "Answer", "text": "By profit, not revenue. We map each product to its true margin, then assign it to one of four tiers: Scale, Protect, Recover or Pause. Spend follows the products that make money, and the rest is suppressed in the feed until the economics change." } },
+        { "@type": "Question", "name": "What happens to products you pause?", "acceptedAnswer": { "@type": "Answer", "text": "They stay on your site and keep selling through organic, direct and email traffic. Pausing a product in Google Ads only stops you paying for clicks that were not profitable. It does not remove the product." } },
+        { "@type": "Question", "name": "Can the Google algorithms handle a large catalogue on their own?", "acceptedAnswer": { "@type": "Answer", "text": "Performance Max and Smart Bidding are powerful, but they optimise to the goal you give them, usually revenue or a blanket ROAS target. Without margin data and constraints they will happily scale unprofitable products. The automation needs a profit-aware structure around it, which is the work." } },
+        { "@type": "Question", "name": "How do you handle new products with no performance data?", "acceptedAnswer": { "@type": "Answer", "text": "New SKUs go into a testing tier with a controlled budget and a short ramp, so they get a fair chance to prove themselves without risking the wider account. Once there is enough data, they move into the tier their economics justify." } },
+        { "@type": "Question", "name": "How big does my catalogue need to be?", "acceptedAnswer": { "@type": "Answer", "text": "The approach earns its keep once you are past a few hundred active SKUs, where manual management stops being realistic. It matters most at thousands of products across Shopping and Performance Max." } }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Large SKU Catalogues", "item": "https://visible-ads.com/high-sku-advertising" }
+      ]
+    }
+  ]
+};
+
+const tiers = [
+  { tier: 'Top 5%', share: 'A small core', rev: 'Most of the revenue', action: 'Scale', colour: 'text-success', note: 'Your winners. Push budget here.' },
+  { tier: 'Next 15%', share: 'Steady earners', rev: 'Solid contribution', action: 'Protect', colour: 'text-electric', note: 'Profitable and stable. Defend the position.' },
+  { tier: 'Middle 30%', share: 'On the line', rev: 'Marginal', action: 'Recover', colour: 'text-amber', note: 'Fixable with feed, price or bid work.' },
+  { tier: 'Bottom 50%', share: 'The long tail', rev: 'Tiny share of profit', action: 'Pause', colour: 'text-cta', note: 'Draining budget. Suppress until the maths changes.' },
+];
+
+const challenges = [
+  { title: 'Algorithm dilution', body: 'Spread a budget across thousands of products and each one gets pennies a day, not enough for the algorithms to learn. The winners never get the room to win.' },
+  { title: 'Feed management at scale', body: 'Titles, attributes and availability across thousands of SKUs cannot be kept clean by hand. A messy feed means the right product never reaches the right search.' },
+  { title: 'Category cannibalisation', body: 'Left unstructured, your own products bid against each other, pushing up your costs to win a sale you would have made anyway.' },
+  { title: 'Margin blindness', body: 'Without margin data in the account, a blanket ROAS target treats a 60% margin product and a 10% one the same. One is scaled into profit, the other into a loss.' },
+];
+
+const capabilities = [
+  { title: 'SKU-level profit segmentation', body: 'We tag every product with its true margin and sort the catalogue into Scale, Protect, Recover and Pause, so spend follows profit.' },
+  { title: 'Feed governance', body: 'Rules-based promotion and suppression in the feed, so unprofitable products drop out automatically and clean data reaches Shopping and Performance Max.' },
+  { title: 'Category-level strategy', body: 'Structure that stops categories cannibalising each other and lets each one carry the bidding approach its economics call for.' },
+  { title: 'Profit-aware automation', body: 'Performance Max and Smart Bidding kept on a leash: margin signals and constraints so the automation scales the right products, not just the busy ones.' },
+];
+
+const sectors = [
+  { name: 'Fashion and apparel', challenge: 'Seasonal rotation, variant sprawl and new-product data gaps.', approach: 'Automated seasonal tiers, variant consolidation and a fast-track testing lane for new lines.' },
+  { name: 'Home and living', challenge: 'Wide price ranges, variable delivery cost and long consideration cycles.', approach: 'Price-band isolation, delivery cost factored into margin, and longer attribution windows.' },
+  { name: 'Multi-brand retail', challenge: 'Brand-level conflicts, co-op funding that distorts incentives, and heavy cannibalisation.', approach: 'Brand-level profit analysis, co-op spend isolated, and cannibalisation modelled rather than ignored.' },
+];
+
+const faqs = [
+  { question: 'Should I advertise every product in my catalogue?', answer: 'No. In most large catalogues a small share of products makes nearly all the profit, while a long tail spends budget and returns little. Advertising everything spreads the budget so thin that none of it works hard. We advertise the products that earn it and pause the ones that drain it.' },
+  { question: 'How do you decide which products to advertise?', answer: 'By profit, not revenue. We map each product to its true margin, then assign it to one of four tiers: Scale, Protect, Recover or Pause. Spend follows the products that make money, and the rest is suppressed in the feed until the economics change.' },
+  { question: 'What happens to products you pause?', answer: 'They stay on your site and keep selling through organic, direct and email traffic. Pausing a product in Google Ads only stops you paying for clicks that were not profitable. It does not remove the product.' },
+  { question: 'Can the Google algorithms handle a large catalogue on their own?', answer: 'Performance Max and Smart Bidding are powerful, but they optimise to the goal you give them, usually revenue or a blanket ROAS target. Without margin data and constraints they will happily scale unprofitable products. The automation needs a profit-aware structure around it, which is the work.' },
+  { question: 'How do you handle new products with no performance data?', answer: 'New SKUs go into a testing tier with a controlled budget and a short ramp, so they get a fair chance to prove themselves without risking the wider account. Once there is enough data, they move into the tier their economics justify.' },
+  { question: 'How big does my catalogue need to be?', answer: 'The approach earns its keep once you are past a few hundred active SKUs, where manual management stops being realistic. It matters most at thousands of products across Shopping and Performance Max.' },
+];
+---
+
+<Layout title="Google Ads for Large SKU Catalogues | Visible Ads" description="Running Google Ads on thousands of products: SKU-level profit segmentation, the Scale, Protect, Recover, Pause framework, feed governance, and why advertising every product loses money." schema={schema}>
+
+  <!-- Hero -->
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-navy to-navy-light relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-3xl mx-auto text-center">
+        <span class="inline-block text-electric-light font-heading font-semibold text-sm tracking-wide uppercase mb-4">Large SKU Catalogues</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white mb-6 leading-tight">Google Ads for catalogues of thousands of products</h1>
+        <p class="text-lg sm:text-xl text-slate-light leading-relaxed mb-8">When you have thousands of SKUs, the answer is not to advertise all of them. It is automation with constraints: spend concentrated on the products that make money, and the long tail held back until it earns its place.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/free-ads-audit" class="px-8 py-4 bg-cta text-white font-semibold rounded-lg hover:bg-electric transition-all duration-200 shadow-lg hover:shadow-xl">Get a catalogue assessment</a>
+          <a href="/roas-vs-profit" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 border border-white/20 transition-all duration-200">Check your profit first</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The 80/20 problem -->
+  <section class="py-20 lg:py-28 bg-white" data-animate>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">The 80/20 problem</h2>
+        <p class="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">In a typical large catalogue, a small core of products makes most of the profit and the bottom half makes almost none. Spending equally across all of them is how good accounts quietly lose money.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+        <table class="w-full text-left text-sm sm:text-base">
+          <thead>
+            <tr class="bg-navy text-white">
+              <th class="px-4 sm:px-6 py-4 font-heading font-semibold text-sm">Catalogue tier</th>
+              <th class="px-4 sm:px-6 py-4 font-heading font-semibold text-sm hidden sm:table-cell">Profit contribution</th>
+              <th class="px-4 sm:px-6 py-4 font-heading font-semibold text-sm">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            {tiers.map((t, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                <td class="px-4 sm:px-6 py-4">
+                  <span class="font-semibold text-navy block">{t.tier}</span>
+                  <span class="text-gray-600 text-sm">{t.note}</span>
+                </td>
+                <td class="px-4 sm:px-6 py-4 text-gray-700 hidden sm:table-cell">{t.rev}</td>
+                <td class={'px-4 sm:px-6 py-4 font-heading font-bold ' + t.colour}>{t.action}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-center text-gray-500 text-sm mt-4">Illustrative of a typical large catalogue. We map your real distribution from your own margin data.</p>
+    </div>
+  </section>
+
+  <!-- Scale Protect Recover Pause -->
+  <section class="py-20 lg:py-28 bg-sky-tint" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">Scale, Protect, Recover, Pause</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">Every product in the catalogue gets one of four jobs, based on what it actually contributes. The whole account is built around this.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+        <div class="bg-white rounded-2xl p-6 border-t-4 border-success shadow-sm">
+          <h3 class="font-heading font-bold text-navy text-lg mb-2">Scale</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">The profit drivers. Push budget and aggression here, because this is where growth actually pays.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border-t-4 border-electric shadow-sm">
+          <h3 class="font-heading font-bold text-navy text-lg mb-2">Protect</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">Steady, profitable lines. Hold the position and defend the margin, no heroics needed.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border-t-4 border-amber shadow-sm">
+          <h3 class="font-heading font-bold text-navy text-lg mb-2">Recover</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">On the line. Fix the feed, the price or the bidding and move them up, or down if they will not respond.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 border-t-4 border-cta shadow-sm">
+          <h3 class="font-heading font-bold text-navy text-lg mb-2">Pause</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">The budget drains. Suppress them in the feed, keep them on the site, and stop paying for unprofitable clicks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why high-SKU accounts fail -->
+  <section class="py-20 lg:py-28 bg-white" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">Why large catalogues go wrong</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">Four failure modes we see again and again in big accounts.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        {challenges.map((c) => (
+          <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+            <h3 class="font-heading font-bold text-navy mb-2 text-lg">{c.title}</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">{c.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities -->
+  <section class="py-20 lg:py-28 bg-gray-50" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">How we handle it</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">Four things that turn a sprawling catalogue into a profitable account.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        {capabilities.map((c) => (
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+            <svg class="w-9 h-9 text-electric mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m9 12.75 2.25 2.25 4.5-4.5m6-2.25a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+            <h3 class="font-heading font-bold text-navy mb-2 text-lg">{c.title}</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">{c.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Sectors -->
+  <section class="py-20 lg:py-28 bg-white" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">Different catalogues, different problems</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">The framework is the same. How it is applied depends on what you sell.</p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {sectors.map((s) => (
+          <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+            <h3 class="font-heading font-bold text-navy text-xl mb-4">{s.name}</h3>
+            <p class="text-sm text-gray-500 font-semibold uppercase tracking-wide mb-1">The challenge</p>
+            <p class="text-gray-700 text-sm leading-relaxed mb-4">{s.challenge}</p>
+            <p class="text-sm text-gray-500 font-semibold uppercase tracking-wide mb-1">Our approach</p>
+            <p class="text-gray-700 text-sm leading-relaxed">{s.approach}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="py-16 lg:py-20 bg-electric" data-animate>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">Managing a few thousand SKUs?</h2>
+      <p class="text-lg text-white/90 leading-relaxed mb-8 max-w-2xl mx-auto">We will map your catalogue by profit and show you which products to scale and which are quietly losing money. Free for qualifying accounts.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/free-ads-audit" class="px-8 py-4 bg-white text-electric font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 shadow-lg">Get a catalogue assessment</a>
+        <a href="/how-we-audit" class="px-8 py-4 bg-electric-dark text-white font-semibold rounded-lg hover:bg-navy border border-white/20 transition-all duration-200">See how we audit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proof -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PartnerBadges compact />
+      <div class="mt-10">
+        <GoogleReviews compact />
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 lg:py-28 bg-gray-50" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-12 text-center">Frequently asked questions</h2>
+      <div class="space-y-6">
+        {faqs.map((faq) => (
+          <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
+            <h3 class="text-lg font-heading font-bold text-navy mb-3">{faq.question}</h3>
+            <p class="text-gray-700 leading-relaxed">{faq.answer}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>

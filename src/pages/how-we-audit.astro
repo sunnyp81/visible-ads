@@ -1,0 +1,291 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PartnerBadges from '../components/PartnerBadges.astro';
+import GoogleReviews from '../components/GoogleReviews.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "How We Audit | The Profit Contribution Framework",
+      "description": "How Visible Ads audits a Google Ads account: the Profit Contribution Framework (PCF), what we check, the 5-day process, and what you get at the end.",
+      "url": "https://visible-ads.com/how-we-audit",
+      "publisher": { "@type": "Organization", "name": "Visible Ads" }
+    },
+    {
+      "@type": "Service",
+      "name": "Google Ads Profit Audit",
+      "serviceType": "Google Ads account audit",
+      "provider": { "@type": "Organization", "name": "Visible Ads", "url": "https://visible-ads.com/" },
+      "areaServed": "GB",
+      "description": "A profit-first audit of your Google Ads account using the Profit Contribution Framework. We find where spend is leaking against your real margins and show you the fix. Free for qualifying accounts.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is the Profit Contribution Framework?", "acceptedAnswer": { "@type": "Answer", "text": "The Profit Contribution Framework (PCF) is how we judge a Google Ads account. Instead of optimising to ROAS, we map the true profit of each product, bid to your contribution margin and break-even ROAS, then pace spend against your P&L. It means a campaign that is not profitable gets scaled down, not left running." } },
+        { "@type": "Question", "name": "How long does the audit take?", "acceptedAnswer": { "@type": "Answer", "text": "We deliver the audit within 5 working days of getting access. The walkthrough call is booked at a time that suits you." } },
+        { "@type": "Question", "name": "Do you charge for the audit?", "acceptedAnswer": { "@type": "Answer", "text": "No. The audit is free for qualifying accounts. We review the account first to check there is a genuine profit opportunity. If there is not, we tell you straight, rather than force an engagement that does not make commercial sense." } },
+        { "@type": "Question", "name": "What access do you need?", "acceptedAnswer": { "@type": "Answer", "text": "Read access to your Google Ads account and, ideally, a view of your product margins. We never make changes during an audit. You see every finding before anything is touched." } }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.com/" },
+        { "@type": "ListItem", "position": 2, "name": "How We Audit", "item": "https://visible-ads.com/how-we-audit" }
+      ]
+    }
+  ]
+};
+
+const pillars = [
+  {
+    letter: 'P',
+    title: 'Profit, not revenue',
+    body: 'We map the true margin of each product, so spend follows what actually makes money. A high-ROAS product that barely clears cost is not a winner, and we will show you which ones are quietly losing.',
+  },
+  {
+    letter: 'C',
+    title: 'Contribution-first bidding',
+    body: 'We bid to your contribution margin and your break-even ROAS, not a vanity target picked out of the air. Every product gets the budget its economics justify, no more.',
+  },
+  {
+    letter: 'F',
+    title: 'Forecast and control',
+    body: 'We pace spend against your P&L and scale anything below break-even down, not off a cliff. The account stays profitable because nothing is left running at a loss while no one is looking.',
+  },
+];
+
+const scaling = [
+  { roas: 'Above 1,200%', action: 'Add 20% budget that week', tone: 'text-success' },
+  { roas: '900% to 1,100%', action: 'Add 10% budget that week', tone: 'text-success' },
+  { roas: '600% to 800%', action: 'Hold budget steady', tone: 'text-electric' },
+  { roas: '300% to 500%', action: 'Reduce budget by 20%', tone: 'text-amber' },
+  { roas: 'Below 300%', action: 'Switch off', tone: 'text-cta' },
+];
+
+const checks = [
+  { title: 'Product feed quality', body: 'Titles, attributes and feed health that decide whether Shopping and PMax can even find the right buyer.' },
+  { title: 'SKU-level profitability', body: 'Which products make money, which break even, and which are draining budget under a flattering blended ROAS.' },
+  { title: 'Wasted spend', body: 'Search terms, audiences and placements paying for clicks that never convert at a profit.' },
+  { title: 'Campaign architecture', body: 'How Search, Shopping and Performance Max are structured, and whether they are competing with each other.' },
+  { title: 'Performance Max control', body: 'How much you can actually see and steer inside PMax, and where it is spending blind.' },
+  { title: 'Conversion tracking', body: 'Whether the numbers Google reports match reality, including margin and offline data, so decisions rest on the truth.' },
+  { title: 'Bidding and break-even', body: 'Whether bid strategies are tied to your real break-even ROAS or to a target that ignores your margins.' },
+  { title: 'Budget pacing vs P&L', body: 'Whether spend is paced to the commercial picture, or just spent because the budget was there.' },
+];
+
+const process = [
+  { day: 'Day 1', title: 'Access and context', body: 'We take read-only access to the account and your product margins, and agree what profit actually means for your business.' },
+  { day: 'Days 2 to 3', title: 'The deep dive', body: 'We run the account through the Profit Contribution Framework, checking everything in the list above against your real economics.' },
+  { day: 'Day 4', title: 'The findings', body: 'We write up where profit is leaking, what it is costing you, and the specific fixes, ranked by impact.' },
+  { day: 'Day 5', title: 'The walkthrough', body: 'We take you through it on a call. You keep the report and the plan, whether or not you work with us.' },
+];
+
+const deliverables = [
+  { title: 'A written profit audit', body: 'Every finding, with the wasted spend quantified and the fix spelled out. Yours to keep and act on.' },
+  { title: 'A prioritised action plan', body: 'The changes ranked by profit impact, so you know exactly what to do first, even if you do it yourself.' },
+  { title: 'An honest verdict', body: 'Whether the opportunity is worth pursuing at all, and whether we are the right partner for it. No pitch if the numbers do not support one.' },
+];
+
+const values = [
+  { title: 'Honesty', body: 'We do not sugarcoat the numbers. If a campaign is not performing, we tell you straight away.' },
+  { title: 'Integrity', body: 'Fixed fees, never a percentage of spend, so we are never incentivised to inflate your budget.' },
+  { title: 'Candour', body: 'Clear, unfiltered feedback, with the solution on the table at the same time. It is the only way to drive real growth.' },
+];
+
+const faqs = [
+  { question: 'What is the Profit Contribution Framework?', answer: 'It is how we judge a Google Ads account. Instead of optimising to ROAS, we map the true profit of each product, bid to your contribution margin and break-even ROAS, then pace spend against your P&L. A campaign that is not profitable gets scaled down, not left running.' },
+  { question: 'How long does the audit take?', answer: 'We deliver the audit within 5 working days of getting access. The walkthrough call is booked at a time that suits you.' },
+  { question: 'Do you charge for the audit?', answer: 'No. The audit is free for qualifying accounts. We review the account first to check there is a genuine profit opportunity. If there is not, we tell you straight, rather than force an engagement that does not make commercial sense.' },
+  { question: 'What access do you need?', answer: 'Read access to your Google Ads account and, ideally, a view of your product margins. We never make changes during an audit. You see every finding before anything is touched.' },
+];
+---
+
+<Layout title="How We Audit | The Profit Contribution Framework | Visible Ads" description="How we audit a Google Ads account: the Profit Contribution Framework, exactly what we check, the 5-day process, and the report you keep. Free for qualifying accounts." schema={schema}>
+
+  <!-- Hero -->
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-navy to-navy-light relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-3xl mx-auto text-center">
+        <span class="inline-block text-electric-light font-heading font-semibold text-sm tracking-wide uppercase mb-4">How We Audit</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white mb-6 leading-tight">We audit for profit, not ROAS</h1>
+        <p class="text-lg sm:text-xl text-slate-light leading-relaxed mb-8">A high ROAS can still lose you money. Our audit runs your account through the Profit Contribution Framework: we find where spend is leaking against your real margins, quantify it, and hand you the fix. Free for qualifying accounts.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/free-ads-audit" class="px-8 py-4 bg-cta text-white font-semibold rounded-lg hover:bg-electric transition-all duration-200 shadow-lg hover:shadow-xl">Book a Profit Audit</a>
+          <a href="/contact" class="px-8 py-4 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 border border-white/20 transition-all duration-200">Book a discovery call</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The PCF framework -->
+  <section class="py-20 lg:py-28 bg-white" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">The Profit Contribution Framework</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">Most agencies optimise to ROAS because it looks good in a report. ROAS does not pay your bills, contribution does. The PCF is the three-part lens we hold every account up to.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {pillars.map((p) => (
+          <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+            <div class="w-14 h-14 rounded-xl bg-electric text-white font-heading font-extrabold text-2xl flex items-center justify-center mb-6 shadow-lg shadow-electric/30">{p.letter}</div>
+            <h3 class="text-xl font-heading font-bold text-navy mb-3">{p.title}</h3>
+            <p class="text-gray-700 leading-relaxed text-sm">{p.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Weekly budget-scaling rulebook -->
+  <section class="py-20 lg:py-28 bg-gray-50" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">How we keep your spend profitable</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">Every week we check each campaign's ROAS against your contribution margin. Winners get more budget. Underperformers are cut before the losses compound. Here is the exact rulebook we follow.</p>
+      </div>
+      <div class="max-w-2xl mx-auto">
+        <div class="overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="bg-navy">
+                <th class="px-6 py-4 text-left font-heading font-semibold text-slate-light text-xs uppercase tracking-wide">Weekly ROAS</th>
+                <th class="px-6 py-4 text-left font-heading font-semibold text-slate-light text-xs uppercase tracking-wide">What we do</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100 bg-white">
+              {scaling.map((row) => (
+                <tr class="hover:bg-gray-50 transition-colors duration-100">
+                  <td class="px-6 py-4 font-heading font-semibold text-navy">{row.roas}</td>
+                  <td class={`px-6 py-4 font-semibold ${row.tone}`}>{row.action}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-5 text-sm text-gray-600 text-center leading-relaxed">Budget decisions respond to real demand week by week, keeping every campaign above minimum profitability targets and nothing running at a loss.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What we check -->
+  <section class="py-20 lg:py-28 bg-sky-tint" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">What we check</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">Eight areas where profit usually leaks. We work through every one against your real numbers.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {checks.map((c) => (
+          <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+            <h3 class="font-heading font-bold text-navy mb-2 text-base">{c.title}</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">{c.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- The process -->
+  <section class="py-20 lg:py-28 bg-white" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">The 5-working-day process</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">From access to a plan you can act on, in a working week.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+        {process.map((step, i) => (
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-12 h-12 rounded-full bg-electric text-white font-heading font-bold text-lg flex items-center justify-center shadow-lg shadow-electric/30 flex-shrink-0">{i + 1}</div>
+              <span class="font-heading font-bold text-electric text-sm">{step.day}</span>
+            </div>
+            <h3 class="text-lg font-heading font-bold text-navy mb-2">{step.title}</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">{step.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- What you get -->
+  <section class="py-20 lg:py-28 bg-gray-50" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">What you get at the end</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">Three things, all yours to keep, whether or not you work with us.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {deliverables.map((d) => (
+          <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+            <svg class="w-10 h-10 text-electric mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+            <h3 class="text-lg font-heading font-bold text-navy mb-3">{d.title}</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">{d.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Values / candour -->
+  <section class="py-20 lg:py-28 bg-navy relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">Why the audit is this straight</h2>
+        <p class="text-lg text-slate-light leading-relaxed">We do not sugarcoat the numbers. If a campaign is not working, we say so, and we bring the fix at the same time. Three things sit behind every audit we run.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        {values.map((v) => (
+          <div class="bg-white/5 rounded-2xl p-8 border border-white/10">
+            <h3 class="text-xl font-heading font-bold text-white mb-3">{v.title}</h3>
+            <p class="text-slate-light leading-relaxed text-sm">{v.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Proof -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PartnerBadges compact />
+      <div class="mt-10">
+        <GoogleReviews compact />
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="py-16 lg:py-20 bg-electric" data-animate>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">See where your profit is leaking</h2>
+      <p class="text-lg text-white/90 leading-relaxed mb-8 max-w-2xl mx-auto">A profit audit on your account, delivered in 5 working days. Free for qualifying accounts, and you keep the report either way.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/free-ads-audit" class="px-8 py-4 bg-white text-electric font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 shadow-lg">Book a Profit Audit</a>
+        <a href="/blueprint" class="px-8 py-4 bg-electric-dark text-white font-semibold rounded-lg hover:bg-navy border border-white/20 transition-all duration-200">See our full methodology</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 lg:py-28 bg-gray-50" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-12 text-center">Frequently asked questions</h2>
+      <div class="space-y-6">
+        {faqs.map((faq) => (
+          <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
+            <h3 class="text-lg font-heading font-bold text-navy mb-3">{faq.question}</h3>
+            <p class="text-gray-700 leading-relaxed">{faq.answer}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>

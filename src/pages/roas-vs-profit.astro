@@ -1,0 +1,151 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProfitCalculator from '../components/ProfitCalculator.astro';
+import PartnerBadges from '../components/PartnerBadges.astro';
+import GoogleReviews from '../components/GoogleReviews.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "ROAS vs Profit: why a high ROAS can still lose money",
+      "description": "ROAS measures revenue, not profit. Learn the difference between ROAS, POAS and break-even ROAS, and use the calculator to check whether your Google Ads are actually profitable.",
+      "url": "https://visible-ads.com/roas-vs-profit",
+      "publisher": { "@type": "Organization", "name": "Visible Ads" }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is the difference between ROAS and profit?", "acceptedAnswer": { "@type": "Answer", "text": "ROAS (return on ad spend) is revenue divided by ad spend. It ignores the cost of your products. Profit is what is left after both product cost and ad spend. A 4x ROAS sounds healthy, but if your gross margin is 25%, you need a 4x ROAS just to break even, so you make nothing." } },
+        { "@type": "Question", "name": "What is break-even ROAS?", "acceptedAnswer": { "@type": "Answer", "text": "Break-even ROAS is 1 divided by your gross margin. At a 25% margin it is 4x, at 40% it is 2.5x, at 50% it is 2x. Below that number, every extra pound of ad spend loses money. Above it, you are in profit." } },
+        { "@type": "Question", "name": "What is POAS?", "acceptedAnswer": { "@type": "Answer", "text": "POAS (profit on ad spend) is gross profit divided by ad spend, rather than revenue divided by ad spend. It tells you how much actual profit each pound of spend returns, which is the number that matters for the business." } },
+        { "@type": "Question", "name": "Why do agencies report ROAS instead of profit?", "acceptedAnswer": { "@type": "Answer", "text": "ROAS is easy to pull from the Google Ads dashboard and it usually looks impressive. Profit needs your margins and your P&L, which takes more work and is harder to flatter. We optimise to profit, not ROAS, because ROAS does not pay your bills." } }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.com/" },
+        { "@type": "ListItem", "position": 2, "name": "ROAS vs Profit", "item": "https://visible-ads.com/roas-vs-profit" }
+      ]
+    }
+  ]
+};
+
+const breakEvenRows = [
+  { margin: '20%', roas: '5.0x' },
+  { margin: '25%', roas: '4.0x' },
+  { margin: '30%', roas: '3.3x' },
+  { margin: '40%', roas: '2.5x' },
+  { margin: '50%', roas: '2.0x' },
+  { margin: '60%', roas: '1.7x' },
+];
+
+const faqs = [
+  { question: 'What is the difference between ROAS and profit?', answer: 'ROAS (return on ad spend) is revenue divided by ad spend. It ignores the cost of your products. Profit is what is left after both product cost and ad spend. A 4x ROAS sounds healthy, but if your gross margin is 25%, you need a 4x ROAS just to break even, so you make nothing.' },
+  { question: 'What is break-even ROAS?', answer: 'Break-even ROAS is 1 divided by your gross margin. At a 25% margin it is 4x, at 40% it is 2.5x, at 50% it is 2x. Below that number, every extra pound of ad spend loses money. Above it, you are in profit.' },
+  { question: 'What is POAS?', answer: 'POAS (profit on ad spend) is gross profit divided by ad spend, rather than revenue divided by ad spend. It tells you how much actual profit each pound of spend returns, which is the number that matters for the business.' },
+  { question: 'Why do agencies report ROAS instead of profit?', answer: 'ROAS is easy to pull from the Google Ads dashboard and it usually looks impressive. Profit needs your margins and your P&L, which takes more work and is harder to flatter. We optimise to profit, not ROAS, because ROAS does not pay your bills.' },
+];
+---
+
+<Layout title="ROAS vs Profit: Why a High ROAS Can Still Lose Money | Visible Ads" description="ROAS measures revenue, not profit. Use the free calculator to see if your Google Ads are actually profitable, and learn break-even ROAS and POAS in plain terms." schema={schema}>
+
+  <!-- Hero -->
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-navy to-navy-light relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-3xl mx-auto text-center">
+        <span class="inline-block text-electric-light font-heading font-semibold text-sm tracking-wide uppercase mb-4">ROAS vs Profit</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white mb-6 leading-tight">A 4x ROAS can still lose you money</h1>
+        <p class="text-lg sm:text-xl text-slate-light leading-relaxed">ROAS measures revenue, not profit. Once you factor in your product margin, a number that looks healthy on the dashboard can be quietly running at a loss. Put your own figures into the calculator and see where you really stand.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator (the hook) -->
+  <section class="py-16 lg:py-24 bg-gray-50" data-animate>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ProfitCalculator />
+    </div>
+  </section>
+
+  <!-- The explainer -->
+  <section class="py-20 lg:py-28 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-6">The difference, in plain terms</h2>
+      <p class="text-gray-700 leading-relaxed mb-5"><strong class="text-navy">ROAS</strong> is revenue divided by ad spend. Spend £10,000, make £40,000 back, and your ROAS is 4x. It says nothing about whether you kept any of it.</p>
+      <p class="text-gray-700 leading-relaxed mb-5"><strong class="text-navy">Profit</strong> is what is left after the product cost and the ad spend. If those sales carry a 25% gross margin, that £40,000 of revenue is only £10,000 of gross profit, and you spent £10,000 to get it. You broke even. The 4x ROAS made nothing.</p>
+      <p class="text-gray-700 leading-relaxed mb-5"><strong class="text-navy">Break-even ROAS</strong> is the line between the two. It is 1 divided by your gross margin. Below it you lose money on every extra pound, above it you are in profit. It is the single most useful number most accounts are not tracking.</p>
+      <p class="text-gray-700 leading-relaxed"><strong class="text-navy">POAS</strong> (profit on ad spend) is the version that counts: gross profit divided by ad spend. It is the number we optimise to, because it is the one that pays your bills.</p>
+    </div>
+  </section>
+
+  <!-- Break-even table -->
+  <section class="py-20 lg:py-28 bg-sky-tint" data-animate>
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">The ROAS you actually need</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">Your break-even ROAS depends entirely on your margin. Find your row.</p>
+      </div>
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+        <table class="w-full text-left">
+          <thead>
+            <tr class="bg-navy text-white">
+              <th class="px-6 py-4 font-heading font-semibold text-sm">Gross margin</th>
+              <th class="px-6 py-4 font-heading font-semibold text-sm">Break-even ROAS</th>
+            </tr>
+          </thead>
+          <tbody>
+            {breakEvenRows.map((r, i) => (
+              <tr class={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
+                <td class="px-6 py-4 text-navy font-semibold">{r.margin}</td>
+                <td class="px-6 py-4 text-electric font-heading font-bold">{r.roas}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-center text-gray-600 text-sm mt-4">Anything below your row is losing money on every extra pound of spend.</p>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="py-16 lg:py-20 bg-electric" data-animate>
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-4">We find this in your real account</h2>
+      <p class="text-lg text-white/90 leading-relaxed mb-8 max-w-2xl mx-auto">The calculator uses one blended margin. Your account has hundreds of products, each with its own. Our profit audit maps the real picture, free for qualifying accounts.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/free-ads-audit" class="px-8 py-4 bg-white text-electric font-semibold rounded-lg hover:bg-gray-100 transition-all duration-200 shadow-lg">Book a Profit Audit</a>
+        <a href="/how-we-audit" class="px-8 py-4 bg-electric-dark text-white font-semibold rounded-lg hover:bg-navy border border-white/20 transition-all duration-200">See how we audit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proof -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PartnerBadges compact />
+      <div class="mt-10">
+        <GoogleReviews compact />
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 lg:py-28 bg-gray-50" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-12 text-center">Frequently asked questions</h2>
+      <div class="space-y-6">
+        {faqs.map((faq) => (
+          <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
+            <h3 class="text-lg font-heading font-bold text-navy mb-3">{faq.question}</h3>
+            <p class="text-gray-700 leading-relaxed">{faq.answer}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>
