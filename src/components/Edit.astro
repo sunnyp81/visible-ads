@@ -1,0 +1,5 @@
+---
+const { key, as = "span" } = Astro.props;
+const Tag = as;
+---
+<Tag data-edit-key={key} data-edit-type="text"><slot /></Tag>
