@@ -64,9 +64,9 @@
         </button>
       </div>
 
-      <!-- Step 4 — Contact form -->
+      <!-- Step 4, Contact form -->
       <div class="wizard-step hidden" data-step="4">
-        <h3 class="font-heading text-xl sm:text-2xl font-bold text-navy mb-2">Almost there — where should we send your free audit?</h3>
+        <h3 class="font-heading text-xl sm:text-2xl font-bold text-navy mb-2">Almost there, where should we send your free audit?</h3>
         <p class="text-slate text-sm mb-6">We'll review your answers and get back within 24 hours.</p>
         <form id="wizard-form" action="/api/submit" method="POST" data-astro-reload class="space-y-4">
           <input type="hidden" name="_form" value="wizard" />
@@ -120,7 +120,7 @@
       if (bar) bar.style.width = `${percent}%`;
     }
 
-    // Step 1 & 2 — single select, auto-advance
+    // Step 1 & 2, single select, auto-advance
     wizard.querySelectorAll('.wizard-option').forEach(btn => {
       btn.addEventListener('click', () => {
         const step = btn.closest('.wizard-step')?.getAttribute('data-step');
@@ -152,7 +152,7 @@
       });
     });
 
-    // Step 3 — multi-select
+    // Step 3, multi-select
     wizard.querySelectorAll('.wizard-multi').forEach(btn => {
       btn.addEventListener('click', () => {
         const value = (btn as HTMLElement).dataset.value || '';

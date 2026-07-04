@@ -102,7 +102,7 @@
       revEl.textContent = gbp(revenue);
       gpEl.textContent = gbp(grossProfit);
       npEl.textContent = (netProfit < 0 ? '-' : '') + gbp(Math.abs(netProfit));
-      beEl.textContent = isFinite(breakEven) ? breakEven.toFixed(1) + 'x' : '—';
+      beEl.textContent = isFinite(breakEven) ? breakEven.toFixed(1) + 'x' : '-';
       poasEl.textContent = poas.toFixed(2) + 'x';
 
       npEl.className = 'font-heading text-xl sm:text-2xl font-bold ' + (netProfit >= 0 ? 'text-[#10B981]' : 'text-[#EF4444]');
