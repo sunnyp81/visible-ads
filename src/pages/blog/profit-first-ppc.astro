@@ -14,7 +14,7 @@ const schema = {
       "dateModified": "2026-07-04",
       "author": { "@type": "Organization", "name": "Visible Ads", "url": "https://visible-ads.com" },
       "publisher": { "@type": "Organization", "name": "Visible Ads", "url": "https://visible-ads.com" },
-      "image": "https://visible-ads.com/images/visible-ads-og.png"
+      "image": "https://visible-ads.com/images/og/profit-first-ppc.png"
     },
     {
       "@type": "FAQPage",
@@ -58,7 +58,7 @@ const schema = {
 };
 ---
 
-<Layout title="Profit-First PPC: Run Google Ads for Profit, Not Revenue | Visible Ads" description="Revenue targets quietly lose money. Learn profit-first PPC: POAS, break-even ROAS by margin, margin-adjusted bidding, and the weekly rulebook we use to scale Google Ads on profit." schema={schema}>
+<Layout title="Profit-First PPC: Run Google Ads for Profit, Not Revenue | Visible Ads" description="Revenue targets quietly lose money. Learn profit-first PPC: POAS, break-even ROAS by margin, margin-adjusted bidding, and the weekly rulebook we use to scale Google Ads on profit." image="/images/og/profit-first-ppc.png" schema={schema}>
 
   <!-- Hero -->
   <section class="py-20 lg:py-28 bg-gradient-to-br from-navy to-navy-light relative overflow-hidden" data-animate>
@@ -86,6 +86,33 @@ const schema = {
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">Ask most advertisers how their Google Ads are doing and they will quote a ROAS: 4x, 6x, 10x. It sounds like a scoreboard, and it feels like winning. The problem is that ROAS measures revenue, and revenue is not the same as profit. A campaign can post a strong ROAS every single week and still lose money on every order it brings in.</p>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">The cause sits in the conversion value you send. A revenue-based conversion value tells the algorithm that a sale is worth its full sticker price. The bidding system then does exactly what you asked and hunts for the cheapest possible revenue. That usually means low-margin bestsellers, heavily discounted lines and products that sell easily but return almost nothing once you subtract cost of goods, payment fees, shipping and returns. The revenue looks great. The contribution to profit is thin or negative.</p>
       <p class="text-lg text-gray-700 leading-relaxed">Profit-first PPC fixes the incentive at its root. You optimise to profit rather than revenue, so every bidding decision is weighed against what the sale is actually worth. Nothing else about the account has to change for this to move the needle. The lever is the target.</p>
+
+      <figure class="content-visual mt-10">
+        <svg role="img" aria-labelledby="chart-title-1 chart-desc-1" viewBox="0 0 720 430" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:720px;height:auto;">
+          <title id="chart-title-1">A 4x ROAS can still lose money on a 20 percent gross margin</title>
+          <desc id="chart-desc-1">On 1,000 pounds of ad spend a 4x ROAS returns 4,000 pounds of revenue, but a 20 percent gross margin leaves only 800 pounds of gross profit. After the 1,000 pounds of ad spend is paid, the campaign is 200 pounds in the red.</desc>
+          <rect width="720" height="430" fill="#EFF6FF"/>
+          <text x="360" y="36" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#0A1628">A 4x ROAS can still lose money</text>
+          <text x="360" y="60" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#64748B">1,000 pounds ad spend, 4x ROAS, 20 percent gross margin</text>
+          <line x1="70" y1="350" x2="660" y2="350" stroke="#94A3B8" stroke-width="1.5"/>
+          <text x="64" y="354" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#94A3B8">0</text>
+          <!-- Revenue -->
+          <rect x="110" y="90" width="120" height="260" fill="#2563EB"/>
+          <text x="170" y="82" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="700" fill="#2563EB">£4,000</text>
+          <text x="170" y="372" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#0A1628">Revenue</text>
+          <text x="170" y="390" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#64748B">what ROAS reports</text>
+          <!-- Gross profit -->
+          <rect x="300" y="298" width="120" height="52" fill="#34A853"/>
+          <text x="360" y="290" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="700" fill="#2E8B4A">£800</text>
+          <text x="360" y="372" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#0A1628">Gross profit</text>
+          <text x="360" y="390" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#64748B">20 percent margin</text>
+          <!-- Profit after ad spend (negative) -->
+          <rect x="490" y="350" width="120" height="13" fill="#EA4335"/>
+          <text x="550" y="404" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="700" fill="#EA4335">-£200</text>
+          <text x="550" y="424" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#0A1628">Profit after ad spend</text>
+        </svg>
+        <figcaption>The revenue looks healthy, but once ad spend is paid a 4x ROAS on a 20 percent margin leaves a 200 pound loss on every 1,000 pounds spent.</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -148,6 +175,35 @@ const schema = {
       <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">Map the profit before you touch the bids</h2>
       <p class="text-lg text-gray-700 mb-6 leading-relaxed">A blended account-wide margin is a useful starting point but hides the real picture. A catalogue of hundreds of products has hundreds of margins. The spread between the best and worst is usually enormous. Some products fund the account. Others drain it while posting a flattering ROAS. You cannot manage to profit until you can see which is which.</p>
       <p class="text-lg text-gray-700 leading-relaxed">That mapping exercise is the first thing we do on any account, and it is the backbone of our <a href="/how-we-audit" class="text-electric font-semibold hover:text-electric-dark underline decoration-electric/30">Profit Contribution Framework</a>. It joins your margin data to your ad data so that every campaign, product group and search term can be read in profit terms rather than revenue terms. Once the map exists, the decisions about where to add budget and where to pull it become obvious.</p>
+
+      <figure class="content-visual mt-10">
+        <svg role="img" aria-labelledby="chart-title-2 chart-desc-2" viewBox="0 0 720 360" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:720px;height:auto;">
+          <title id="chart-title-2">Break-even ROAS by gross margin</title>
+          <desc id="chart-desc-2">Break-even ROAS is one divided by gross margin. A 20 percent margin needs a 5x ROAS just to break even, a 25 percent margin needs 4x, a 40 percent margin needs 2.5x, and a 50 percent margin needs only 2x. Lower margins need a far higher ROAS to avoid losing money.</desc>
+          <rect width="720" height="360" fill="#FFFFFF"/>
+          <text x="360" y="34" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#0A1628">Break-even ROAS by gross margin</text>
+          <text x="360" y="56" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="13" fill="#64748B">The ROAS you need just to break even, before any profit</text>
+          <!-- 20% margin -> 5.0x -->
+          <text x="140" y="103" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#0A1628">20% margin</text>
+          <rect x="150" y="86" width="510" height="30" fill="#EA4335"/>
+          <text x="672" y="107" text-anchor="start" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#EA4335">5.0x</text>
+          <!-- 25% margin -> 4.0x -->
+          <text x="140" y="157" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#0A1628">25% margin</text>
+          <rect x="150" y="140" width="408" height="30" fill="#F59E0B"/>
+          <text x="570" y="161" text-anchor="start" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#B87400">4.0x</text>
+          <!-- 40% margin -> 2.5x -->
+          <text x="140" y="211" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#0A1628">40% margin</text>
+          <rect x="150" y="194" width="255" height="30" fill="#2563EB"/>
+          <text x="417" y="215" text-anchor="start" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#2563EB">2.5x</text>
+          <!-- 50% margin -> 2.0x -->
+          <text x="140" y="265" text-anchor="end" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#0A1628">50% margin</text>
+          <rect x="150" y="248" width="204" height="30" fill="#34A853"/>
+          <text x="366" y="269" text-anchor="start" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#2E8B4A">2.0x</text>
+          <line x1="150" y1="86" x2="150" y2="278" stroke="#94A3B8" stroke-width="1.5"/>
+          <text x="360" y="322" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#64748B">Break-even ROAS = 1 divided by gross margin</text>
+        </svg>
+        <figcaption>The thinner your margin, the higher the ROAS you need just to break even, which is why a blended account-wide target hides where the money is really made and lost.</figcaption>
+      </figure>
     </div>
   </section>
 

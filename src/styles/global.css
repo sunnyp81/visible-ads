@@ -114,3 +114,22 @@ html {
   from { opacity: 1; }
   to { opacity: 0; }
 }
+
+/* Inline content visuals (branded SVG figures) */
+.content-visual {
+  margin: 0;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(10, 22, 40, 0.04);
+}
+.content-visual svg { display: block; margin: 0 auto; }
+.content-visual figcaption {
+  margin-top: 14px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-slate-dark);
+  text-align: center;
+}
