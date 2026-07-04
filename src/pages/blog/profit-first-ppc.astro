@@ -1,0 +1,305 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PartnerBadges from '../../components/PartnerBadges.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Profit-First PPC: How to Run Google Ads for Profit, Not Revenue",
+      "description": "A complete guide to profit-first PPC. Learn why revenue targets quietly lose money, how POAS and break-even ROAS work, and the weekly rulebook we use to scale Google Ads on profit.",
+      "url": "https://visible-ads.com/blog/profit-first-ppc",
+      "datePublished": "2026-07-04",
+      "dateModified": "2026-07-04",
+      "author": { "@type": "Organization", "name": "Visible Ads", "url": "https://visible-ads.com" },
+      "publisher": { "@type": "Organization", "name": "Visible Ads", "url": "https://visible-ads.com" },
+      "image": "https://visible-ads.com/images/visible-ads-og.png"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is profit-first PPC?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Profit-first PPC is a way of managing paid search where the target is gross profit, not revenue. Instead of optimising to a revenue-based ROAS goal, you feed each product's real margin into the account and manage to POAS (profit on ad spend) and break-even ROAS. The result is that budget flows to the products and campaigns that actually contribute profit, not just the ones that report the highest revenue." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does a high ROAS still lose money?",
+          "acceptedAnswer": { "@type": "Answer", "text": "ROAS measures revenue returned per pound of spend, and revenue is not profit. A 4x ROAS on a product with a 20 percent gross margin loses money on every extra sale once you subtract cost of goods, fees and the ad spend itself. Because Google optimises to the conversion value you give it, a revenue-only feed tells the platform to chase low-margin volume. Switching the target to profit fixes the incentive." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I set a profit target for Google Ads?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Start with your contribution margin per product, which is the selling price minus cost of goods, payment fees, shipping and returns. Your break-even ROAS is 1 divided by that margin: a 40 percent margin needs a 2.5x ROAS just to break even. Set your target ROAS above break-even by the profit margin you want to keep, then use margin-adjusted conversion values so the platform bids to profit rather than revenue." }
+        },
+        {
+          "@type": "Question",
+          "name": "What is break-even ROAS?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Break-even ROAS is the revenue-per-pound-of-spend figure at which your ad campaign makes neither a profit nor a loss. It equals 1 divided by your gross margin. At a 25 percent margin you need a 4x ROAS to break even; at a 50 percent margin you need 2x. Any campaign running below its break-even ROAS is subsidising sales out of your own pocket." }
+        },
+        {
+          "@type": "Question",
+          "name": "When should I scale a profitable campaign?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Scale on a weekly cadence tied to profit, not on a single good day. Our rulebook increases budget by 20 percent a week when ROAS is comfortably above target, holds steady in the middle band, reduces spend when it slips below target, and pauses only when a campaign is clearly below break-even. Scaling in controlled weekly steps lets the bidding algorithm relearn without shocking performance." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://visible-ads.com/blog" },
+        { "@type": "ListItem", "position": 3, "name": "Profit-First PPC", "item": "https://visible-ads.com/blog/profit-first-ppc" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title="Profit-First PPC: Run Google Ads for Profit, Not Revenue | Visible Ads" description="Revenue targets quietly lose money. Learn profit-first PPC: POAS, break-even ROAS by margin, margin-adjusted bidding, and the weekly rulebook we use to scale Google Ads on profit." schema={schema}>
+
+  <!-- Hero -->
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-navy to-navy-light relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <nav class="text-sm text-slate-light mb-8">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+        <span class="mx-2">/</span>
+        <span class="text-white">Profit-First PPC</span>
+      </nav>
+      <div class="max-w-3xl">
+        <span class="inline-block px-4 py-1.5 bg-electric/20 text-electric-light text-sm font-medium rounded-full mb-6">Strategy</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white leading-tight mb-6">Profit-First PPC: Run Google Ads for Profit, Not Revenue</h1>
+        <p class="text-lg sm:text-xl text-slate-light leading-relaxed">Most Google Ads accounts are optimised to the wrong number. They chase revenue and report a healthy ROAS while the bank balance quietly shrinks. This guide shows you how to flip the target to profit, and manage spend to the number that actually pays your bills.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The revenue trap -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">The revenue trap</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Ask most advertisers how their Google Ads are doing and they will quote a ROAS: 4x, 6x, 10x. It sounds like a scoreboard, and it feels like winning. The problem is that ROAS measures revenue, and revenue is not the same as profit. A campaign can post a strong ROAS every single week and still lose money on every order it brings in.</p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">The cause sits in the conversion value you send. A revenue-based conversion value tells the algorithm that a sale is worth its full sticker price. The bidding system then does exactly what you asked and hunts for the cheapest possible revenue. That usually means low-margin bestsellers, heavily discounted lines and products that sell easily but return almost nothing once you subtract cost of goods, payment fees, shipping and returns. The revenue looks great. The contribution to profit is thin or negative.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">Profit-first PPC fixes the incentive at its root. You optimise to profit rather than revenue, so every bidding decision is weighed against what the sale is actually worth. Nothing else about the account has to change for this to move the needle. The lever is the target.</p>
+    </div>
+  </section>
+
+  <!-- What profit-first means -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">What profit-first PPC actually means</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Profit-first PPC rests on one substitution: replace ROAS as your north star with POAS. ROAS is return on ad spend, revenue divided by cost. POAS is profit on ad spend, gross profit divided by cost. It is a small change in the maths and a large change in behaviour, because POAS is the only version of the number that reflects whether the campaign made you money.</p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">The two numbers can tell opposite stories on the same account. A 4x ROAS looks like a win, yet on a product carrying a 20 percent gross margin it is a loss once the ad spend is paid. We walk through that exact scenario in <a href="/roas-vs-profit" class="text-electric font-semibold hover:text-electric-dark underline decoration-electric/30">ROAS vs profit: why a high ROAS can still lose money</a>, with a calculator you can run against your own figures. That page makes the gap between the two numbers concrete in about thirty seconds.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">Everything that follows in this guide is about turning that single idea into an operating system: the numbers you need before you spend, how to feed profit into the platform, how to scale on it, and how to structure an account so the profitable products get the budget.</p>
+    </div>
+  </section>
+
+  <!-- Four numbers -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">The four numbers to fix before you spend</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">Profit-first PPC starts before a single bid is placed. You need four numbers on the table, because they set the targets everything else is measured against.</p>
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-navy text-white">
+              <th class="px-5 py-4 font-heading font-semibold text-sm">Number</th>
+              <th class="px-5 py-4 font-heading font-semibold text-sm">What it is</th>
+              <th class="px-5 py-4 font-heading font-semibold text-sm">Why it matters</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+            <tr class="bg-white border-b border-gray-100">
+              <td class="px-5 py-4 font-semibold text-navy">Contribution margin</td>
+              <td class="px-5 py-4">Price minus cost of goods, fees, shipping and returns</td>
+              <td class="px-5 py-4">The real money left to cover ads and profit</td>
+            </tr>
+            <tr class="bg-gray-50 border-b border-gray-100">
+              <td class="px-5 py-4 font-semibold text-navy">Break-even ROAS</td>
+              <td class="px-5 py-4">1 divided by your gross margin</td>
+              <td class="px-5 py-4">The floor: below it, every extra sale loses money</td>
+            </tr>
+            <tr class="bg-white border-b border-gray-100">
+              <td class="px-5 py-4 font-semibold text-navy">Target POAS</td>
+              <td class="px-5 py-4">The profit-on-spend you want to keep</td>
+              <td class="px-5 py-4">The goal the platform should bid towards</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-5 py-4 font-semibold text-navy">CAC to LTV</td>
+              <td class="px-5 py-4">Cost to acquire a customer versus their lifetime value</td>
+              <td class="px-5 py-4">Lets you spend more on first orders that repeat</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Break-even ROAS is the one most accounts skip, and it is pure arithmetic. Divide one by your gross margin. A 25 percent margin needs a 4x ROAS just to stand still. A 50 percent margin needs only 2x. Until you know that floor for each product group, you cannot tell a winning campaign from a subsidised one.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">The CAC-to-LTV number is what lets profit-first accounts spend aggressively where it is justified. If a first order breaks even but the customer typically comes back three times, you can afford to bid up front and collect the profit on the repeat orders. Revenue-only accounts never see this, because they treat every sale as a one-off.</p>
+    </div>
+  </section>
+
+  <!-- PCF framework -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">Map the profit before you touch the bids</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">A blended account-wide margin is a useful starting point but hides the real picture. A catalogue of hundreds of products has hundreds of margins. The spread between the best and worst is usually enormous. Some products fund the account. Others drain it while posting a flattering ROAS. You cannot manage to profit until you can see which is which.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">That mapping exercise is the first thing we do on any account, and it is the backbone of our <a href="/how-we-audit" class="text-electric font-semibold hover:text-electric-dark underline decoration-electric/30">Profit Contribution Framework</a>. It joins your margin data to your ad data so that every campaign, product group and search term can be read in profit terms rather than revenue terms. Once the map exists, the decisions about where to add budget and where to pull it become obvious.</p>
+    </div>
+  </section>
+
+  <!-- Feed profit into the platform -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">Feed profit into the platform</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Google Ads bids to the conversion value you send it. If that value is revenue, it optimises to revenue. The single most powerful move in profit-first PPC is to change what the platform sees, so its automated bidding works for you instead of against you.</p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">There are three practical levers, in rough order of impact:</p>
+      <ul class="space-y-4 mb-6 text-lg text-gray-700">
+        <li class="flex gap-3"><span class="text-electric font-bold shrink-0">1.</span><span><strong class="text-navy">Margin-adjusted conversion values.</strong> Pass gross profit as the conversion value instead of order revenue. Now a high-margin sale is worth more to the algorithm than a low-margin one of the same price, and it bids accordingly.</span></li>
+        <li class="flex gap-3"><span class="text-electric font-bold shrink-0">2.</span><span><strong class="text-navy">Target ROAS set above break-even.</strong> With profit values feeding in, set a target that clears your break-even floor by the margin you want to keep. The bid strategy then chases profit, not cheap revenue.</span></li>
+        <li class="flex gap-3"><span class="text-electric font-bold shrink-0">3.</span><span><strong class="text-navy">Clean conversion tracking.</strong> None of the above works if the data is wrong. Deduplicated conversions, accurate values and a sensible attribution window are the foundation everything else sits on.</span></li>
+      </ul>
+      <p class="text-lg text-gray-700 leading-relaxed">This is also where profit-first PPC meets conversion rate optimisation. Every extra point of conversion rate lowers your effective cost per sale and lifts POAS without spending a penny more. We cover that side of the equation in <a href="/blog/what-is-ecro" class="text-electric font-semibold hover:text-electric-dark underline decoration-electric/30">what is eCRO</a>.</p>
+    </div>
+  </section>
+
+  <!-- Weekly rulebook -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">Scale on profit, not on a good day</h2>
+      <p class="text-lg text-gray-700 mb-8 leading-relaxed">Once an account is profitable, the instinct is to pour on budget. Done wrong, that shocks the bidding algorithm and performance falls off a cliff. We scale in controlled weekly steps, tied to how far ROAS sits above or below target. This is the rulebook we run against live accounts managing millions in annual spend.</p>
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-navy text-white">
+              <th class="px-5 py-4 font-heading font-semibold text-sm">Weekly ROAS vs target</th>
+              <th class="px-5 py-4 font-heading font-semibold text-sm">Action</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+            <tr class="bg-white border-b border-gray-100"><td class="px-5 py-4 font-semibold text-navy">Well above target</td><td class="px-5 py-4">Increase budget by 20 percent</td></tr>
+            <tr class="bg-gray-50 border-b border-gray-100"><td class="px-5 py-4 font-semibold text-navy">Comfortably above target</td><td class="px-5 py-4">Increase budget by 10 percent</td></tr>
+            <tr class="bg-white border-b border-gray-100"><td class="px-5 py-4 font-semibold text-navy">On target</td><td class="px-5 py-4">Hold and let it stabilise</td></tr>
+            <tr class="bg-gray-50 border-b border-gray-100"><td class="px-5 py-4 font-semibold text-navy">Below target</td><td class="px-5 py-4">Reduce budget by 20 percent</td></tr>
+            <tr class="bg-white"><td class="px-5 py-4 font-semibold text-navy">Below break-even</td><td class="px-5 py-4">Cap spend and rebuild, do not just switch off</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-lg text-gray-700 leading-relaxed">The point of the rulebook is discipline. It scales winners fast enough to matter but slowly enough for the algorithm to relearn, and it protects profit on the way down by cutting spend before a soft week becomes a bad month. When a campaign drops below break-even, the fix is to cap and rebuild rather than pausing outright, so you keep the learning and the history.</p>
+    </div>
+  </section>
+
+  <!-- Structure by margin -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">Structure the account around margin</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Profit-first management is much easier when the account is built for it. If every product sits in one undifferentiated campaign, the algorithm blends your best and worst margins together and you lose the ability to bid them differently. The answer is to group products by margin band, so high-margin lines can be pushed harder and thin-margin lines are held to a stricter target.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">This matters most for retailers with large catalogues, where the margin spread across thousands of SKUs is where the profit is won or lost. We go deep on that in <a href="/high-sku-advertising" class="text-electric font-semibold hover:text-electric-dark underline decoration-electric/30">advertising a high-SKU catalogue</a>, which covers how to segment thousands of products without drowning in campaigns.</p>
+    </div>
+  </section>
+
+  <!-- Profit leaks -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">Profit leaks worth fixing this week</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">You do not need a full rebuild to start managing to profit. A handful of leaks show up in almost every account, and each one is worth checking before your next reporting cycle:</p>
+      <ul class="space-y-4 mb-6 text-lg text-gray-700">
+        <li class="flex gap-3"><span class="text-electric shrink-0">•</span><span><strong class="text-navy">Revenue conversion values.</strong> If Google still sees order value rather than profit, it is bidding to the wrong goal every hour of the day.</span></li>
+        <li class="flex gap-3"><span class="text-electric shrink-0">•</span><span><strong class="text-navy">No break-even floor.</strong> Campaigns running under their break-even ROAS are losing money invisibly. Work out the floor and find them.</span></li>
+        <li class="flex gap-3"><span class="text-electric shrink-0">•</span><span><strong class="text-navy">Thin-margin bestsellers eating budget.</strong> The products with the most spend are often the least profitable. Read spend in profit terms and the picture changes.</span></li>
+        <li class="flex gap-3"><span class="text-electric shrink-0">•</span><span><strong class="text-navy">Brand and non-brand blended together.</strong> Brand terms flatter the account-wide ROAS. Separate them so you can see what the working budget really returns.</span></li>
+        <li class="flex gap-3"><span class="text-electric shrink-0">•</span><span><strong class="text-navy">Wasted spend on converting-but-unprofitable search terms.</strong> A term can convert well and still lose money. The search terms report, read against margin, surfaces them.</span></li>
+      </ul>
+      <p class="text-lg text-gray-700 leading-relaxed">Fixing even two or three of these usually lifts profit without touching the budget, because the same spend is simply pointed at better sales.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-8">Frequently asked questions</h2>
+      <div class="space-y-4">
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            What is profit-first PPC?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">Profit-first PPC is a way of managing paid search where the target is gross profit, not revenue. Instead of optimising to a revenue-based ROAS goal, you feed each product's real margin into the account and manage to POAS and break-even ROAS. Budget then flows to the products and campaigns that actually contribute profit, not just the ones that report the highest revenue.</div>
+        </details>
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            Why does a high ROAS still lose money?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">ROAS measures revenue returned per pound of spend, and revenue is not profit. A 4x ROAS on a product with a 20 percent gross margin loses money on every extra sale once you subtract cost of goods, fees and the ad spend itself. Because Google optimises to the conversion value you give it, a revenue-only feed tells the platform to chase low-margin volume. Switching the target to profit fixes the incentive.</div>
+        </details>
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            How do I set a profit target for Google Ads?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">Start with your contribution margin per product, which is the selling price minus cost of goods, payment fees, shipping and returns. Your break-even ROAS is 1 divided by that margin: a 40 percent margin needs a 2.5x ROAS just to break even. Set your target ROAS above break-even by the profit margin you want to keep, then use margin-adjusted conversion values so the platform bids to profit rather than revenue.</div>
+        </details>
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            What is break-even ROAS?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">Break-even ROAS is the revenue-per-pound-of-spend figure at which your campaign makes neither a profit nor a loss. It equals 1 divided by your gross margin. At a 25 percent margin you need a 4x ROAS to break even; at a 50 percent margin you need 2x. Any campaign running below its break-even ROAS is subsidising sales out of your own pocket.</div>
+        </details>
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            When should I scale a profitable campaign?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">Scale on a weekly cadence tied to profit, not on a single good day. Our rulebook increases budget by 20 percent a week when ROAS is comfortably above target, holds steady in the middle band, reduces spend when it slips below target, and caps spend when a campaign is clearly below break-even. Scaling in controlled weekly steps lets the bidding algorithm relearn without shocking performance.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-heading font-bold text-navy text-center mb-8">Related Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+        <a href="/google-ads" class="group bg-white rounded-2xl p-6 shadow-md border border-gray-100 ring-1 ring-electric/10 hover:ring-electric/30 hover:shadow-lg transition-all duration-300">
+          <h3 class="text-lg font-heading font-bold text-navy mb-2 group-hover:text-electric transition-colors">Google Ads</h3>
+          <p class="text-gray-700 text-sm mb-3">Profit-first PPC management built around your real margins.</p>
+          <span class="text-electric text-sm font-medium inline-flex items-center gap-1">Learn more <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/how-we-audit" class="group bg-white rounded-2xl p-6 shadow-md border border-gray-100 ring-1 ring-electric/10 hover:ring-electric/30 hover:shadow-lg transition-all duration-300">
+          <h3 class="text-lg font-heading font-bold text-navy mb-2 group-hover:text-electric transition-colors">How We Audit</h3>
+          <p class="text-gray-700 text-sm mb-3">The Profit Contribution Framework that maps profit before bids.</p>
+          <span class="text-electric text-sm font-medium inline-flex items-center gap-1">Learn more <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/ecro" class="group bg-white rounded-2xl p-6 shadow-md border border-gray-100 ring-1 ring-electric/10 hover:ring-electric/30 hover:shadow-lg transition-all duration-300">
+          <h3 class="text-lg font-heading font-bold text-navy mb-2 group-hover:text-electric transition-colors">eCRO</h3>
+          <p class="text-gray-700 text-sm mb-3">Lift conversion rate to raise POAS without raising spend.</p>
+          <span class="text-electric text-sm font-medium inline-flex items-center gap-1">Learn more <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Badges -->
+  <section class="py-12 bg-white border-y border-gray-100" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PartnerBadges compact />
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative py-20 lg:py-28 bg-navy" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">See your account in profit terms</h2>
+      <p class="text-lg text-slate-light mb-8 max-w-2xl mx-auto">Our free profit audit maps your real margins against your ad data and shows you exactly where the money is made and lost. No revenue vanity metrics, just the number that matters.</p>
+      <a href="/free-ads-audit" class="w-full sm:w-auto inline-flex items-center justify-center bg-cta text-white font-semibold px-10 py-4 rounded-xl hover:bg-electric transition-colors text-lg">Book a Profit Audit</a>
+    </div>
+  </section>
+
+</Layout>

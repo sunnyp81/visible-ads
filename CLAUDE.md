@@ -11,12 +11,20 @@ Per-repo brain, migrated from central claude-memory 2026-06-20. Canonical projec
 ## Pilot scope (agenda)
 4 AEO pages + homepage sections (team-values block, "Find your path" role selector). Framework name = **PCF™ (Profit Contribution Framework)** = entity anchor (mirrors judeluxe's BOI®). About + gated Pricing Guide = retainer/add-on, NOT pilot.
 
-## Built but NOT pushed (on disk only)
-🔴 3 pilot pages + ProfitCalculator + Nav change are UNCOMMITTED on disk (verified `git status` Jun 19). Visible Ads work is NOT live yet — pending Sunny's push-now-vs-hold decision.
-1. `src/pages/how-we-audit.astro` — PCF™ page (Profit-not-revenue / Contribution-first bidding / Forecast+control; 8-point checklist, 5-day process, Honesty/Integrity/Candour values, Service/FAQPage/Breadcrumb schema).
-2. `src/pages/roas-vs-profit.astro` + `src/components/ProfitCalculator.astro` — THE HOOK: interactive POAS/profit calculator (spend/ROAS/margin → revenue, gross profit, profit-after-ad-spend, POAS, break-even ROAS = 1/margin) with green/amber/red verdict + email-capture lead form (`_form=profit-calculator`).
-3. `src/pages/high-sku-advertising.astro` — Google Ads for large SKU catalogues; Scale/Protect/Recover/Pause tiers (tier table marked "illustrative", no fabricated stats).
-Remaining: pilot page 4 (challenger/results block, Avis "We Try Harder" positioning = copy only) + homepage sections.
+## Pilot pages — now LIVE (was "not pushed", superseded Jul 4)
+✅ The 3 pilot pages are committed, pushed and LIVE (verified 200 Jul 4): `/how-we-audit/` (PCF™), `/roas-vs-profit/` (+ProfitCalculator POAS hook), `/high-sku-advertising/`. Working tree clean, in sync with origin before the Jul 4 SEO commit below.
+Remaining pilot work: page 4 (challenger/results block, Avis "We Try Harder" copy) + homepage sections (team-values, "Find your path" role selector).
+
+## Jul 4 SEO pass — PUSHED + LIVE (`14f0a7f`, in sync with origin)
+The SEO commit is live on Boh's site (master in sync, verified this session). Contents:
+1. Homepage `<title>` → "Google Ads Agency London | Profit-First PPC | Visible Ads" (was "Digital Advertising Agency | Visible Ads, Ads That Convert"; site ranks pos ~1.8 for "google ads agency" but title omitted it).
+2. `/free-ads-audit` sitelink renamed to "Book a Profit Audit" (Boh request) across title, H1 ("Book Your Free Profit Audit"), nav CTAs desktop+mobile, WebPage+breadcrumb schema. URL unchanged.
+3. Stripped all 316 em-dashes site-wide (house rule).
+NOTE: `visible-ads-optimization-tracker.md` in `G:\My Drive\clients\visible-ads\` is STALE; the site now has ~25 blog posts + service/case-study pages. Trust this brain + live site over that tracker.
+
+## Jul 4 — NEW definitive-guide blog post (pilot item 2) — build verified, pushing
+`/blog/profit-first-ppc/` — "Profit-First PPC: Run Google Ads for Profit, Not Revenue" (Strategy). Methodology HUB that reinforces + hub-links all 3 pilot pages: /roas-vs-profit/ (POAS calc), /how-we-audit/ (PCF), /high-sku-advertising/ (margin segmentation), plus /blog/what-is-ecro/. Sections: revenue trap, POAS vs ROAS, four numbers (contribution margin / break-even ROAS / target POAS / CAC:LTV), map profit first, margin-adjusted bidding, the weekly scaling rulebook (VA's substantiated ROAS-threshold rulebook, safe facts only), structure by margin, profit leaks, 5-FAQ. Article+FAQPage+Breadcrumb schema. Distinct intent from /roas-vs-profit/ (no cannibalisation). 0 em/en dashes, semantic-audit ~88 (>=85). Registered top of `blog.astro` posts array. Build = 52 pages OK.
+Still open for VA content push: deeper on-page pass (a few overlong titles: google-ads-vs-bing-ads 81ch, what-is-ecro 85ch, how-much-google-ads-cost-uk 75ch), internal linking; homepage sections (team-values, "Find your path"); early-Aug re-measure baseline for pilot delta.
 
 ## Already DEPLOYED
 - robots.txt two-lane fix (`7034379`, pushed): ALLOW citation bots (OAI-SearchBot, ChatGPT-User, PerplexityBot, Claude-SearchBot/User), BLOCK training bots (GPTBot, ClaudeBot, Google-Extended, CCBot, Bytespider, Amazonbot, Applebot-Extended, meta-externalagent, cohere-ai, Diffbot), keep `Content-Signal: search=yes,ai-train=no`. (CF managed layer had been injecting Disallow; Sunny removed the override — origin file is now source of truth.)
