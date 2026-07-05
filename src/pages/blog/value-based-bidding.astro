@@ -1,0 +1,275 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import PartnerBadges from '../../components/PartnerBadges.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Value-Based Bidding: Feeding Profit into Google Ads",
+      "description": "Google bids to the conversion value you send it. Feed profit, not revenue: margin-adjusted values, how to implement them, and what changes once profit is the signal.",
+      "url": "https://visible-ads.com/blog/value-based-bidding",
+      "datePublished": "2026-07-05",
+      "dateModified": "2026-07-05",
+      "author": { "@type": "Organization", "name": "Visible Ads", "url": "https://visible-ads.com" },
+      "publisher": { "@type": "Organization", "name": "Visible Ads", "url": "https://visible-ads.com" },
+      "image": "https://visible-ads.com/images/og/value-based-bidding.png"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is value-based bidding in Google Ads?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Value-based bidding is a smart bidding approach where Google optimises to the conversion value you report rather than to a flat cost per conversion. The platform predicts the value of each potential click and bids more for the ones likely to be worth more. It is only as good as the value you feed it: report revenue and it chases revenue, report profit and it chases profit." }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I send revenue or profit as my conversion value?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Send profit where you can. If you report order revenue, Google treats a low-margin sale and a high-margin sale of the same price as equally valuable, so it will happily chase cheap, low-margin volume. Passing gross profit as the conversion value tells the algorithm that a high-margin order is worth more, and it bids accordingly. Revenue-based values are a reasonable starting point only when margins are broadly similar across the catalogue." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate a profit-based conversion value?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Take the order value and subtract cost of goods, payment fees, shipping and expected returns to get contribution profit. The simplest implementation is a margin multiplier: if a product group runs at a 40 percent margin, report 40 percent of order value as the conversion value. Where you have per-order or per-product cost data, pass the actual profit figure through offline or enhanced conversions for greater accuracy." }
+        },
+        {
+          "@type": "Question",
+          "name": "What target ROAS should I pair with profit values?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Once you feed profit rather than revenue, your target ROAS is measured against profit and the break-even point shifts to 1x. Set the target above 1x by the profit cushion you want to keep. Keep in mind that changing the conversion value resets what past ROAS figures mean, so recalibrate the target rather than reusing the old revenue-based number." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does data hygiene matter for value-based bidding?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The strategy is only as good as the data behind it. Duplicated conversions inflate value and pull budget towards the wrong campaigns, inaccurate values mislead the bidding on every auction, and an attribution window that is too short or too long distorts which clicks get credit. Deduplicated conversions, accurate values and a sensible attribution window are the foundation the whole approach sits on." }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://visible-ads.com/blog" },
+        { "@type": "ListItem", "position": 3, "name": "Value-Based Bidding", "item": "https://visible-ads.com/blog/value-based-bidding" }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title="Value-Based Bidding for Google Ads | Visible Ads" description="Google bids to the conversion value you send it. Feed profit, not revenue: margin-adjusted values, how to implement them, and what changes." image="/images/og/value-based-bidding.png" schema={schema}>
+
+  <!-- Hero -->
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-navy to-navy-light relative overflow-hidden" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <nav class="text-sm text-slate-light mb-8">
+        <a href="/" class="hover:text-white transition-colors">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+        <span class="mx-2">/</span>
+        <span class="text-white">Value-Based Bidding</span>
+      </nav>
+      <div class="max-w-3xl">
+        <span class="inline-block px-4 py-1.5 bg-electric/20 text-electric-light text-sm font-medium rounded-full mb-6">Strategy</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white leading-tight mb-6">Value-based bidding: feeding profit into Google Ads</h1>
+        <p class="text-lg sm:text-xl text-slate-light leading-relaxed">Google's automated bidding optimises to the conversion value you report. Report revenue and it chases revenue. Report profit and it chases profit. This guide shows you how to feed margin-adjusted values into the platform so its bidding works towards the number that pays your bills.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- What value-based bidding is -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">What value-based bidding actually is</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Value-based bidding is the mode of Google's smart bidding that optimises to conversion value rather than to a flat cost per conversion. Instead of treating every sale as worth the same, the platform predicts how much value each potential click is likely to return and bids more for the auctions worth winning. Target ROAS and Maximise Conversion Value are the two bid strategies that run on this signal.</p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">The mechanism is simple and it is the whole point. Google bids to the number you send it in the conversion value field. That number is not a fixed truth about your business. It is a variable you control, and the algorithm takes it completely literally. Whatever you define as valuable becomes the thing the bidding system spends your budget chasing.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">This is why value-based bidding is powerful and why it can quietly work against you. Point it at the right value and the automation compounds in your favour on every auction, all day, without supervision. Point it at the wrong value and it does the same thing just as diligently in the wrong direction. The lever that decides which of those happens is the value you choose to report.</p>
+    </div>
+  </section>
+
+  <!-- Why revenue values mislead -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">Why revenue-based values mislead the algorithm</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">By default, most ecommerce tracking reports order revenue as the conversion value. On the surface this looks right: a sale is worth what the customer paid. The trouble is that revenue and profit are not the same, and the gap between them varies wildly from product to product. When you feed revenue, you tell Google that a 100 pound order is worth 100 pounds whether it carries a 60 percent margin or a 10 percent one.</p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">The bidding system then does exactly what you asked. It hunts for the cheapest possible revenue, which usually means low-margin bestsellers, discounted lines and easy-to-sell products that return almost nothing once cost of goods, fees, shipping and returns come out. Budget drifts towards volume that looks productive in the revenue column and contributes little or nothing in the profit column. The account can post a strong revenue-based ROAS every week while the underlying margin thins out. This is the same trap covered in <a href="/roas-vs-profit" class="text-electric font-semibold hover:text-electric-dark underline decoration-electric/30">ROAS vs profit and break-even</a>, where a high headline ROAS still loses money.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">The failure is not in the algorithm. It optimised faithfully to the goal it was given. The failure is upstream, in the definition of value. Fixing it means changing what the platform sees before you touch bids, budgets or structure.</p>
+    </div>
+  </section>
+
+  <!-- Margin-adjusted values -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">Margin-adjusted conversion values</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">The fix is to report profit as the conversion value instead of revenue. Start from the contribution profit on an order: the price the customer paid, minus cost of goods, minus payment fees, minus shipping, minus the cost of expected returns. That figure is what the sale genuinely adds to the business, and it is what you want the algorithm bidding towards.</p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">The simplest version is a margin multiplier. If a product group runs at a 40 percent contribution margin, report 40 percent of the order value as the conversion value. A 100 pound order in that group is passed to Google as 40 pounds of value. Do the same for each margin band and the platform starts to see, in real terms, that a high-margin sale is worth more than a low-margin one of the same sticker price. The table below shows how the signal changes for two products at the same price but different margins.</p>
+      <div class="overflow-x-auto mb-8">
+        <table class="w-full text-left border-collapse">
+          <thead>
+            <tr class="bg-navy text-white">
+              <th class="px-5 py-4 font-heading font-semibold text-sm">Product</th>
+              <th class="px-5 py-4 font-heading font-semibold text-sm">Order value</th>
+              <th class="px-5 py-4 font-heading font-semibold text-sm">Gross margin</th>
+              <th class="px-5 py-4 font-heading font-semibold text-sm">Revenue-based value</th>
+              <th class="px-5 py-4 font-heading font-semibold text-sm">Profit-based value</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+            <tr class="bg-white border-b border-gray-100">
+              <td class="px-5 py-4 font-semibold text-navy">Product A</td>
+              <td class="px-5 py-4">£100</td>
+              <td class="px-5 py-4">15 percent</td>
+              <td class="px-5 py-4">£100</td>
+              <td class="px-5 py-4">£15</td>
+            </tr>
+            <tr class="bg-gray-50">
+              <td class="px-5 py-4 font-semibold text-navy">Product B</td>
+              <td class="px-5 py-4">£100</td>
+              <td class="px-5 py-4">55 percent</td>
+              <td class="px-5 py-4">£100</td>
+              <td class="px-5 py-4">£55</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-lg text-gray-700 leading-relaxed">On revenue values, Google sees two identical 100 pound sales and has no reason to prefer one over the other. On profit values, Product B is worth almost four times as much, so the bidding leans towards it. Nothing about the products changed. The only thing that moved is the value the platform was allowed to see.</p>
+    </div>
+  </section>
+
+  <!-- Implementation options -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">How to implement profit values</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">There is no single correct way to pass profit into Google Ads. The right method depends on how granular your cost data is and where it lives. Three approaches cover most accounts, and they can be combined.</p>
+      <ul class="space-y-4 mb-6 text-lg text-gray-700">
+        <li class="flex gap-3"><span class="text-electric font-bold shrink-0">1.</span><span><strong class="text-navy">Conversion value rules.</strong> Built into Google Ads, these adjust the reported value up or down based on conditions you set, such as audience, location or device. They are a practical way to apply a margin haircut at the account level when you do not have per-order profit data, though the conditions available are limited.</span></li>
+        <li class="flex gap-3"><span class="text-electric font-bold shrink-0">2.</span><span><strong class="text-navy">Offline or enhanced conversions carrying profit.</strong> Where you can calculate contribution profit per order in your back end, send that exact figure back to Google through offline conversion imports or enhanced conversions. This is the most accurate route because the value reflects real costs on real orders rather than an averaged margin band.</span></li>
+        <li class="flex gap-3"><span class="text-electric font-bold shrink-0">3.</span><span><strong class="text-navy">Margin at the product-feed level in Merchant Center.</strong> For Shopping and Performance Max, supplying cost of goods on the product feed lets Merchant Center work in profit terms per item. This is the natural home for margin data when the profit signal needs to vary product by product across a catalogue.</span></li>
+      </ul>
+      <p class="text-lg text-gray-700 leading-relaxed">For retailers with large catalogues, feed-level margin is usually the workhorse, because managing thousands of individual values by hand is not realistic. We cover how to structure that scale in <a href="/high-sku-advertising" class="text-electric font-semibold hover:text-electric-dark underline decoration-electric/30">advertising a high-SKU catalogue</a>.</p>
+    </div>
+  </section>
+
+  <!-- Pair with target ROAS -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">Pair profit values with a target above break-even</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Changing the conversion value changes what your target ROAS means. When you fed revenue, break-even sat at your inverse margin: a 25 percent margin needed a 4x revenue ROAS just to stand still. Once you feed profit, the value already has the margin baked in, so break-even moves to 1x. At a profit ROAS of 1x, the campaign returns exactly as much profit as it cost in ad spend and nets zero.</p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">That makes the target simpler to reason about. Set it above 1x by the cushion you want to keep after the media cost. A profit ROAS target of 1.5x means you aim to keep 50 pence of profit for every pound of ad spend, on top of covering the spend itself. The important discipline is not to reuse your old revenue-based number, because a 4x target that made sense on revenue values would be wildly restrictive on profit values and would choke the account.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">Because the correct target depends on the margin of what a campaign actually sells, a single account-wide figure rarely fits. Setting the target band by margin is its own exercise, which we work through in <a href="/blog/target-roas-by-margin" class="text-electric font-semibold hover:text-electric-dark underline decoration-electric/30">setting target ROAS by margin</a>.</p>
+    </div>
+  </section>
+
+  <!-- Data hygiene -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">The strategy is only as good as the data</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Value-based bidding hands the platform a great deal of control, and it makes every decision from the values you supply. If those values are wrong, the automation amplifies the error on every auction. Getting the data clean is not a nice-to-have before you switch, it is the precondition for the whole approach to work.</p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Three checks matter most:</p>
+      <ul class="space-y-4 mb-6 text-lg text-gray-700">
+        <li class="flex gap-3"><span class="text-electric shrink-0">&bull;</span><span><strong class="text-navy">Deduplicated conversions.</strong> A single sale counted twice doubles the value the algorithm sees and pulls budget towards whatever campaign got the duplicate credit. Confirm one conversion per order.</span></li>
+        <li class="flex gap-3"><span class="text-electric shrink-0">&bull;</span><span><strong class="text-navy">Accurate values.</strong> If the reported profit is off, whether from stale cost of goods, missing shipping or ignored returns, the bidding optimises to a fiction. The value has to reflect the real contribution on the order.</span></li>
+        <li class="flex gap-3"><span class="text-electric shrink-0">&bull;</span><span><strong class="text-navy">A sensible attribution window.</strong> Too short and you starve the model of conversions it should credit; too long and you hand credit to clicks that did little. Match the window to your real buying cycle so value lands on the right auctions.</span></li>
+      </ul>
+      <p class="text-lg text-gray-700 leading-relaxed">None of this is glamorous, and it is the part accounts most often skip. It is also the part that decides whether feeding profit actually improves results or simply moves the budget around based on bad numbers.</p>
+    </div>
+  </section>
+
+  <!-- What changes -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-6">What changes once profit is the signal</h2>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">The visible effect of switching to profit values is a redistribution of budget. Spend flows away from the low-margin lines that looked productive on revenue and towards the products that actually contribute. High-margin items that were previously undervalued by the bidding start to win more auctions, while thin-margin volume that was quietly draining the account gets throttled back. Headline revenue may dip. Contribution profit is what you are now steering by, and that is the number that should rise.</p>
+      <p class="text-lg text-gray-700 mb-6 leading-relaxed">Expect a relearning period. The bid strategy has to recalibrate to the new value signal, and performance can wobble for a couple of weeks while it does. This is normal and it is the reason to make the change deliberately, with the data clean and the target recalibrated, rather than flipping the value and reusing the old settings on top of it.</p>
+      <p class="text-lg text-gray-700 leading-relaxed">Value-based bidding is one piece of managing an account to profit rather than revenue. It handles the automated bidding layer, but it works best alongside the account structure, targets and reporting that read everything in profit terms. We tie the whole approach together in our guide to <a href="/blog/profit-first-ppc" class="text-electric font-semibold hover:text-electric-dark underline decoration-electric/30">profit-first PPC</a>.</p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-16 lg:py-20 bg-sky-tint" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-8">Frequently asked questions</h2>
+      <div class="space-y-4">
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            What is value-based bidding in Google Ads?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">Value-based bidding is a smart bidding approach where Google optimises to the conversion value you report rather than to a flat cost per conversion. The platform predicts the value of each potential click and bids more for the ones likely to be worth more. It is only as good as the value you feed it: report revenue and it chases revenue, report profit and it chases profit.</div>
+        </details>
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            Should I send revenue or profit as my conversion value?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">Send profit where you can. If you report order revenue, Google treats a low-margin sale and a high-margin sale of the same price as equally valuable, so it will happily chase cheap, low-margin volume. Passing gross profit as the conversion value tells the algorithm that a high-margin order is worth more, and it bids accordingly. Revenue-based values are a reasonable starting point only when margins are broadly similar across the catalogue.</div>
+        </details>
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            How do I calculate a profit-based conversion value?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">Take the order value and subtract cost of goods, payment fees, shipping and expected returns to get contribution profit. The simplest implementation is a margin multiplier: if a product group runs at a 40 percent margin, report 40 percent of order value as the conversion value. Where you have per-order or per-product cost data, pass the actual profit figure through offline or enhanced conversions for greater accuracy.</div>
+        </details>
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            What target ROAS should I pair with profit values?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">Once you feed profit rather than revenue, your target ROAS is measured against profit and the break-even point shifts to 1x. Set the target above 1x by the profit cushion you want to keep. Keep in mind that changing the conversion value resets what past ROAS figures mean, so recalibrate the target rather than reusing the old revenue-based number.</div>
+        </details>
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+            Why does data hygiene matter for value-based bidding?
+            <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="px-6 pb-6 text-gray-700 leading-relaxed">The strategy is only as good as the data behind it. Duplicated conversions inflate value and pull budget towards the wrong campaigns, inaccurate values mislead the bidding on every auction, and an attribution window that is too short or too long distorts which clicks get credit. Deduplicated conversions, accurate values and a sensible attribution window are the foundation the whole approach sits on.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Services -->
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl font-heading font-bold text-navy text-center mb-8">Related Services</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+        <a href="/google-ads" class="group bg-white rounded-2xl p-6 shadow-md border border-gray-100 ring-1 ring-electric/10 hover:ring-electric/30 hover:shadow-lg transition-all duration-300">
+          <h3 class="text-lg font-heading font-bold text-navy mb-2 group-hover:text-electric transition-colors">Google Ads</h3>
+          <p class="text-gray-700 text-sm mb-3">Profit-first PPC management built around your real margins.</p>
+          <span class="text-electric text-sm font-medium inline-flex items-center gap-1">Learn more <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/how-we-audit" class="group bg-white rounded-2xl p-6 shadow-md border border-gray-100 ring-1 ring-electric/10 hover:ring-electric/30 hover:shadow-lg transition-all duration-300">
+          <h3 class="text-lg font-heading font-bold text-navy mb-2 group-hover:text-electric transition-colors">How We Audit</h3>
+          <p class="text-gray-700 text-sm mb-3">The Profit Contribution Framework that maps profit before bids.</p>
+          <span class="text-electric text-sm font-medium inline-flex items-center gap-1">Learn more <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/high-sku-advertising" class="group bg-white rounded-2xl p-6 shadow-md border border-gray-100 ring-1 ring-electric/10 hover:ring-electric/30 hover:shadow-lg transition-all duration-300">
+          <h3 class="text-lg font-heading font-bold text-navy mb-2 group-hover:text-electric transition-colors">High-SKU Advertising</h3>
+          <p class="text-gray-700 text-sm mb-3">Feed-level margin and structure for large catalogues.</p>
+          <span class="text-electric text-sm font-medium inline-flex items-center gap-1">Learn more <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Badges -->
+  <section class="py-12 bg-white border-y border-gray-100" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PartnerBadges compact />
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative py-20 lg:py-28 bg-navy" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">Feed the right value to your bidding</h2>
+      <p class="text-lg text-slate-light mb-8 max-w-2xl mx-auto">Our free profit audit checks what value your account is really sending Google and maps your margins against your ad data, so the bidding optimises to profit instead of cheap revenue.</p>
+      <a href="/free-ads-audit" class="w-full sm:w-auto inline-flex items-center justify-center bg-cta text-white font-semibold px-10 py-4 rounded-xl hover:bg-electric transition-colors text-lg">Book a Profit Audit</a>
+    </div>
+  </section>
+
+</Layout>
