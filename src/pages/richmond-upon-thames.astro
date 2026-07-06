@@ -1,0 +1,291 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CountUp from '../components/CountUp.astro';
+import PartnerBadges from '../components/PartnerBadges.astro';
+import ClientLogos from '../components/ClientLogos.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "Visible Ads, Richmond-Upon-Thames",
+      "description": "PPC and digital advertising agency serving Richmond-Upon-Thames and South West London. Google Partner delivering measurable ROI through Google Ads, SEO, and multi-channel campaigns.",
+      "url": "https://visible-ads.com/richmond-upon-thames",
+      "telephone": "+447810477679",
+      "email": "Boh@Visible-Ads.com",
+      "areaServed": [
+        { "@type": "City", "name": "Richmond upon Thames" },
+        { "@type": "City", "name": "Twickenham" },
+        { "@type": "City", "name": "Kew" },
+        { "@type": "City", "name": "East Sheen" },
+        { "@type": "City", "name": "St Margarets" },
+        { "@type": "AdministrativeArea", "name": "South West London" }
+      ],
+      "priceRange": "$$$$",
+      "knowsAbout": ["Google Ads", "PPC Management", "SEO", "Amazon Advertising", "Paid Social", "Conversion Rate Optimisation"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Richmond-Upon-Thames", "item": "https://visible-ads.com/richmond-upon-thames" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why choose a PPC agency that knows Richmond-Upon-Thames?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A team that understands Richmond gives you face-to-face strategy sessions, faster communication, and genuine insight into the affluent South West London market. Richmond shoppers, diners and professional-services clients behave very differently from the wider London average, so campaigns built for this borough convert better. Visible Ads pairs that local understanding with enterprise-level PPC expertise."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What digital marketing services do you offer in Richmond-Upon-Thames?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We offer the full spectrum of performance marketing: Google Ads management, Bing Ads, SEO, Amazon advertising, paid social campaigns across Meta and LinkedIn, and conversion rate optimisation. Whether you run a boutique on Richmond high street, a riverside restaurant, or a professional-services firm in Twickenham or Kew, every service is built to deliver measurable ROI."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does PPC management cost for Richmond businesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our management fees typically range from £1,500 to £5,000 per month depending on campaign complexity and ad spend levels. We provide a detailed, transparent proposal after a free audit of your current advertising setup, so you know exactly what to expect before committing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with independent and premium Richmond businesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Richmond is home to a high concentration of premium independents, hospitality venues and professional-services firms, and that suits how we work. We specialise in established businesses generating £1M+ in annual revenue that are serious about scaling profitably. If you are investing at least £2,000 per month in ad spend and want expert management to maximise your return, we are the right fit."
+          }
+        }
+      ]
+    }
+  ]
+};
+---
+
+<Layout title="PPC Agency Richmond-Upon-Thames | Google Ads | Visible Ads" description="Richmond-upon-Thames PPC and digital advertising agency. Google Partner driving measurable ROI through Google Ads, SEO and multi-channel campaigns." schema={schema}>
+
+  <!-- Hero -->
+  <section class="relative py-20 lg:py-28 overflow-hidden bg-navy" data-animate>
+    <div class="absolute inset-0 bg-gradient-to-br from-navy to-navy-light"></div>
+    <div class="absolute inset-0 dot-pattern opacity-10"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <span class="inline-block px-4 py-1.5 bg-electric/20 text-electric-light text-sm font-medium rounded-full mb-6">Richmond-Upon-Thames</span>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-white leading-tight mb-6">PPC & Digital Advertising Agency in Richmond-Upon-Thames</h1>
+        <p class="text-lg sm:text-xl text-slate-light mb-8 leading-relaxed">Visible Ads is a Google Partner agency delivering profitable growth for Richmond and South West London businesses through expertly managed Google Ads, SEO, and multi-channel advertising campaigns. Local expertise, enterprise-level results.</p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/free-ads-audit" class="w-full sm:w-auto inline-flex items-center justify-center bg-cta text-white font-semibold px-8 py-4 rounded-xl hover:bg-electric transition-colors text-lg">Get Your Free Ads Audit</a>
+          <a href="#services" class="w-full sm:w-auto inline-flex items-center justify-center text-white font-medium px-8 py-4 rounded-xl border border-white/20 hover:bg-white/10 transition-colors">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partner Badges -->
+  <section class="py-12 bg-sky-tint border-y border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PartnerBadges compact />
+    </div>
+  </section>
+
+  <!-- Why Richmond Businesses Choose Us -->
+  <section class="py-20 lg:py-28 bg-white" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-8">Why Richmond-Upon-Thames Businesses Choose Visible Ads</h2>
+        <p class="text-lg text-gray-700 mb-6 leading-relaxed">Richmond-Upon-Thames is one of South West London's most affluent and competitive commercial districts. From the independent boutiques and premium retailers along Richmond high street to the riverside restaurants, professional-services firms, and fast-growing eCommerce brands spread across Twickenham, Kew, East Sheen and St Margarets, businesses here compete hard for the attention of a discerning, high-spending audience. That is precisely where we come in.</p>
+        <p class="text-lg text-gray-700 mb-6 leading-relaxed">As a performance marketing agency rooted in South West London, we understand the local dynamics that national agencies miss. We know how Richmond's shoppers and diners search, how demand shifts around the riverside in summer and the run-up to the rugby crowds at Twickenham, and how a premium borough audience responds to advertising that feels considered rather than pushy. Just as importantly, we are close enough for face-to-face strategy sessions whenever you need them: no remote-only relationships, no faceless account managers halfway across the country.</p>
+        <p class="text-lg text-gray-700 mb-6 leading-relaxed">Our clients across Richmond typically arrive with one of two challenges: they are spending on digital advertising but not seeing the returns they expected, or they know there is room to scale but lack the specialist expertise to do it profitably. In both cases our approach is the same, a thorough audit, a clear strategy, and hands-on management that delivers measurable growth month after month.</p>
+        <p class="text-lg text-gray-700 leading-relaxed">We are not a generalist marketing agency that dabbles in PPC. We are certified Google Partners, Amazon Ads specialists, and SEO practitioners who have managed over £10 million in advertising revenue. When you work with Visible Ads, you get a senior team that treats your budget as if it were their own.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section id="services" class="py-20 lg:py-28 bg-sky-tint" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-4">Digital Marketing Services for Richmond Businesses</h2>
+        <p class="text-lg text-gray-700 max-w-2xl mx-auto">A full suite of performance marketing services, each designed to deliver measurable ROI.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <a href="/google-ads" class="group bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 hover:shadow-lg hover:border-electric/20 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-electric/10 flex items-center justify-center mb-6 group-hover:bg-electric/20 transition-colors">
+            <svg class="w-7 h-7 text-electric" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+          </div>
+          <h3 class="text-lg font-heading font-bold text-navy mb-2 group-hover:text-electric transition-colors">Google Ads Management</h3>
+          <p class="text-gray-700 text-sm mb-3">Search, Shopping, Performance Max, and remarketing campaigns engineered for profitable growth.</p>
+          <span class="text-electric text-sm font-medium inline-flex items-center gap-1">Learn more <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/bing-ads" class="group bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 hover:shadow-lg hover:border-electric/20 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-electric/10 flex items-center justify-center mb-6 group-hover:bg-electric/20 transition-colors">
+            <svg class="w-7 h-7 text-electric" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 0 1-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0 1 15 18.257V17.25m6-12V15a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 15V5.25m18 0A2.25 2.25 0 0 0 18.75 3H5.25A2.25 2.25 0 0 0 3 5.25m18 0V12a2.25 2.25 0 0 1-2.25 2.25H5.25A2.25 2.25 0 0 1 3 12V5.25"/></svg>
+          </div>
+          <h3 class="text-lg font-heading font-bold text-navy mb-2 group-hover:text-electric transition-colors">Bing Ads Management</h3>
+          <p class="text-gray-700 text-sm mb-3">Reach high-value audiences on Microsoft's search network with 20-35% lower CPCs.</p>
+          <span class="text-electric text-sm font-medium inline-flex items-center gap-1">Learn more <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/seo" class="group bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 hover:shadow-lg hover:border-electric/20 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-electric/10 flex items-center justify-center mb-6 group-hover:bg-electric/20 transition-colors">
+            <svg class="w-7 h-7 text-electric" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/></svg>
+          </div>
+          <h3 class="text-lg font-heading font-bold text-navy mb-2 group-hover:text-electric transition-colors">SEO Services</h3>
+          <p class="text-gray-700 text-sm mb-3">Sustainable organic growth through technical SEO, content strategy, and authority building.</p>
+          <span class="text-electric text-sm font-medium inline-flex items-center gap-1">Learn more <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/paid-social" class="group bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 hover:shadow-lg hover:border-electric/20 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-electric/10 flex items-center justify-center mb-6 group-hover:bg-electric/20 transition-colors">
+            <svg class="w-7 h-7 text-electric" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 0 1 1.037-.443 48.7 48.7 0 0 0 5.232-.537c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.4 48.4 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"/></svg>
+          </div>
+          <h3 class="text-lg font-heading font-bold text-navy mb-2 group-hover:text-electric transition-colors">Paid Social Advertising</h3>
+          <p class="text-gray-700 text-sm mb-3">Creative-led campaigns on Meta, TikTok, and LinkedIn that turn scrollers into buyers.</p>
+          <span class="text-electric text-sm font-medium inline-flex items-center gap-1">Learn more <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/amazon" class="group bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 hover:shadow-lg hover:border-electric/20 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-electric/10 flex items-center justify-center mb-6 group-hover:bg-electric/20 transition-colors">
+            <svg class="w-7 h-7 text-electric" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z"/></svg>
+          </div>
+          <h3 class="text-lg font-heading font-bold text-navy mb-2 group-hover:text-electric transition-colors">Amazon Ads & Marketplace</h3>
+          <p class="text-gray-700 text-sm mb-3">Sponsored Products, Brands, and DSP campaigns that drive marketplace dominance.</p>
+          <span class="text-electric text-sm font-medium inline-flex items-center gap-1">Learn more <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="/ecro" class="group bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 hover:shadow-lg hover:border-electric/20 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-electric/10 flex items-center justify-center mb-6 group-hover:bg-electric/20 transition-colors">
+            <svg class="w-7 h-7 text-electric" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 6a7.5 7.5 0 1 0 7.5 7.5h-7.5V6Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0 0 13.5 3v7.5Z"/></svg>
+          </div>
+          <h3 class="text-lg font-heading font-bold text-navy mb-2 group-hover:text-electric transition-colors">Conversion Rate Optimisation</h3>
+          <p class="text-gray-700 text-sm mb-3">Turn more visitors into customers through data-driven A/B testing and UX improvements.</p>
+          <span class="text-electric text-sm font-medium inline-flex items-center gap-1">Learn more <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="relative bg-gradient-to-b from-electric/5 to-transparent" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <div class="text-center mb-10">
+        <h2 class="font-heading text-2xl sm:text-3xl font-bold text-navy">Results at a Glance</h2>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <CountUp value="20" suffix="+" label="Years Experience" />
+        <CountUp value="50" suffix="+" label="Businesses Scaled" />
+        <CountUp value="10" prefix="£" suffix="M+" label="Revenue Generated" />
+        <CountUp value="1" suffix="" label="Richmond-Upon-Thames Based" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies -->
+  <section class="py-20 lg:py-28 bg-sky-tint" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-14">
+        <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-4">Proven Results Across Industries</h2>
+        <p class="text-lg text-gray-700 max-w-2xl mx-auto">See how we have helped businesses like yours achieve profitable growth through strategic digital advertising.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass-card p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <CountUp value="340" suffix="%" label="ROAS" />
+          <h3 class="font-heading text-xl font-bold text-navy mt-4 mb-3">CFW</h3>
+          <p class="text-gray-700 text-sm leading-relaxed mb-1">Amazon + Google Ads</p>
+          <p class="text-gray-700 font-medium mb-6">From stagnation to 7-figure revenue</p>
+          <a href="/case-studies/cfw" class="text-electric font-semibold text-sm hover:underline">Read Case Study &rarr;</a>
+        </div>
+        <div class="glass-card p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <CountUp value="450" prefix="+" suffix="%" label="Sales Growth" />
+          <h3 class="font-heading text-xl font-bold text-navy mt-4 mb-3">iWholesales</h3>
+          <p class="text-gray-700 text-sm leading-relaxed mb-1">Airsoft Division</p>
+          <p class="text-gray-700 font-medium mb-6">Supercharged online presence</p>
+          <a href="/case-studies/iwholesales" class="text-electric font-semibold text-sm hover:underline">Read Case Study &rarr;</a>
+        </div>
+        <div class="glass-card p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+          <CountUp value="2.1" prefix="+£" suffix="M" label="Revenue Generated" />
+          <h3 class="font-heading text-xl font-bold text-navy mt-4 mb-3">Sephra Europe</h3>
+          <p class="text-gray-700 text-sm leading-relaxed mb-1">Multi-channel Growth</p>
+          <p class="text-gray-700 font-medium mb-6">Exceptional business growth</p>
+          <a href="/case-studies/sephra" class="text-electric font-semibold text-sm hover:underline">Read Case Study &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Local Trust Section -->
+  <section class="py-20 lg:py-28 bg-white" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-8">A Digital Advertising Partner You Can Meet in Person</h2>
+        <p class="text-lg text-gray-700 mb-6 leading-relaxed">Too many businesses in Richmond and the surrounding boroughs have been burned by distant agencies that promise the world during the sales call and then hand your account to a junior who barely understands your industry. We operate differently. Our senior strategists manage your account directly, and because we are local to South West London, you can sit across the table from the people actually running your campaigns.</p>
+        <p class="text-lg text-gray-700 mb-6 leading-relaxed">Whether you run a professional-services firm near Richmond town centre, an independent retailer or hospitality venue along the riverside, or a multi-location brand serving customers across Twickenham, Kew, East Sheen and St Margarets, we build advertising strategies tailored to your specific market, audience, and growth ambitions.</p>
+        <p class="text-lg text-gray-700 leading-relaxed">Our track record speaks for itself: over 20 years of experience, more than 50 businesses scaled, and a 97% client retention rate. We do not lock you into long contracts because we do not need to, clients stay because of results. If you are a Richmond-Upon-Thames business ready to take your digital advertising seriously, <a href="/free-ads-audit" class="text-electric underline hover:text-electric-dark">start with a free audit</a> and see exactly where you are leaving money on the table.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Logos -->
+  <section class="py-16 lg:py-20 bg-gray-50" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ClientLogos />
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 lg:py-28 bg-white" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-2xl sm:text-3xl font-heading font-bold text-navy mb-10">Frequently Asked Questions</h2>
+        <div class="space-y-4">
+          <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+              Why choose a PPC agency that knows Richmond-Upon-Thames?
+              <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-gray-700 leading-relaxed">A team that understands Richmond gives you face-to-face strategy sessions, faster communication, and genuine insight into the affluent South West London market. Richmond shoppers, diners and professional-services clients behave very differently from the wider London average, so campaigns built for this borough convert better. Visible Ads pairs that local understanding with enterprise-level PPC expertise.</div>
+          </details>
+          <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+              What digital marketing services do you offer in Richmond-Upon-Thames?
+              <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-gray-700 leading-relaxed">We offer the full spectrum of performance marketing: Google Ads management, Bing Ads, SEO, Amazon advertising, paid social campaigns across Meta and LinkedIn, and conversion rate optimisation. Whether you run a boutique on Richmond high street, a riverside restaurant, or a professional-services firm in Twickenham or Kew, every service is built to deliver measurable ROI.</div>
+          </details>
+          <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+              How much does PPC management cost for Richmond businesses?
+              <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-gray-700 leading-relaxed">Our management fees typically range from £1,500 to £5,000 per month depending on campaign complexity and ad spend levels. We provide a detailed, transparent proposal after a free audit of your current advertising setup, so you know exactly what to expect before committing.</div>
+          </details>
+          <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+            <summary class="flex items-center justify-between cursor-pointer p-6 font-heading font-semibold text-navy text-lg hover:bg-gray-50 transition-colors">
+              Do you work with independent and premium Richmond businesses?
+              <svg class="w-5 h-5 text-electric shrink-0 ml-4 group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <div class="px-6 pb-6 text-gray-700 leading-relaxed">Yes. Richmond is home to a high concentration of premium independents, hospitality venues and professional-services firms, and that suits how we work. We specialise in established businesses generating £1M+ in annual revenue that are serious about scaling profitably. If you are investing at least £2,000 per month in ad spend and want expert management to maximise your return, we are the right fit.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="relative py-20 lg:py-28 bg-navy" data-animate>
+    <div class="absolute inset-0 dot-pattern opacity-5"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">Ready to Grow Your Richmond Business?</h2>
+      <p class="text-lg text-slate-light mb-8 max-w-2xl mx-auto">Get a free, no-obligation audit of your digital advertising. We will show you exactly where you are leaving money on the table and how to fix it.</p>
+      <a href="/free-ads-audit" class="w-full sm:w-auto inline-flex items-center justify-center bg-cta text-white font-semibold px-10 py-4 rounded-xl hover:bg-electric transition-colors text-lg">Get Your Free Ads Audit</a>
+    </div>
+  </section>
+
+</Layout>
