@@ -2,6 +2,9 @@
 
 Per-repo brain, migrated from central claude-memory 2026-06-20. Canonical project memory now lives here. (Folds visible-ads-boh-proposal-jun9 + visible-ads-facts.)
 
+## Jul 7 — GA4 tag installed (`d01fd94`, pushed)
+Boh supplied GA4 measurement ID G-ZZ6RF754RW. Installed in `src/layouts/Layout.astro` head. Site uses `<ClientRouter />` (Astro view transitions), so a static gtag config alone would only fire page_view on the very first pageload of a session; set `send_page_view: false` on config and manually fire `gtag('event','page_view',...)` inside the existing `astro:page-load` listener so every client-side navigation is tracked. Build verified (57 pages), tag confirmed in dist output. Closes the "GA4 access" open flag from the Jul 6 QA sweep — conversion tracking (contact form etc.) can now be wired up in GA4 once data starts flowing.
+
 ## Current state
 - Client site visible-ads.com (Boh Tjarks + Joe). Boh = referral partner who sends Sunny clients. Engagement: AI-visibility + content pilot AGREED Jun 14 2026.
 - Stack: Astro 6 + Tailwind 4, tokens navy/electric/cta, Plus Jakarta + Inter. Forms → `/api/submit`.
