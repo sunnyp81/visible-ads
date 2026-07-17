@@ -2,6 +2,19 @@
 
 Per-repo brain, migrated from central claude-memory 2026-06-20. Canonical project memory now lives here. (Folds visible-ads-boh-proposal-jun9 + visible-ads-facts.)
 
+## Jul 18 — Messaging + multi-channel refresh, LIVE (`b37e9a4`..`c80ba0b`, pushed)
+Sunny's punch list, built via superpowers brainstorm → plan → subagent-driven execution (7 tasks, each with an independent task-review pass, all clean). Build verified (62 pages). Shipped:
+- Homepage hero rewrite: H1 → "Making Ecom Ads Profitable", subheadline → full-funnel/multi-channel/FMCG/POAS-over-ROAS positioning (`index.astro:82-87`)
+- Homepage "Growth Services" subhead tied to profit/multi-channel (`index.astro:181`)
+- Nav restructure: new top-level "Multi-Channel Services" link, channel dropdown relabeled "Services" → "By Channel" (`Nav.astro`)
+- New `/multi-channel-services` hub page: journey map, 8-channel grid, POAS tie-in, Sephra proof
+- Yo-Yo Desk case study added (`case-studies.astro` + `case-studies/yo-yo-desk.astro`) — **metric-only, only the 2.5x→5x ROAS figure is used, no channels/spend/timeframe invented**
+- `/roas-vs-profit` expanded: Signs-your-ROAS-is-lying-to-you section, a labeled-hypothetical worked example, 4-step ROAS→POAS methodology, FAQ 4→7 questions (array + JSON-LD schema kept in sync)
+
+⚠️ **FMCG hero copy and the Yo-Yo Desk case study shipped without Boh's written sign-off.** A GSC-driven tracker built in an earlier session (Google Sheet, "Visible Ads" merged-tabs tracker, dated 16 Jul 2026 — Action Plan tab items 0.5 and 0.8, For Boh tab items #2 and #4) flagged both as unverified: zero FMCG queries in 6mo of GSC and no named FMCG client, and the Yo-Yo Desk ROAS figure is Boh's word only, same class of issue as the fabricated local-page stats corrected 6 Jul. Sunny made the informed call to ship now and chase sign-off after. **Next session: confirm with Sunny whether Boh has since signed off; if not, this is still open risk on a live client site.**
+
+Design spec: `docs/superpowers/specs/2026-07-18-messaging-multichannel-refresh-design.md`. Plan: `docs/superpowers/plans/2026-07-18-messaging-multichannel-refresh.md`.
+
 ## Jul 7 — GA4 tag installed (`d01fd94`, pushed)
 Boh supplied GA4 measurement ID G-ZZ6RF754RW. Installed in `src/layouts/Layout.astro` head. Site uses `<ClientRouter />` (Astro view transitions), so a static gtag config alone would only fire page_view on the very first pageload of a session; set `send_page_view: false` on config and manually fire `gtag('event','page_view',...)` inside the existing `astro:page-load` listener so every client-side navigation is tracked. Build verified (57 pages), tag confirmed in dist output. Closes the "GA4 access" open flag from the Jul 6 QA sweep — conversion tracking (contact form etc.) can now be wired up in GA4 once data starts flowing.
 
