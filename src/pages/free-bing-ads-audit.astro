@@ -1,0 +1,302 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PartnerBadges from '../components/PartnerBadges.astro';
+import GoogleReviews from '../components/GoogleReviews.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "Free Bing Ads Audit",
+      "description": "A free, no obligation audit of your Microsoft Advertising account from a Microsoft Advertising Partner.",
+      "url": "https://visible-ads.com/free-bing-ads-audit",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Visible Ads"
+      }
+    },
+    {
+      "@type": "Service",
+      "serviceType": "Microsoft Advertising account audit",
+      "provider": {
+        "@type": "Organization",
+        "name": "Visible Ads",
+        "url": "https://visible-ads.com/"
+      },
+      "areaServed": "GB",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "GBP",
+        "description": "Free, no obligation Microsoft Advertising audit."
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What do you check in a Bing Ads audit?", "acceptedAnswer": { "@type": "Answer", "text": "We check nine things: how your account was built, whether it is a stale Google import, your keyword and match type structure, negative keyword coverage, Microsoft Audience Network settings, Search Partner Network placements, LinkedIn profile targeting, device and schedule bid adjustments, and whether your UET tag records conversions accurately." } },
+        { "@type": "Question", "name": "Is the Bing Ads audit really free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. There is no cost and no obligation. You receive the written findings whether or not you work with us. You are free to implement them yourself." } },
+        { "@type": "Question", "name": "How long does the audit take?", "acceptedAnswer": { "@type": "Answer", "text": "The report arrives within 5 working days. We then walk you through it on a call at a time that suits you." } },
+        { "@type": "Question", "name": "Do I need to give you account access?", "acceptedAnswer": { "@type": "Answer", "text": "Read only access to your Microsoft Advertising account is enough. We never make changes to your campaigns during an audit." } },
+        { "@type": "Question", "name": "Is Microsoft Advertising worth running if I already use Google Ads?", "acceptedAnswer": { "@type": "Answer", "text": "That depends on your market. The audit answers it with your own numbers rather than a rule of thumb. Microsoft Advertising reaches searchers across Bing, Yahoo and DuckDuckGo. It offers LinkedIn profile targeting that Google does not. Competition in the auction is often thinner. The catch is that most accounts get set up once as a Google import and then left alone. The real question is whether yours has ever been run properly rather than whether the channel works." } }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://visible-ads.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Free Bing Ads Audit", "item": "https://visible-ads.com/free-bing-ads-audit" }
+      ]
+    }
+  ]
+};
+
+const checks = [
+  {
+    title: 'Is your account a stale Google import?',
+    body: 'Most Microsoft Advertising accounts were imported from Google Ads once and never touched again. We check what came across and what broke on the way. Then we check what has drifted since.',
+  },
+  {
+    title: 'Search Partner Network placement',
+    body: 'Your ads may be serving across partner sites you have never reviewed. We check where your spend is actually landing and whether the placements are earning it.',
+  },
+  {
+    title: 'LinkedIn profile targeting',
+    body: 'Microsoft Advertising can target by company, job function and industry through LinkedIn profile data. Google cannot. We check whether you use it and whether it suits your buyer.',
+  },
+  {
+    title: 'Audience Network settings',
+    body: 'The Microsoft Audience Network is on by default in places people do not expect. We check whether it is working for you or quietly absorbing budget.',
+  },
+  {
+    title: 'Keywords, match types and negatives',
+    body: 'We review your match type structure and negative keyword coverage. That finds the queries you pay for that were never worth a click.',
+  },
+  {
+    title: 'UET tag and conversion tracking',
+    body: 'A misfiring UET tag makes every decision after it guesswork. We verify conversions record accurately before reading anything else.',
+  },
+];
+
+const faqs = [
+  {
+    question: 'What do you check in a Bing Ads audit?',
+    answer: 'We check nine things: how your account was built, whether it is a stale Google import, your keyword and match type structure, negative keyword coverage, Microsoft Audience Network settings, Search Partner Network placements, LinkedIn profile targeting, device and schedule bid adjustments, and whether your UET tag records conversions accurately.',
+  },
+  {
+    question: 'Is the Bing Ads audit really free?',
+    answer: 'Yes. There is no cost and no obligation. You receive the written findings whether or not you work with us. You are free to implement them yourself.',
+  },
+  {
+    question: 'How long does the audit take?',
+    answer: 'The report arrives within 5 working days. We then walk you through it on a call at a time that suits you.',
+  },
+  {
+    question: 'Do I need to give you account access?',
+    answer: 'Read only access to your Microsoft Advertising account is enough. We never make changes to your campaigns during an audit.',
+  },
+  {
+    question: 'Is Microsoft Advertising worth running if I already use Google Ads?',
+    answer: 'That depends on your market. The audit answers it with your own numbers rather than a rule of thumb. Microsoft Advertising reaches searchers across Bing, Yahoo and DuckDuckGo. It offers LinkedIn profile targeting that Google does not. Competition in the auction is often thinner. The catch is that most accounts get set up once as a Google import and then left alone. The real question is whether yours has ever been run properly rather than whether the channel works.',
+  },
+];
+---
+
+<Layout
+  title="Free Bing Ads Audit | Microsoft Ads Partner | Visible Ads"
+  description="A free, no obligation Bing Ads audit from a Microsoft Advertising Partner. We find the wasted spend and the gaps in your Microsoft Ads account."
+  schema={schema}
+>
+
+  <section class="relative overflow-hidden py-20 lg:py-28 bg-white" data-animate>
+    <div class="absolute top-20 left-10 w-32 h-32 bg-electric/5 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-10 w-40 h-40 bg-cyan-400/5 rounded-full blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+
+        <div class="lg:pt-4">
+          <span class="inline-block px-3 py-1 rounded-full bg-sky-tint text-electric text-xs font-semibold tracking-wide uppercase mb-5">Microsoft Advertising Partner</span>
+          <h1 class="text-4xl sm:text-5xl font-heading font-extrabold text-navy mb-6 leading-tight">Free Bing Ads Audit</h1>
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">Most Microsoft Advertising accounts were imported from Google Ads once. Nobody opened them again. Yours is probably paying for clicks nobody chose to buy.</p>
+          <p class="text-lg text-gray-700 leading-relaxed mb-8">We review your account and tell you what is wrong with it. The findings arrive in writing within 5 working days. You keep them whether you work with us or not.</p>
+
+          <div class="space-y-5 mb-10">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-sky-tint flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-electric" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+              </div>
+              <div>
+                <h3 class="font-heading font-bold text-navy mb-1">A written report, not a sales call</h3>
+                <p class="text-gray-700 text-sm">Findings arrive in writing within 5 working days. A call follows to talk them through. The report is yours either way.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-sky-tint flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-electric" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
+              </div>
+              <div>
+                <h3 class="font-heading font-bold text-navy mb-1">The import problem, spelled out</h3>
+                <p class="text-gray-700 text-sm">We list what came across from Google and what broke in transit. Then we show what has drifted since.</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-sky-tint flex items-center justify-center flex-shrink-0">
+                <svg class="w-5 h-5 text-electric" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <h3 class="font-heading font-bold text-navy mb-1">Where your spend is actually going</h3>
+                <p class="text-gray-700 text-sm">We review your Search Partner Network placements and Audience Network settings line by line. You may never have chosen them.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-6 flex-wrap">
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span class="text-sm font-medium text-gray-700">100% Free</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span class="text-sm font-medium text-gray-700">No Obligation</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-success" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span class="text-sm font-medium text-gray-700">Read Only Access</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 sm:p-10 shadow-xl border border-gray-200 ring-1 ring-electric/10">
+          <h2 class="text-2xl font-heading font-bold text-navy mb-6">Request Your Bing Ads Audit</h2>
+          <form id="audit-form" action="/api/submit" method="POST" data-astro-reload class="space-y-5">
+            <input type="hidden" name="_form" value="bing-audit" />
+            <input type="hidden" name="_next" value="https://visible-ads.com/free-bing-ads-audit?thanks=1" />
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;pointer-events:none" />
+            <div>
+              <label for="name" class="block text-sm font-medium text-navy mb-1.5">Name</label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-gray-700" placeholder="Your full name" />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-navy mb-1.5">Email</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-gray-700" placeholder="you@company.com" />
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-medium text-navy mb-1.5">Phone</label>
+              <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-gray-700" placeholder="+44 7XXX XXXXXX" />
+            </div>
+            <div>
+              <label for="website" class="block text-sm font-medium text-navy mb-1.5">Website URL</label>
+              <input type="text" inputmode="url" autocapitalize="none" autocorrect="off" spellcheck="false" id="website" name="website" required class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-gray-700" placeholder="yoursite.com" />
+            </div>
+            <div>
+              <label for="budget" class="block text-sm font-medium text-navy mb-1.5">Monthly Microsoft Ads Spend</label>
+              <select id="budget" name="budget" required class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-gray-700">
+                <option value="" disabled selected>Select your monthly spend</option>
+                <option value="not-running">Not running Microsoft Ads yet</option>
+                <option value="under-5k">Under £5,000</option>
+                <option value="5k-20k">£5,000 - £20,000</option>
+                <option value="20k-50k">£20,000 - £50,000</option>
+                <option value="50k-plus">£50,000+</option>
+              </select>
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-navy mb-1.5">Message</label>
+              <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-gray-700 resize-none" placeholder="Tell us about your account and what you want from it..."></textarea>
+            </div>
+            <button type="submit" class="w-full px-6 py-4 bg-cta text-white font-semibold rounded-lg hover:bg-electric transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-cta/25 text-lg">
+              Request My Free Audit
+            </button>
+          </form>
+          <script>
+            if (window.location.search.includes('thanks=1')) {
+              const form = document.getElementById('audit-form');
+              if (form) form.innerHTML = '<div class="text-center py-12"><div class="w-16 h-16 rounded-full bg-success/10 flex items-center justify-center mx-auto mb-4"><svg class="w-8 h-8 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg></div><h3 class="text-xl font-heading font-bold text-navy mb-2">Thank You!</h3><p class="text-gray-700">We\'ve received your request. Boh will be in touch within 24 hours to arrange access and confirm timings.</p></div>';
+            }
+          </script>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28 bg-sky-tint" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">What We Check</h2>
+        <p class="text-lg text-gray-700 max-w-2xl mx-auto">Microsoft Advertising is not Google Ads with a different logo. These are the things that go wrong specifically here.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {checks.map((c) => (
+          <div class="bg-white rounded-2xl p-8 shadow-md border border-gray-100 border-t-4 border-electric">
+            <h3 class="font-heading text-lg font-bold text-navy mb-3">{c.title}</h3>
+            <p class="text-gray-700 text-sm leading-relaxed">{c.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28 bg-white" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-6 text-center">Why Microsoft Advertising Gets Neglected</h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">The usual story runs like this. Someone ticks the import box in Google Ads. The campaigns copy across and the account goes live. Nobody rebuilds it for a different auction or a different set of partner placements. Then it gets judged on results it was never set up to produce.</p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">That is a shame. The platform has things Google does not. Microsoft Advertising reaches searchers across Bing, Yahoo and DuckDuckGo. It targets by company, job function and industry through LinkedIn profile data. Competition in the auction is often thinner than the equivalent Google auction.</p>
+      <p class="text-lg text-gray-700 leading-relaxed mb-8">None of that helps if the account is a two year old import nobody has opened. The audit tells you which situation you are in. It uses your numbers rather than ours.</p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/bing-ads" class="px-6 py-3 rounded-lg border border-electric text-electric font-semibold hover:bg-sky-tint transition-all">Our Microsoft Ads service</a>
+        <a href="/free-ads-audit" class="px-6 py-3 rounded-lg border border-gray-200 text-navy font-semibold hover:bg-gray-50 transition-all">Auditing another channel?</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28 bg-gray-50" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-4">What Happens Next?</h2>
+        <p class="text-lg text-gray-700">Three steps from enquiry to findings.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-electric text-white font-heading font-bold text-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-electric/30">1</div>
+          <h3 class="text-lg font-heading font-bold text-navy mb-2">You Give Us Read Only Access</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">Read only access to your Microsoft Advertising account. We never change your campaigns during an audit.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-electric text-white font-heading font-bold text-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-electric/30">2</div>
+          <h3 class="text-lg font-heading font-bold text-navy mb-2">We Send a Written Report</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">Within 5 working days you get what is wasting money, what is missing and what we would do first.</p>
+        </div>
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full bg-electric text-white font-heading font-bold text-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-electric/30">3</div>
+          <h3 class="text-lg font-heading font-bold text-navy mb-2">We Walk You Through It</h3>
+          <p class="text-gray-700 text-sm leading-relaxed">A call to talk through the findings and answer questions. No pressure to buy anything.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 lg:py-20 bg-white" data-animate>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PartnerBadges compact />
+      <div class="mt-10">
+        <GoogleReviews compact />
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 lg:py-28 bg-gray-50" data-animate>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-12 text-center">Frequently Asked Questions</h2>
+      <div class="space-y-6">
+        {faqs.map((faq) => (
+          <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-100">
+            <h3 class="text-lg font-heading font-bold text-navy mb-3">{faq.question}</h3>
+            <p class="text-gray-700 leading-relaxed">{faq.answer}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>
