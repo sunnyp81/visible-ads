@@ -18,37 +18,38 @@ const services = [
         <img src="/images/visible-ads-logo.png" alt="Visible Ads" class="h-8 lg:h-10 w-auto" />
       </a>
 
-      <nav class="hidden lg:flex items-center gap-8">
-        <a href="/multi-channel-services" class="text-sm font-medium text-gray-700 hover:text-electric transition-colors">Multi-Channel Services</a>
+      <nav class="hidden xl:flex items-center gap-5 xl:gap-7">
         <div class="relative group">
-          <button class="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-electric transition-colors">
-            By Channel
-            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <a href="/multi-channel-services" class="flex items-center gap-1 text-sm font-medium text-gray-700 hover:text-electric transition-colors whitespace-nowrap" aria-haspopup="true" aria-expanded="false">
+            Services
+            <svg class="w-4 h-4 transition-transform group-hover:rotate-180 group-focus-within:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
             </svg>
-          </button>
-          <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 py-2">
+          </a>
+          <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200 py-2">
+            <a href="/multi-channel-services" class="block px-4 py-2.5 text-sm font-semibold text-navy hover:text-electric hover:bg-sky-tint transition-colors">Multi-Channel Overview</a>
+            <div class="border-t border-gray-100 my-1"></div>
             {services.map(s => (
               <a href={s.href} class="block px-4 py-2.5 text-sm text-gray-700 hover:text-electric hover:bg-sky-tint transition-colors">{s.name}</a>
             ))}
           </div>
         </div>
-        <a href="/blueprint" class="text-sm font-medium text-gray-700 hover:text-electric transition-colors">Blueprint</a>
-        <a href="/how-we-audit" class="text-sm font-medium text-gray-700 hover:text-electric transition-colors">How We Audit</a>
-        <a href="/roas-vs-profit" class="text-sm font-medium text-gray-700 hover:text-electric transition-colors">ROAS vs Profit</a>
-        <a href="/case-studies" class="text-sm font-medium text-gray-700 hover:text-electric transition-colors">Case Studies</a>
-        <a href="/about" class="text-sm font-medium text-gray-700 hover:text-electric transition-colors">About</a>
-        <a href="/blog" class="text-sm font-medium text-gray-700 hover:text-electric transition-colors">Blog</a>
-        <a href="/contact" class="text-sm font-medium text-gray-700 hover:text-electric transition-colors">Contact</a>
+        <a href="/blueprint" class="text-sm font-medium text-gray-700 hover:text-electric transition-colors whitespace-nowrap">Blueprint</a>
+        <a href="/how-we-audit" class="text-sm font-medium text-gray-700 hover:text-electric transition-colors whitespace-nowrap">How We Audit</a>
+        <a href="/roas-vs-profit" class="text-sm font-medium text-gray-700 hover:text-electric transition-colors whitespace-nowrap">ROAS vs Profit</a>
+        <a href="/case-studies" class="text-sm font-medium text-gray-700 hover:text-electric transition-colors whitespace-nowrap">Case Studies</a>
+        <a href="/about" class="text-sm font-medium text-gray-700 hover:text-electric transition-colors whitespace-nowrap">About</a>
+        <a href="/blog" class="text-sm font-medium text-gray-700 hover:text-electric transition-colors whitespace-nowrap">Blog</a>
+        <a href="/contact" class="text-sm font-medium text-gray-700 hover:text-electric transition-colors whitespace-nowrap">Contact</a>
       </nav>
 
-      <div class="hidden lg:block">
-        <a href="/free-ads-audit" class="inline-flex items-center px-5 py-2.5 bg-cta text-white text-sm font-semibold rounded-lg hover:bg-electric transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-cta/25">
+      <div class="hidden xl:block shrink-0">
+        <a href="/free-ads-audit" class="inline-flex items-center px-5 py-2.5 bg-cta text-white text-sm font-semibold rounded-lg hover:bg-electric transition-all duration-200 shadow-sm hover:shadow-md hover:shadow-cta/25 whitespace-nowrap">
           Book a Profit Audit
         </a>
       </div>
 
-      <button id="mobile-toggle" class="lg:hidden relative w-10 h-10 flex items-center justify-center text-navy rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle menu" aria-expanded="false">
+      <button id="mobile-toggle" class="xl:hidden relative w-10 h-10 flex items-center justify-center text-navy rounded-lg hover:bg-gray-100 transition-colors" aria-label="Toggle menu" aria-expanded="false">
         <svg id="hamburger-icon" class="w-6 h-6 transition-all duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
@@ -60,12 +61,12 @@ const services = [
   </div>
 </header>
 
-<div id="mobile-overlay" class="lg:hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-40 hidden transition-opacity duration-300 opacity-0"></div>
+<div id="mobile-overlay" class="xl:hidden fixed inset-0 bg-black/20 backdrop-blur-sm z-40 hidden transition-opacity duration-300 opacity-0"></div>
 
-<nav id="mobile-menu" class="lg:hidden fixed top-16 right-0 bottom-0 w-full max-w-sm bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out overflow-y-auto">
+<nav id="mobile-menu" class="xl:hidden fixed top-16 right-0 bottom-0 w-full max-w-sm bg-white z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out overflow-y-auto">
   <div class="px-5 py-6">
     <a href="/multi-channel-services" class="mobile-link flex items-center px-3 py-3 text-base font-medium text-navy hover:text-electric hover:bg-sky-tint rounded-xl transition-colors">Multi-Channel Services</a>
-    <p class="px-3 pt-4 pb-2 text-xs font-semibold text-slate uppercase tracking-widest">By Channel</p>
+    <p class="px-3 pt-4 pb-2 text-xs font-semibold text-slate uppercase tracking-widest">Services</p>
     <div class="space-y-0.5">
       {services.map(s => (
         <a href={s.href} class="mobile-link flex items-center gap-3 px-3 py-3 text-base font-medium text-navy hover:text-electric hover:bg-sky-tint rounded-xl transition-colors">
@@ -145,7 +146,7 @@ const services = [
     });
 
     window.addEventListener('resize', () => {
-      if (window.innerWidth >= 1024 && isOpen) closeMenu();
+      if (window.innerWidth >= 1280 && isOpen) closeMenu();
     });
   });
 </script>
