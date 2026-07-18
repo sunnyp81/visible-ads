@@ -2,6 +2,9 @@
 
 Per-repo brain, migrated from central claude-memory 2026-06-20. Canonical project memory now lives here. (Folds visible-ads-boh-proposal-jun9 + visible-ads-facts.)
 
+## Jul 18 — Proposal-vs-delivery reconciliation (Fable 5)
+Full report: `G:\My Drive\clients\visible-ads\Visible-Ads-Delivered-vs-Proposed-2026-07-18.md`. Headline: the £250 pilot (`Boh-AI-Visibility-Proposal-2026-06-09.md`) is ~3.5/4 delivered plus a large amount of unpriced over-delivery (roughly 8 extra pages, 2 major rewrites, 3 branded reports, GA4, a full GSC strategy plan, and today's whole punch-list sprint). **NDMedia038 (£250, the pilot invoice) may still not have been sent** — invoice register shows "To send" as of 9 Jul with no payment record found anywhere. Adjacent invoices (Huntsman/iWholesales/Kingston CoWork, £1,250 total) are separate engagements, not part of this pilot. Retainer never formally agreed/invoiced. **Action: confirm NDMedia038 actually went out and get paid before shipping more free scope.**
+
 ## Jul 18 — Messaging + multi-channel refresh, LIVE (`b37e9a4`..`c80ba0b`, pushed)
 Sunny's punch list, built via superpowers brainstorm → plan → subagent-driven execution (7 tasks, each with an independent task-review pass, all clean). Build verified (62 pages). Shipped:
 - Homepage hero rewrite: H1 → "Making Ecom Ads Profitable", subheadline → full-funnel/multi-channel/FMCG/POAS-over-ROAS positioning (`index.astro:82-87`)
