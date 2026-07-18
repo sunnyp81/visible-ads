@@ -21,9 +21,9 @@ const schema = {
         { "@type": "Question", "name": "What is break-even ROAS?", "acceptedAnswer": { "@type": "Answer", "text": "Break-even ROAS is 1 divided by your gross margin. At a 25% margin it is 4x, at 40% it is 2.5x, at 50% it is 2x. Below that number, every extra pound of ad spend loses money. Above it, you are in profit." } },
         { "@type": "Question", "name": "What is POAS?", "acceptedAnswer": { "@type": "Answer", "text": "POAS (profit on ad spend) is gross profit divided by ad spend, rather than revenue divided by ad spend. It tells you how much actual profit each pound of spend returns, which is the number that matters for the business." } },
         { "@type": "Question", "name": "Why do agencies report ROAS instead of profit?", "acceptedAnswer": { "@type": "Answer", "text": "ROAS is easy to pull from the Google Ads dashboard and it usually looks impressive. Profit needs your margins and your P&L, which takes more work and is harder to flatter. We optimise to profit, not ROAS, because ROAS does not pay your bills." } },
-        { "@type": "Question", "name": "Does POAS work for low-margin businesses?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, and it matters more there. Thin margins mean the gap between a break-even ROAS and a genuinely profitable one is small, so a POAS-first approach is what stops those campaigns quietly draining cash." } },
-        { "@type": "Question", "name": "How long does it take to move from ROAS to POAS reporting?", "acceptedAnswer": { "@type": "Answer", "text": "Most accounts can have SKU-level margin data mapped and a first margin-weighted bidding pass live within a few weeks, once we have accurate cost and margin data from you. A full rebuild timeline depends on catalogue size." } },
-        { "@type": "Question", "name": "What data do you need from me to calculate POAS?", "acceptedAnswer": { "@type": "Answer", "text": "At minimum, cost of goods sold or gross margin per product or category, plus any other true costs you want reflected, such as marketplace fees or return rates. The more granular the margin data, the more accurate the profit picture." } }
+        { "@type": "Question", "name": "Does POAS work for low-margin businesses?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, and it matters more there. Thin margins mean the gap between a break-even ROAS and a genuinely profitable one is small. A POAS-first approach is what stops those campaigns quietly draining cash." } },
+        { "@type": "Question", "name": "How long does it take to move from ROAS to POAS reporting?", "acceptedAnswer": { "@type": "Answer", "text": "Most accounts can have SKU-level margin data mapped and a first margin-weighted bidding pass live within a few weeks. This assumes we have accurate cost and margin data from you. A full rebuild timeline depends on catalogue size." } },
+        { "@type": "Question", "name": "What data do you need from me to calculate POAS?", "acceptedAnswer": { "@type": "Answer", "text": "You need, at minimum, cost of goods sold or gross margin per product or category. Add any other true costs you want reflected, such as marketplace fees or return rates. The more granular the margin data, the more accurate the profit picture." } }
       ]
     },
     {
@@ -50,9 +50,9 @@ const faqs = [
   { question: 'What is break-even ROAS?', answer: 'Break-even ROAS is 1 divided by your gross margin. At a 25% margin it is 4x, at 40% it is 2.5x, at 50% it is 2x. Below that number, every extra pound of ad spend loses money. Above it, you are in profit.' },
   { question: 'What is POAS?', answer: 'POAS (profit on ad spend) is gross profit divided by ad spend, rather than revenue divided by ad spend. It tells you how much actual profit each pound of spend returns, which is the number that matters for the business.' },
   { question: 'Why do agencies report ROAS instead of profit?', answer: 'ROAS is easy to pull from the Google Ads dashboard and it usually looks impressive. Profit needs your margins and your P&L, which takes more work and is harder to flatter. We optimise to profit, not ROAS, because ROAS does not pay your bills.' },
-  { question: 'Does POAS work for low-margin businesses?', answer: 'Yes, and it matters more there. Thin margins mean the gap between a break-even ROAS and a genuinely profitable one is small, so a POAS-first approach is what stops those campaigns quietly draining cash.' },
-  { question: 'How long does it take to move from ROAS to POAS reporting?', answer: 'Most accounts can have SKU-level margin data mapped and a first margin-weighted bidding pass live within a few weeks, once we have accurate cost and margin data from you. A full rebuild timeline depends on catalogue size.' },
-  { question: 'What data do you need from me to calculate POAS?', answer: 'At minimum, cost of goods sold or gross margin per product or category, plus any other true costs you want reflected, such as marketplace fees or return rates. The more granular the margin data, the more accurate the profit picture.' },
+  { question: 'Does POAS work for low-margin businesses?', answer: 'Yes, and it matters more there. Thin margins mean the gap between a break-even ROAS and a genuinely profitable one is small. A POAS-first approach is what stops those campaigns quietly draining cash.' },
+  { question: 'How long does it take to move from ROAS to POAS reporting?', answer: 'Most accounts can have SKU-level margin data mapped and a first margin-weighted bidding pass live within a few weeks. This assumes we have accurate cost and margin data from you. A full rebuild timeline depends on catalogue size.' },
+  { question: 'What data do you need from me to calculate POAS?', answer: 'You need, at minimum, cost of goods sold or gross margin per product or category. Add any other true costs you want reflected, such as marketplace fees or return rates. The more granular the margin data, the more accurate the profit picture.' },
 ];
 ---
 
@@ -98,7 +98,7 @@ const faqs = [
       <div class="grid sm:grid-cols-2 gap-6">
         <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 border-t-4 border-electric">
           <h3 class="font-heading text-lg font-bold text-navy mb-3">Your bank balance doesn't move</h3>
-          <p class="text-gray-700 text-sm leading-relaxed">Revenue is up on the dashboard, but the money in the account tells a different story.</p>
+          <p class="text-gray-700 text-sm leading-relaxed">Revenue is up on the dashboard. The money in the account tells a different story.</p>
         </div>
         <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 border-t-4 border-amber-500">
           <h3 class="font-heading text-lg font-bold text-navy mb-3">Margins shrink as you scale</h3>
@@ -120,7 +120,7 @@ const faqs = [
   <section class="py-20 lg:py-28 bg-white" data-animate>
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl sm:text-4xl font-heading font-bold text-navy mb-6">A worked example</h2>
-      <p class="text-gray-700 leading-relaxed mb-5">Say a £25,000-a-month account is running at a 4x ROAS. On the dashboard, that looks strong. But the products driving that revenue carry a 22% gross margin, which puts break-even ROAS at 4.55x.</p>
+      <p class="text-gray-700 leading-relaxed mb-5">Say a £25,000-a-month account is running at a 4x ROAS. That looks strong on the dashboard. The products driving that revenue carry a 22% gross margin, though. That puts break-even ROAS at 4.55x.</p>
       <div class="grid sm:grid-cols-2 gap-6 my-8">
         <div class="bg-sky-tint rounded-2xl p-6">
           <p class="text-sm font-semibold text-slate uppercase tracking-wide mb-2">What the dashboard shows</p>
@@ -133,7 +133,7 @@ const faqs = [
           <p class="text-sm text-slate-light">£22,000 gross profit, minus £25,000 ad spend</p>
         </div>
       </div>
-      <p class="text-gray-700 leading-relaxed">A 4x ROAS reads as a win. The account is actually running at a loss, because it sits below its own break-even ROAS. This is the exact gap a profit audit is built to catch.</p>
+      <p class="text-gray-700 leading-relaxed">A 4x ROAS reads as a win. The account is actually running at a loss. It sits below its own break-even ROAS. This is the exact gap a profit audit is built to catch.</p>
     </div>
   </section>
 
@@ -179,7 +179,7 @@ const faqs = [
           <div class="text-center relative">
             <div class="w-20 h-20 rounded-full bg-electric text-white flex items-center justify-center text-2xl font-heading font-extrabold mx-auto relative z-10 shadow-lg shadow-electric/30">1</div>
             <h3 class="font-heading text-xl font-bold text-navy mt-6 mb-3">Map Margins</h3>
-            <p class="text-slate text-sm leading-relaxed">We map true product or category-level margins across your catalogue, not one blended figure.</p>
+            <p class="text-slate text-sm leading-relaxed">We map true product or category-level margins across your catalogue. Not one blended figure.</p>
           </div>
           <div class="text-center relative">
             <div class="w-20 h-20 rounded-full bg-amber-500 text-white flex items-center justify-center text-2xl font-heading font-extrabold mx-auto relative z-10 shadow-lg shadow-amber-500/30">2</div>
@@ -189,7 +189,7 @@ const faqs = [
           <div class="text-center relative">
             <div class="w-20 h-20 rounded-full bg-purple-600 text-white flex items-center justify-center text-2xl font-heading font-extrabold mx-auto relative z-10 shadow-lg shadow-purple-600/30">3</div>
             <h3 class="font-heading text-xl font-bold text-navy mt-6 mb-3">Segment by Profitability</h3>
-            <p class="text-slate text-sm leading-relaxed">High-margin SKUs and low-margin loss-leaders get separated, so budget follows profit, not volume.</p>
+            <p class="text-slate text-sm leading-relaxed">High-margin SKUs and low-margin loss-leaders get separated. Budget follows profit, not volume.</p>
           </div>
           <div class="text-center relative">
             <div class="w-20 h-20 rounded-full bg-emerald-500 text-white flex items-center justify-center text-2xl font-heading font-extrabold mx-auto relative z-10 shadow-lg shadow-emerald-500/30">4</div>
