@@ -2,6 +2,49 @@
 
 Per-repo brain, migrated from central claude-memory 2026-06-20. Canonical project memory now lives here. (Folds visible-ads-boh-proposal-jun9 + visible-ads-facts.)
 
+## Aug 5-6 — reports.visible-ads.com LIVE + full infra handover proposed (email SENT 6 Aug)
+
+Joe Short emailed asking Sunny for a CF Account ID + a scoped API token so he could stand up a reports host, replacing claude.ai artifact links for client deliverables. Boh confirmed to Joe that Sunny holds the account.
+
+**Built and verified live: https://reports.visible-ads.com** (200, valid SSL, confirmed by headless screenshot). Repo `sunnyp81/visible-ads-reports` (private), local `C:\Users\sunny\repos\visible-ads-reports`. Publish = drop self-contained HTML at `site/reports/<slug>/index.html`, `npx wrangler deploy`. Placeholder is `noindex`, robots disallow-all, 404 wired. Main site re-verified unaffected: apex 200, www 301; DNS diff 11 → 12 records, only addition the proxied `reports` AAAA, all 5 Workspace MX + SPF/DMARC untouched.
+
+🔴 **Built as a Worker with static assets, NOT a Pages project** — Sunny's CF account is at the Pages cap, exactly 100/100 (`wrangler pages project create` → code 8000027). See [[reference_cf-pages-cap-use-workers]].
+
+**The requested token was never sent, and should not be.** `Account | Cloudflare Pages | Edit` is account-level; the "Specific zone: visible-ads.com" restriction only constrains the DNS half. It would have granted edit/delete over every project in an account holding 97 zones, stored in a workspace Joe administers.
+
+### Infra handover (email sent 6 Aug, awaiting reply)
+Sunny's position: he wants **least possible responsibility**, Joe owns it end to end. Proposed migrating the zone, site, workers and repos to a Visible Ads-owned CF account. Joe does nearly all of it (creates account, verifies Boh's address, adds zone, deploys from transferred repos, switches NS at GoDaddy, mints his own token). Sunny only transfers the two GitHub repos, deletes the zone at cutover, and removes the old projects (which returns a Pages slot).
+
+Audit of everything attached to the zone (CF API, 6 Aug):
+
+| Thing | Detail |
+|---|---|
+| Zone `visible-ads.com` | Free plan, full setup, NS `meg`/`sergi`, 12 records, zone id `ca95e768c9eb26377879edf9ffb82ffb`, account `aba0a6722a4510842ca473315a8ba13e` |
+| Pages project `visible-ads` | Direct upload — no git source, no build command, no env vars. Domains: `visible-ads.pages.dev`, `visible-ads.com`, `visible-ads.optimisedwebsite.com` |
+| Worker `visible-ads-forms` | Route `visible-ads.com/api/*`, `send_email` binding |
+| Worker `visible-ads-www-redirect` | Route `www.visible-ads.com/*` |
+| Worker `visible-ads-reports` | `reports.visible-ads.com` |
+
+No KV, D1, R2, queues, durable objects, cron triggers or Pages Functions. CF Email Routing is OFF on the zone, so the 5 MX records are pure Google Workspace.
+
+🔴 **Highest migration risk:** `visible-ads-forms` sends enquiries to `boh@visible-ads.com` via a `send_email` binding, and that address is verified at **account level in Sunny's account**. It must be re-verified in the new account (Boh clicks a Cloudflare email) BEFORE cutover. If skipped, the form still returns its success page while leads silently vanish. Only human-gated step, so it goes first.
+
+⚠️ `visible-ads.optimisedwebsite.com` is attached to their Pages project and is Sunny's domain — post-move it becomes a cross-account custom domain and breaks (Error 1014). Drop or re-point it.
+
+⚠️ Page Rules and Rulesets were **not readable** (wrangler OAuth session lacks scope, 9109/10000). Probably none given the dedicated www-redirect Worker, but needs a dashboard glance, not an assumption.
+
+**Open:** Access rules on the reports host still undecided (Sunny's recommendation to Boh: Access across the whole host, not public+noindex with Access only on revenue pages). Joe can't self-publish yet — needs his GitHub username or the CF dashboard git connection; the committed Actions workflow needs `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` and the master-builds token is stale. Yo-Yo Desk audit is the intended first report but it is Joe's artifact, so he must send it.
+
+**Say it out loud when the handover lands: once it's theirs, changes are theirs.** Otherwise the account moves and the phone calls don't.
+
+## Jul 19 — NDMedia038 revised, still unsent; GA4 flag fixed
+Acted on the Jul 18 reconciliation's recommendation. Regenerated `NDMedia038 - Boh Tjarks - Visible Ads Pilot.{html,pdf}` (source `G:\My Drive\clients\_invoices\ndmedia038-visible-ads.json`), dated 19 Jul:
+- **Total stays £250** (Sunny's explicit call — not billing the overage). The 6-18 Jul "cycle 2" work (homepage repositioning, Multi-Channel Services hub, Yo-Yo Desk case study, ROAS-vs-Profit expansion, GA4 install, privacy page) is listed as a new line, shown **Included at no charge**, with note copy that frames it as proof of the £250/mo retainer's value ("this alone is a full retainer month, included so you can see what the retainer gets you") rather than silently absorbed.
+- Added a flag: FMCG hero copy + Yo-Yo Desk case study shipped live 18 Jul without Boh's written sign-off (zero FMCG GSC queries, no named FMCG client, ROAS figure is Boh's word only from a calendar invite) — do not let Boh read these as pre-approved.
+- **Fixed a stale flag:** "GA4 access needed" read as if the tag wasn't installed, but it's been live since 7 Jul (`d01fd94`). Confirmed via `mcp__ga4__get_account_summaries` — no Visible Ads property in Sunny's connected GA4 accounts, so the real gap is *login access to the GA4 property* (to configure key events), not the tag. Reworded to "GA4 account access needed" and asked Boh to add `hello@sunnypatel.co.uk` as a GA4 user.
+- `invoice-register.csv` NDMedia038 row updated to match: date 2026-07-19, amount 250.00, status still **"To send"** — nothing has gone to Boh yet, only PDFs to Sunny for review.
+- **Next:** Sunny sends NDMedia038 + chases (a) GA4 account access, (b) written sign-off on FMCG/Yo-Yo Desk wording. See [[disk-full-incident-jun11]]-adjacent note: C: hit 100% full mid-session during this work (same Drive-cache-on-C: failure mode as 11 Jun), `npm cache clean --force` freed ~3GB as a stopgap only — still needs a real fix.
+
 ## Jul 18 — Proposal-vs-delivery reconciliation (Fable 5)
 Full report: `G:\My Drive\clients\visible-ads\Visible-Ads-Delivered-vs-Proposed-2026-07-18.md`. Headline: the £250 pilot (`Boh-AI-Visibility-Proposal-2026-06-09.md`) is ~3.5/4 delivered plus a large amount of unpriced over-delivery (roughly 8 extra pages, 2 major rewrites, 3 branded reports, GA4, a full GSC strategy plan, and today's whole punch-list sprint). **NDMedia038 (£250, the pilot invoice) may still not have been sent** — invoice register shows "To send" as of 9 Jul with no payment record found anywhere. Adjacent invoices (Huntsman/iWholesales/Kingston CoWork, £1,250 total) are separate engagements, not part of this pilot. Retainer never formally agreed/invoiced. **Action: confirm NDMedia038 actually went out and get paid before shipping more free scope.**
 
