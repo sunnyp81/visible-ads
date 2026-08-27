@@ -67,7 +67,7 @@ Boh supplied GA4 measurement ID G-ZZ6RF754RW. Installed in `src/layouts/Layout.a
 ## Current state
 - Client site visible-ads.com (Boh Tjarks + Joe). Boh = referral partner who sends Sunny clients. Engagement: AI-visibility + content pilot AGREED Jun 14 2026.
 - Stack: Astro 6 + Tailwind 4, tokens navy/electric/cta, Plus Jakarta + Inter. Forms → `/api/submit`.
-- Repo: `sunnyp81/visible-ads` (master). Local: `C:\Users\sunny\repos\visible-ads`. Deploy: CF Pages auto-deploy from master.
+- Repo: `sunnyp81/visible-ads` (master). Local: `C:\Users\sunny\repos\visible-ads`. Deploy: 🔴 NOT git-connected (`wrangler pages project list` shows Git Provider: No, confirmed 2026-08-27). Manual deploy required after every push: `npm install` (if fresh clone) → `npm run build` → `npx wrangler pages deploy dist --project-name visible-ads --commit-dirty=true` (wrangler OAuth login, sunnypat81 CF account `aba0a6722a4510842ca473315a8ba13e` — no valid API token needed, `cfut_143a...` is dead).
 - Pricing (de-salesed): pilot £350 standard / £250 partner; retainer £400 / £250/mo partner (£250 = floor; partner resells at standard, keeps margin).
 
 ## Pilot scope (agenda)
