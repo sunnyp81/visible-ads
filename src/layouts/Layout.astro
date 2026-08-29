@@ -96,18 +96,41 @@ import '../styles/global.css';
 
       const stickyCta = document.getElementById('sticky-cta');
       let stickyShown = false;
+      let pastThreshold = false;
+      let overOwnCta = false;
       const backToTop = document.getElementById('back-to-top');
 
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 500 && !stickyShown) {
+      const syncStickyCta = () => {
+        const shouldShow = pastThreshold && !overOwnCta;
+        if (shouldShow && !stickyShown) {
           stickyShown = true;
           stickyCta?.classList.remove('translate-y-full');
           stickyCta?.classList.add('translate-y-0');
-        } else if (window.scrollY <= 500 && stickyShown) {
+        } else if (!shouldShow && stickyShown) {
           stickyShown = false;
           stickyCta?.classList.remove('translate-y-0');
           stickyCta?.classList.add('translate-y-full');
         }
+      };
+
+      // Pages that embed their own CTA form (e.g. the profit calculator) can have that
+      // form scroll flush to the bottom of a mobile viewport, right under the global
+      // sticky bar. Hide the sticky bar while an in-page CTA is visible so the two
+      // don't overlap.
+      const ownCtaTargets = document.querySelectorAll('[data-hide-sticky-cta]');
+      if (ownCtaTargets.length) {
+        const overlapObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            overOwnCta = entry.isIntersecting;
+          });
+          syncStickyCta();
+        }, { threshold: 0.01 });
+        ownCtaTargets.forEach((el) => overlapObserver.observe(el));
+      }
+
+      window.addEventListener('scroll', () => {
+        pastThreshold = window.scrollY > 500;
+        syncStickyCta();
         if (window.scrollY > 800) {
           backToTop?.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
           backToTop?.classList.add('opacity-100', 'translate-y-0', 'pointer-events-auto');
