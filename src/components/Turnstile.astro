@@ -23,7 +23,38 @@ const SITEKEY = '0x4AAAAAAEjuiFvjTq5K7Aln';
     document.querySelectorAll('.cf-turnstile').forEach(function (el) {
       if (el.dataset.rendered || el.offsetParent === null) return;
       el.dataset.rendered = '1';
-      window.turnstile.render(el);
+
+      var form = el.closest('form');
+      var waitingToSubmit = false;
+
+      var id = window.turnstile.render(el, {
+        sitekey: el.dataset.sitekey,
+        theme: el.dataset.theme || 'light',
+        'refresh-expired': 'auto',
+        'expired-callback': function () {
+          window.turnstile.reset(id);
+        },
+        callback: function () {
+          if (waitingToSubmit && form) {
+            waitingToSubmit = false;
+            form.submit();
+          }
+        },
+      });
+
+      if (!form) return;
+
+      // A token dies after five minutes, and a backgrounded tab can sleep through the
+      // automatic refresh. Someone who leaves a form open while they think about what to
+      // write would otherwise post a stale token and get a page of raw JSON instead of
+      // sending their enquiry. Hold the submission, fetch a fresh token, then send it.
+      form.addEventListener('submit', function (e) {
+        var input = form.querySelector('input[name="cf-turnstile-response"]');
+        if (input && input.value && !window.turnstile.isExpired(id)) return;
+        e.preventDefault();
+        waitingToSubmit = true;
+        window.turnstile.reset(id);
+      });
     });
   };
   document.addEventListener('astro:page-load', function () {
