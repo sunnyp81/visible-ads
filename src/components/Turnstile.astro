@@ -1,0 +1,39 @@
+---
+// Cloudflare Turnstile, the bot check in front of every site form. Added 1 Sep 2026 after a
+// bot started filling real-looking name/email values, which walks straight past the honeypot.
+// The sitekey is public, so it lives here rather than in a build variable the Pages build
+// would also need; its secret half is the visible-ads-forms worker's TURNSTILE_SECRET.
+interface Props {
+  theme?: 'light' | 'dark' | 'auto';
+  class?: string;
+}
+
+const { theme = 'light', class: className = '' } = Astro.props;
+const SITEKEY = '0x4AAAAAAEjuiFvjTq5K7Aln';
+---
+
+<script is:inline>
+  // Turnstile normally renders itself the moment api.js loads. This site uses view
+  // transitions, so a client-side navigation onto a form page never re-runs api.js and the
+  // widget would never appear. Render explicitly instead: once when api.js is ready, and
+  // again every time a page settles. Widgets already up, and ones still hidden behind a
+  // wizard step, are skipped.
+  window.vaRenderTurnstile = function () {
+    if (!window.turnstile) return;
+    document.querySelectorAll('.cf-turnstile').forEach(function (el) {
+      if (el.dataset.rendered || el.offsetParent === null) return;
+      el.dataset.rendered = '1';
+      window.turnstile.render(el);
+    });
+  };
+  document.addEventListener('astro:page-load', function () {
+    window.vaRenderTurnstile();
+  });
+</script>
+<script
+  is:inline
+  src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=vaRenderTurnstile"
+  async
+  defer></script>
+
+<div class:list={['cf-turnstile', className]} data-sitekey={SITEKEY} data-theme={theme}></div>

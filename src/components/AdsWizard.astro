@@ -1,4 +1,5 @@
 ---
+import Turnstile from './Turnstile.astro';
 ---
 <div id="ads-wizard" class="max-w-2xl mx-auto">
   <div class="bg-white rounded-2xl shadow-xl border border-gray-200 ring-1 ring-electric/10 overflow-hidden">
@@ -87,6 +88,7 @@
             <label for="wiz-website" class="block text-sm font-medium text-navy mb-1.5">Website</label>
             <input type="text" inputmode="url" autocapitalize="none" autocorrect="off" spellcheck="false" id="wiz-website" name="website" class="w-full px-4 py-3 rounded-lg border border-gray-200 bg-white focus:border-electric focus:ring-2 focus:ring-electric/20 outline-none transition-all text-gray-700" placeholder="yoursite.com" />
           </div>
+          <Turnstile />
           <button type="submit" class="w-full px-6 py-4 bg-cta text-white font-semibold rounded-xl hover:bg-electric transition-all duration-200 shadow-lg text-lg">
             Get My Free Audit
           </button>
@@ -118,6 +120,10 @@
       if (label) label.textContent = `Step ${step} of 4`;
       if (pct) pct.textContent = `${percent}%`;
       if (bar) bar.style.width = `${percent}%`;
+
+      // The Turnstile widget on step 4 is skipped while its step is hidden, so render it
+      // the moment that step becomes visible.
+      (window as any).vaRenderTurnstile?.();
     }
 
     // Step 1 & 2, single select, auto-advance

@@ -1,6 +1,7 @@
 ---
 // Profit / POAS calculator. Reveals whether a given ROAS is actually profitable
 // once product margin is taken into account, plus break-even ROAS and POAS.
+import Turnstile from './Turnstile.astro';
 ---
 <div class="bg-gradient-to-br from-[#0A1628] to-[#132240] rounded-3xl p-6 sm:p-10 shadow-2xl" id="profit-calc">
   <div class="text-center mb-8">
@@ -57,15 +58,18 @@
   <!-- Lead capture -->
   <div class="mt-8 pt-8 border-t border-white/10" data-hide-sticky-cta>
     <p class="text-center text-white font-heading font-semibold mb-4">Want the real numbers from your own account?</p>
-    <form action="/api/submit" method="POST" data-astro-reload class="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto" id="pc-form">
+    <form action="/api/submit" method="POST" data-astro-reload class="flex flex-col gap-3 max-w-xl mx-auto" id="pc-form">
       <input type="hidden" name="_form" value="profit-calculator" />
       <input type="hidden" name="_next" value="https://visible-ads.com/roas-vs-profit?thanks=1" />
       <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;pointer-events:none" />
-      <input type="text" name="name" required placeholder="Your name"
-        class="flex-1 min-w-0 px-4 py-3 rounded-lg bg-white/5 border border-white/15 text-white placeholder-[#64748B] focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 outline-none transition-all" />
-      <input type="email" name="email" required placeholder="you@company.com"
-        class="flex-1 min-w-0 px-4 py-3 rounded-lg bg-white/5 border border-white/15 text-white placeholder-[#64748B] focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 outline-none transition-all" />
-      <button type="submit" class="px-6 py-3 bg-cta text-white font-semibold rounded-lg hover:bg-electric transition-all duration-200 shadow-lg whitespace-nowrap">Get a free profit audit</button>
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input type="text" name="name" required placeholder="Your name"
+          class="flex-1 min-w-0 px-4 py-3 rounded-lg bg-white/5 border border-white/15 text-white placeholder-[#64748B] focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 outline-none transition-all" />
+        <input type="email" name="email" required placeholder="you@company.com"
+          class="flex-1 min-w-0 px-4 py-3 rounded-lg bg-white/5 border border-white/15 text-white placeholder-[#64748B] focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/30 outline-none transition-all" />
+        <button type="submit" class="px-6 py-3 bg-cta text-white font-semibold rounded-lg hover:bg-electric transition-all duration-200 shadow-lg whitespace-nowrap">Get a free profit audit</button>
+      </div>
+      <Turnstile theme="dark" class="mx-auto" />
     </form>
     <p id="pc-form-thanks" class="text-center text-[#94A3B8] text-sm mt-3 hidden">Thanks. Boh will be in touch within 24 hours with a profit read on your account.</p>
   </div>
